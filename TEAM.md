@@ -68,6 +68,14 @@ collapses to one recipient — never address the same person twice.
 | Deadlines calendar (a dedicated Google calendar, NOT the primary — FUB two-way-syncs the primary) | `[fill-in: e.g. "Escrow Deadlines"]` |
 | Pipeline Board artifact URL (set on first `dashboard` run) | `[fill-in]` |
 
+## Texts (Mac iMessage tap)
+
+| Setting | Value |
+|---|---|
+| iMessage tap installed? | `[fill-in: yes once mac-tap/install.sh has run on Ernie's Mac]` |
+| Snapshot file | `<Drive folder>/imessage-threads.json` (see `references/imessage-tap.md`) |
+| Work-contacts allowlist | `<Drive folder>/work-contacts.csv` — only these threads are ever read |
+
 ## Vendors and house rules
 
 | Setting | Value |

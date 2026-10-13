@@ -66,7 +66,13 @@ Run the **`setup`** skill ("set up the TC assistant"). It walks through:
 Click **Run now** once on each to pre-approve the connector/Executor prompts. These are local
 tasks — **the Claude app must be open** for them to fire.
 
-## 7. The Pipeline Board
+## 7. Texts (Mac only, optional)
+
+See [`mac-tap/README.md`](mac-tap/README.md): install python.org Python once, run
+`mac-tap/install.sh` with the Drive folder, grant Full Disk Access, then ask Claude to
+"set up texts" to build the work-contacts list from Follow Up Boss.
+
+## 8. The Pipeline Board
 
 The first "Refresh the pipeline board" publishes a new private artifact and records its URL
 in `TEAM.md`. Share it from the artifact's Share menu with anyone else who should see it.

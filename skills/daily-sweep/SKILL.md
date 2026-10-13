@@ -1,6 +1,6 @@
 ---
 name: daily-sweep
-version: 1.1.0
+version: 1.2.0
 description: >-
   The team's morning transaction sweep — run across all active files to produce
   the TC's daily list of what's due today, what's late, what they're waiting on others for,
@@ -48,11 +48,15 @@ look complete are surfaced for the TC to confirm, not closed for them.
    LATE
    DUE TODAY
    WAITING ON OTHERS  (nudges drafted, not sent)
+   TEXTS WAITING ON YOU  (deal contacts whose last text has no reply — only if the iMessage tap is installed)
    CLOSED SINCE YESTERDAY
    ```
+   Texts come from `imessage-threads.json` in the Drive folder — see
+   `../../references/imessage-tap.md`. A text is evidence, never a reason to close an item.
    Group by property; name the item, its age, and who was asked.
 5. **Coverage line** — end with what was checked and, plainly, what couldn't be seen
-   (texts/phone, any mailbox without access). Never imply completeness you can't verify.
+   (phone calls, any mailbox without access, and texts if the tap isn't installed — or
+   "texts as of <time>" when its snapshot is more than ~2 hours old, i.e. the Mac was asleep). Never imply completeness you can't verify.
 6. **Refresh the Pipeline Board** — run the `dashboard` skill so the artifact the team opens
    shows this morning's data. It re-pulls FUB and republishes the board in place (same URL),
    read-only. If the board refresh fails, note it in the digest and still send the digest —

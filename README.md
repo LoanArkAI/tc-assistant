@@ -16,6 +16,8 @@ broker signs off.
 - **Kase checklists:** [`checklists/kase.md`](checklists/kase.md) — all 18 Kase transaction
   checklists, imported from the master workbook. Item names are the SkySlope slot names and
   double as the document naming convention.
+- **Texts (Mac, optional):** [`mac-tap/`](mac-tap/README.md) — a read-only background job that
+  writes work-contact iMessage threads to Drive, so texts count as evidence. Never sends.
 - **Setup:** [`INSTALL.md`](INSTALL.md) — connectors, Executor + FUB key, filling in `TEAM.md`,
   scheduled tasks.
 - **Working on the skills:** [`docs/skill-ops.md`](docs/skill-ops.md) — how we version,

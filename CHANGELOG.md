@@ -7,6 +7,22 @@ moves independently.
 
 ---
 
+## plugin 0.3.0 — 2026-10-13
+
+### mac-tap 1.0.0 · whats-missing, daily-sweep, inbox-watch 1.2.0 · setup 1.1.0
+**Hypothesis:** much of a transaction moves by text, and every report said "texts aren't
+visible". A read-only iMessage tap that writes work-contact threads to Drive should cut the
+`items_missing` that turn out to have been handled by text, and surface clients waiting on a
+reply the same day.
+**Changed:** `mac-tap/` (adapted from the EA tap: same read-only chat.db reader, but local file
+output, no network, and personal threads dropped entirely), `references/imessage-tap.md`,
+`TEAM.md` → Texts; the three evidence skills read the snapshot and report its age; setup builds
+the work-contacts allowlist from FUB.
+**Watch:** snapshot age at read time (how often the Mac is asleep), and any deal contact
+missing from the allowlist.
+
+---
+
 ## plugin 0.2.0 — 2026-10-13
 
 ### create-deal, whats-missing, inbox-watch, daily-sweep 1.1.0 · setup 1.0.1

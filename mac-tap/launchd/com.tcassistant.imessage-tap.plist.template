@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <!-- Template. install.sh fills the __PLACEHOLDERS__ and copies the result to
+       ~/Library/LaunchAgents. Runs the tap every 20 minutes while logged in.
+       The interpreter below needs Full Disk Access to read chat.db. -->
+  <key>Label</key>
+  <string>com.tcassistant.imessage-tap</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>__PYTHON__</string>
+    <string>-m</string>
+    <string>tc_tap.tap</string>
+  </array>
+
+  <key>WorkingDirectory</key>
+  <string>__TAP_DIR__</string>
+
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>TC_TAP_OUTPUT</key>
+    <string>__OUTPUT__</string>
+    <key>TC_TAP_CONTACTS_CSV</key>
+    <string>__CONTACTS_CSV__</string>
+  </dict>
+
+  <key>StartInterval</key>
+  <integer>1200</integer>
+  <key>RunAtLoad</key>
+  <true/>
+
+  <key>StandardOutPath</key>
+  <string>__LOG_DIR__/tap.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>__LOG_DIR__/tap.err.log</string>
+
+  <key>ProcessType</key>
+  <string>Background</string>
+  <key>LowPriorityIO</key>
+  <true/>
+</dict>
+</plist>

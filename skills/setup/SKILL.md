@@ -1,6 +1,6 @@
 ---
 name: setup
-version: 1.0.1
+version: 1.1.0
 description: >-
   First-run setup for the TC assistant plugin. Use when the agent or TC (or
   whoever is installing) says "set up the TC assistant plugin", "finish setup", "install my
@@ -60,6 +60,15 @@ FUB can answer instead of asking:
 Show the proposed changes to `TEAM.md` and get a yes before saving. In Cowork, where the
 plugin folder can't be edited, give the person the finished file to commit to the plugin's
 repo, and note that skills will keep asking for those values until it's in.
+
+### 2c. Texts — the iMessage tap (Mac only, optional)
+If the person works on a Mac and wants texts counted as evidence, follow
+`../../mac-tap/README.md`: install python.org Python once, run `mac-tap/install.sh` with the
+team's Google Drive folder, grant Full Disk Access. Then fill the allowlist: build
+`work-contacts.csv` in that Drive folder from FUB — the people on open deals, plus the escrow
+officers, lenders and other-side agents on them — as `Category,Name,Contact` rows (one row per
+phone number or email). Show the list before saving. Only these contacts' threads are ever
+read; everyone else stays private. Record "installed" in `TEAM.md` → Texts.
 
 ### 3. Register the three scheduled tasks (on this machine)
 Create all three as local scheduled tasks. Use the exact prompts the plugin ships — they are

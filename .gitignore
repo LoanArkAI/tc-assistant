@@ -14,3 +14,6 @@ __pycache__/
 # metrics/runs.jsonl is committed instead. See docs/skill-ops.md.
 runs/*
 !runs/README.md
+
+# Python caches from the Mac tap tests
+mac-tap/**/__pycache__/
