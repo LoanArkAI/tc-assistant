@@ -27,6 +27,42 @@ def label(it):
     if it["required"]: return '<td class=r>'
     if it["when"] == "if-applicable": return '<td class=o>'
     return f'<td class=c>{e(COND.get(it["when"], it["when"]))}'
+
+# Tabs: "Audit report" | "TC Assistant". The section ships inside the report's HTML, so the
+# tab bar is moved to the top of the report on load and a class on <body> picks the view.
+# The report itself is untouched; with scripts off, both simply show one after the other.
+TABS = """<div class="tc-tabs" role="tablist" aria-label="Report sections" hidden>
+<button type="button" role="tab" id="tc-tab-report" aria-selected="true">Audit report</button>
+<button type="button" role="tab" id="tc-tab-tc" aria-selected="false">TC Assistant</button>
+</div>
+<style>
+.tc-tabs{display:flex;gap:4px;margin:24px 0 0;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5;background:var(--ground);padding-top:8px}
+.tc-tabs button{all:unset;cursor:pointer;padding:10px 18px;font-weight:600;font-size:.92rem;color:var(--ink-2);border-bottom:3px solid transparent;margin-bottom:-1px}
+.tc-tabs button[aria-selected="true"]{color:var(--navy);border-bottom-color:var(--red)}
+.tc-tabs button:focus-visible{outline:2px solid var(--sky);outline-offset:2px}
+body.tc-js:not(.tc-on) #tc-assistant{display:none}
+body.tc-on .tc-host > :not(#tc-assistant):not(.tc-tabs){display:none}
+body.tc-on #tc-assistant{border-top:0;padding-top:24px}
+</style>
+<script>
+(function(){
+  var tabs=document.querySelector('.tc-tabs'), sec=document.getElementById('tc-assistant');
+  if(!tabs||!sec||!sec.parentNode)return;
+  var host=sec.parentNode; host.classList.add('tc-host');
+  host.insertBefore(tabs, host.firstChild); tabs.hidden=false;
+  document.body.classList.add('tc-js');
+  var bR=document.getElementById('tc-tab-report'), bT=document.getElementById('tc-tab-tc');
+  function show(tc){
+    document.body.classList.toggle('tc-on', tc);
+    bR.setAttribute('aria-selected', String(!tc)); bT.setAttribute('aria-selected', String(tc));
+    window.scrollTo(0,0);
+  }
+  bR.addEventListener('click', function(){show(false);});
+  bT.addEventListener('click', function(){show(true);});
+  show(location.hash==='#tc-assistant');
+})();
+</script>"""
+
 out = ['<!-- tc-assistant:start -->', '<section id="tc-assistant">', '''<style>
 #tc-assistant details{border:1px solid var(--line);border-radius:6px;margin:0 0 10px;background:var(--ground)}
 #tc-assistant summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--ink);display:flex;justify-content:space-between;gap:12px}
@@ -52,7 +88,7 @@ out = ['<!-- tc-assistant:start -->', '<section id="tc-assistant">', '''<style>
  '<p class="lede">Your Claude TC Assistant is set up for Kase. Every file it opens follows the Kase checklist for that transaction type, '
  'and every document is named exactly as its checklist item &mdash; the SkySlope slot name, with no property address.</p>',
  '<h3>Setting it up</h3><ol class="tc-steps">',
- '<li><b>Download and install the plugin.</b> <a href="https://loanark.com/downloads/tc-assistant.zip" target="_blank" rel="noopener"><b>Download the TC Assistant</b></a> (tc-assistant.zip). '
+ '<li><b>Download and install the plugin.</b> Click <b>Download TC Assistant</b> at the top of this page (tc-assistant.zip). '
  'Then in Claude (desktop app or claude.ai): Customize &rarr; Plugins &rarr; Add &rarr; Upload plugin, and choose that file.</li>',
  '<li><b>Connect your accounts</b> in Claude: Gmail, Google Calendar, Google Drive and DocuSign.</li>',
  '<li><b>Run setup.</b> Tell Claude &ldquo;set up the TC assistant&rdquo;. It connects Follow Up Boss and asks for anything it still needs.</li>',
@@ -78,7 +114,7 @@ for c in d["checklists"]:
         note = f'<small>{e(n)}</small>' if n else ""
         out.append(f'<tr><td>{e(it["name"])}{note}{label(it)}')
     out.append('</table></details>')
-out += ['</section>', '<!-- tc-assistant:end -->']
+out += ['</section>', TABS, '<!-- tc-assistant:end -->']
 s = "\n".join(out)
 assert "$tcsec$" not in s
 open(sys.argv[2], "w").write(s)
