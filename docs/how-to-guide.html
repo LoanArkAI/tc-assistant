@@ -1,0 +1,167 @@
+<title>Ernie's TC Assistant</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
+<style>
+/* Layout: one reading column; lettered sections A–E mirror the order Ernie uses the assistant.
+   Palette and type follow KASE Real Estate's site (Montserrat; ink, cream, sand, olive). */
+:root{
+  --bg:#F9F2EE; --surface:#FFFFFF; --ink:#1A1A1A; --ink-2:#4B4B4B; --muted:#7A7468;
+  --rule:#E4D9CF; --sand:#CCB091; --sand-soft:#F1E6DA; --olive:#4F563E; --olive-ink:#4F563E;
+  --font:"Montserrat",system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#141414; --surface:#1E1D1C; --ink:#F3EEEA; --ink-2:#C9C2BB; --muted:#9B9389;
+  --rule:#34302C; --sand:#CCB091; --sand-soft:#2B2620; --olive:#9AA37F; --olive-ink:#B4BC97; color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#141414; --surface:#1E1D1C; --ink:#F3EEEA; --ink-2:#C9C2BB; --muted:#9B9389;
+  --rule:#34302C; --sand:#CCB091; --sand-soft:#2B2620; --olive:#9AA37F; --olive-ink:#B4BC97; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.65;padding-inline:20px;padding-block:0 64px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto}
+h1,h2,h3{text-wrap:balance;margin:0}
+p{margin:0 0 1rem;max-width:66ch}
+a{color:var(--olive-ink)}
+code,.say{font-family:var(--font);font-weight:600;color:var(--ink);background:var(--sand-soft);padding:1px 6px;border-radius:3px}
+
+.mast{padding-block:44px 32px;border-bottom:1px solid var(--rule);margin-bottom:8px}
+.word{font-weight:300;letter-spacing:.42em;font-size:1.05rem;color:var(--ink)}
+.word b{font-weight:600}
+.kicker{margin-top:28px;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:600}
+h1{margin-top:10px;font-size:2.3rem;line-height:1.15;font-weight:600;letter-spacing:-.01em}
+.lede{margin-top:16px;font-size:1.05rem;color:var(--ink-2)}
+
+section{padding-block:36px 8px;border-bottom:1px solid var(--rule)}
+section:last-of-type{border-bottom:0}
+.head{display:flex;gap:16px;align-items:baseline;margin-bottom:14px}
+.letter{font-weight:300;font-size:1.9rem;color:var(--sand);line-height:1;min-width:1.4ch}
+h2{font-size:1.3rem;font-weight:600}
+.sub{color:var(--ink-2);margin-left:calc(1.4ch + 16px + .1rem)}
+
+ol.steps{list-style:none;padding:0;margin:8px 0 0;counter-reset:s;display:grid;gap:12px}
+ol.steps li{counter-increment:s;display:grid;grid-template-columns:2rem 1fr;gap:10px;min-width:0}
+ol.steps li:before{content:counter(s);font-weight:600;font-size:.8rem;color:var(--olive-ink);border:1px solid var(--olive);border-radius:50%;width:1.6rem;height:1.6rem;display:grid;place-items:center;margin-top:2px}
+ol.steps li > div{min-width:0}
+
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--sand);padding:14px 18px;margin:18px 0 8px;border-radius:2px}
+.note b{color:var(--ink)}
+
+.cmds{display:grid;gap:8px;margin-top:10px}
+.cmd{display:grid;grid-template-columns:minmax(0,11rem) minmax(0,1fr);gap:12px;align-items:center}
+.cmd .what{font-size:.82rem;color:var(--muted);font-weight:500}
+.phrase{all:unset;cursor:pointer;display:flex;justify-content:space-between;gap:10px;align-items:center;background:var(--surface);border:1px solid var(--rule);border-radius:3px;padding:9px 12px;font-family:var(--font);font-size:.9rem;font-weight:500;color:var(--ink);min-width:0}
+.phrase:hover{border-color:var(--sand)}
+.phrase:focus-visible{outline:2px solid var(--olive);outline-offset:2px}
+.phrase .txt{min-width:0;overflow-wrap:anywhere}
+.phrase .copy{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;flex:none}
+.phrase.copied{border-color:var(--olive)}
+.phrase.copied .copy{color:var(--olive-ink)}
+@media (max-width:560px){.cmd{grid-template-columns:1fr;gap:4px}}
+
+dl.sched{display:grid;grid-template-columns:minmax(0,9rem) minmax(0,1fr);gap:14px 18px;margin:8px 0 0}
+dl.sched dt{font-weight:600;font-size:.85rem;color:var(--olive-ink);font-variant-numeric:tabular-nums}
+dl.sched dd{margin:0;color:var(--ink-2)}
+@media (max-width:560px){dl.sched{grid-template-columns:1fr;gap:2px}dl.sched dd{margin-bottom:12px}}
+
+ul.rules{list-style:none;padding:0;margin:8px 0 0;display:grid;gap:12px}
+ul.rules li{padding-left:18px;position:relative;max-width:66ch}
+ul.rules li:before{content:"";position:absolute;left:0;top:.7em;width:7px;height:1px;background:var(--sand)}
+.foot{margin-top:28px;padding-top:18px;border-top:1px solid var(--rule);font-size:.8rem;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+<header class="mast">
+  <div class="word"><b>KASE</b> &nbsp;REAL ESTATE</div>
+  <p class="kicker">Ernie Aguilar &middot; Transaction desk</p>
+  <h1>Your TC Assistant, and how to use it</h1>
+  <p class="lede">You talk to it in plain language in Claude. It reads the contract, does the date math, sets up Follow Up Boss, and keeps every file on its Kase checklist. You approve every date and every email.</p>
+</header>
+
+<section>
+  <div class="head"><span class="letter">A</span><h2>Opening or updating a file</h2></div>
+  <p class="sub">The main job. Drop in the contract or point it at Google Drive, and it does the rest with you confirming.</p>
+  <ol class="steps">
+    <li><div>A contract is accepted. Say <span class="say">create a new deal</span> and drop in the executed RPA, or say <span class="say">the contract for [address] is in Drive</span>. To sweep the folder, say <span class="say">review new contracts in Drive</span>.</div></li>
+    <li><div>It reads the contract from Google Drive and checks Follow Up Boss for that address. An existing file gets updated, never duplicated. A contract that isn't fully signed is skipped and flagged.</div></li>
+    <li><div>It asks the side and property type and picks the matching Kase checklist (residential purchase, listing, vacant land, lease and the rest), then asks only the questions that checklist needs: HOA, year built, solar, trust or LLC, FHA/VA and so on.</div></li>
+    <li><div>It shows a dates table with the page it read each date from: acceptance, each contingency removal (inspection, appraisal, loan) and close of escrow, with weekends and holidays rolled forward. Anything unclear, it asks. It never writes a guessed date.</div></li>
+    <li><div>Nothing goes into Follow Up Boss until you say yes. Then it writes the deal and its dates, tags the file, and creates a task for every document the checklist requires, each named exactly as its SkySlope slot.</div></li>
+  </ol>
+  <div class="note"><b>Naming.</b> Every document is named by its checklist item alone, like <code>TDS - Transfer Disclosure Statement.pdf</code>. No property address in the file name; the deal's Drive folder says which file it belongs to.</div>
+</section>
+
+<section>
+  <div class="head"><span class="letter">B</span><h2>Knowing what's missing</h2></div>
+  <p class="sub">Ask any time, about one file or all of them.</p>
+  <ol class="steps">
+    <li><div>Say <span class="say">what's missing on [address]?</span> It checks the file's Kase checklist against Gmail, DocuSign, the deal's Drive folder and, if your Mac is set up, your texts with work contacts.</div></li>
+    <li><div>You get four groups: blocking a deadline in the next 3 days, late, still open, and arrived but needs your review. Something that only showed up as a text ("signed it") counts as arrived but unverified until the document itself is in.</div></li>
+    <li><div>It ends by saying what it could not see, such as phone calls, so a short answer is never mistaken for a complete one.</div></li>
+  </ol>
+</section>
+
+<section>
+  <div class="head"><span class="letter">C</span><h2>The commands</h2></div>
+  <p class="sub">Say these in Claude. Tap one to copy it, then swap in the real address.</p>
+  <div class="cmds" id="cmds"></div>
+</section>
+
+<section>
+  <div class="head"><span class="letter">D</span><h2>What happens on its own</h2></div>
+  <dl class="sched">
+    <dt>7:27a &amp; 4:27p</dt><dd>Daily sweep: one digest of every active file. What's due today, what's late, who owes you what, and clients whose texts are waiting on a reply. It lands as a draft in your Gmail.</dd>
+    <dt>every 2 hours</dt><dd>Inbox watch: scans email and DocuSign for documents your files are waiting on, matches each to its deal and its checklist slot, and flags what arrived. It never closes a checklist item for you.</dd>
+    <dt>every 20 min</dt><dd>Texts (Mac only, optional): a read-only reader saves your threads with work contacts to Google Drive. Friends, family and unknown numbers are never read. It never sends a text.</dd>
+    <dt>1st of the month</dt><dd>Voice check: it compares the email drafts it wrote with what you actually sent and learns your edits, so next month's drafts need less work.</dd>
+  </dl>
+  <div class="note">These run while the Claude app is open. If it was closed when one was due, it runs at the next launch. When your Mac is asleep, texts catch up the next time it wakes.</div>
+</section>
+
+<section>
+  <div class="head"><span class="letter">E</span><h2>The rules it always follows</h2></div>
+  <ul class="rules">
+    <li>It never guesses a date. Unclear or missing means it asks or leaves the field blank.</li>
+    <li>It confirms before every write to Follow Up Boss, and it never deletes anything.</li>
+    <li>Emails are drafts. Anything to escrow, a lender, the other side or a client is written for you to review and send.</li>
+    <li>Your broker at Kase signs off. The assistant never records a broker approval.</li>
+    <li>Wire or payment instructions are never repeated in a draft or a digest. Verify them by phone on a number you already know.</li>
+  </ul>
+  <p class="foot">One-time setup: install the <b>tc-assistant</b> plugin, connect Gmail, Google Calendar, Google Drive and DocuSign in Claude, then say <span class="say">set up the TC assistant</span>. It connects Follow Up Boss through Executor, which keeps your API key in its own vault. Prepared by Loan Ark for Ernie Aguilar. Not an official KASE Real Estate publication.</p>
+</section>
+</div>
+
+<script>
+(function(){
+  var CMDS=[
+    ["Open a new file","create a new deal — here's the accepted contract for [address]"],
+    ["Contract in Drive","the contract for [address] is in Drive — set up the deal"],
+    ["Sweep new contracts","review new contracts in Drive and set up any that aren't in Follow Up Boss"],
+    ["Update a file","update the deal for [address] with the new dates"],
+    ["What's missing","what's missing on [address]?"],
+    ["All files","what's missing across my open files?"],
+    ["Intro emails","draft the accepted-offer intro emails for [address]"],
+    ["Move a file","move [address] to In Escrow"],
+    ["Morning list now","run the daily sweep"],
+    ["Refresh the board","refresh the pipeline board"],
+    ["Texts allowlist","refresh my work contacts"]
+  ];
+  var host=document.getElementById('cmds');
+  CMDS.forEach(function(c,i){
+    var row=document.createElement('div');row.className='cmd';
+    var what=document.createElement('div');what.className='what';what.textContent=c[0];
+    var btn=document.createElement('button');btn.type='button';btn.className='phrase';btn.id='cmd-'+i;
+    var t=document.createElement('span');t.className='txt';t.textContent=c[1];
+    var k=document.createElement('span');k.className='copy';k.textContent='copy';
+    btn.appendChild(t);btn.appendChild(k);
+    function done(){btn.classList.add('copied');k.textContent='copied';setTimeout(function(){btn.classList.remove('copied');k.textContent='copy';},1400);}
+    function fallback(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);done();}
+    btn.addEventListener('click',function(){
+      try{navigator.clipboard.writeText(c[1]).then(done,fallback);}catch(e){fallback();}
+    });
+    row.appendChild(what);row.appendChild(btn);host.appendChild(row);
+  });
+})();
+</script>
