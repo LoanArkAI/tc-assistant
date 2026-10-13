@@ -88,7 +88,7 @@ out = ['<!-- tc-assistant:start -->', '<section id="tc-assistant">', '''<style>
  '<p class="lede">Your Claude TC Assistant is set up for Kase. Every file it opens follows the Kase checklist for that transaction type, '
  'and every document is named exactly as its checklist item &mdash; the SkySlope slot name, with no property address.</p>',
  '<h3>Setting it up</h3><ol class="tc-steps">',
- '<li><b>Download and install the plugin.</b> <a href="https://loanark.com/downloads/tc-assistant.zip" target="_blank" rel="noopener"><b>Download the TC Assistant</b></a> (tc-assistant.zip). '
+ '<li><b>Download and install the plugin.</b> Click <b>Download TC Assistant</b> at the top of this page (tc-assistant.zip). '
  'Then in Claude (desktop app or claude.ai): Customize &rarr; Plugins &rarr; Add &rarr; Upload plugin, and choose that file.</li>',
  '<li><b>Connect your accounts</b> in Claude: Gmail, Google Calendar, Google Drive and DocuSign.</li>',
  '<li><b>Run setup.</b> Tell Claude &ldquo;set up the TC assistant&rdquo;. It connects Follow Up Boss and asks for anything it still needs.</li>',
