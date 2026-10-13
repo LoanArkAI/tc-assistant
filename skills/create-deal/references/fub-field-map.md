@@ -6,7 +6,7 @@ The connective tissue between the contract and Follow Up Boss. All values synthe
 - Base `https://api.followupboss.com/v1`. HTTP Basic: the FUB API key as username, blank password (held in Executor's vault — never in this repo).
 - Account: the one named in `../../../TEAM.md`. The key's FUB user decides what it can see.
 - Writes used here: `POST /deals`, `POST /tasks`. Reads: `GET /deals`, `GET /people`, `GET /templates`.
-- Never `PUT`/`PATCH`/`DELETE` on an existing deal, person, or task.
+- Never `DELETE` anything. Updates to an existing deal, person or task are field-scoped and only after the human confirms (see `SKILL.md` step 5).
 
 ## Proven create shapes (live-verified 2026-09-18 on a production FUB account; re-verify once on this one)
 **`POST /deals`** — the native date fields post directly on create (no `customFields` wrapper):

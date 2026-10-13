@@ -7,6 +7,17 @@ moves independently.
 
 ---
 
+## plugin 0.3.2 — 2026-10-13
+
+### create-deal 1.3.0 (MINOR — it stops writing the CR1/CR2 fields for teams that don't group removals)
+Final review fixes. Step 5 no longer tells the skill to write `customCR1`/`customCR2Date`
+when `TEAM.md` says removals aren't grouped (Kase): per-contingency removal dates go on the
+`CR - Inspection` / `CR - Appraisal` / `CR - Loan` / `CR - Removal of ALL Contingencies` tasks,
+with the mapping spelled out. `fub-field-map.md` no longer forbids the field-scoped updates the
+skill's update path allows.
+
+---
+
 ## plugin 0.3.1 — 2026-10-13
 
 ### create-deal 1.2.0
