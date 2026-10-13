@@ -1,14 +1,14 @@
 ---
 name: setup
-version: 1.1.0
+version: 2.0.0
 description: >-
   First-run setup for the TC assistant plugin. Use when the agent or TC (or
   whoever is installing) says "set up the TC assistant plugin", "finish setup", "install my
   schedules", "get me started", or right after installing the plugin. It checks the required
   Claude connectors, confirms the Follow Up Boss key is in place, fills in the team's
-  TEAM.md from Follow Up Boss, and registers the three
-  scheduled tasks (daily sweep, inbox watch, monthly feedback loop) on THIS machine — because scheduled tasks are
-  per-machine and don't travel inside a plugin. Run it once per person/computer.
+  TEAM.md from Follow Up Boss, and registers the three scheduled jobs (daily sweep, inbox
+  watch, monthly feedback loop) as cloud routines on the person's claude.ai account, so they
+  run even when the computer is off. Run it once per person.
 ---
 
 # Setup (TC assistant plugin)
@@ -56,9 +56,10 @@ FUB can answer instead of asking:
   `python3 ../../scripts/import_checklists.py <workbook> --team <team>`, and fill in the
   checklist-picking table in `TEAM.md` with the ids it prints.
 - Everything else (emails, broker, folders, calendar, vendors) — ask. Leave `[fill-in]` on anything the person doesn't know yet rather than guessing.
-Show the proposed changes to `TEAM.md` and get a yes before saving. In Cowork, where the
-plugin folder can't be edited, give the person the finished file to commit to the plugin's
-repo, and note that skills will keep asking for those values until it's in.
+Show the proposed values and get a yes before saving. Save personal values (emails, phones,
+folder names, the broker's name) to `TEAM.private.md` in the agent's TC Assistant folder in
+Google Drive — never into the repo, which is public. Only non-personal values (stage ids,
+template prefix, checklist choices) may go into `TEAM.md`.
 
 ### 2c. Texts — the iMessage tap (Mac only, optional)
 If the person works on a Mac and wants texts counted as evidence, follow
@@ -69,31 +70,46 @@ officers, lenders and other-side agents on them — as `Category,Name,Contact` r
 phone number or email). Show the list before saving. Only these contacts' threads are ever
 read; everyone else stays private. Record "installed" in `TEAM.md` → Texts.
 
-### 3. Register the three scheduled tasks (on this machine)
-Create all three as local scheduled tasks. Use the exact prompts the plugin ships — they are
-self-contained and carry the guardrails (unattended-safe, drafts-only, read-only on
-compliance). The three tasks:
+### 3. Register the three scheduled tasks as cloud routines
+They run in the cloud, on the person's own claude.ai account, so they fire on time whether or
+not their computer is on. Each run is a fresh Claude Code on the web session; nothing runs on
+the person's machine. Create them **from the person's own account** — a routine reads the
+Gmail, Drive and DocuSign of the account it was created on.
 
-- **TC — Daily Sweep** — cron `27 7,16 * * *` (7:27am & 4:27pm). Prompt: run the
-  `daily-sweep` skill; reconcile active deals vs Gmail/DocuSign/Google Drive; draft one
-  digest to the TC (cc the agent if a different person). (The sweep also refreshes the Pipeline Board at the end of its run.)
-- **TC — Inbox Watch** — cron `13 8-18/2 * * *` (every 2h, business hours). Prompt: run
-  the `inbox-watch` skill; match recent arrivals to deals; surface (never auto-close).
-- **TC — Feedback Loop** — cron `0 9 1 * *` (9:00am on the 1st of each month). Prompt: run
-  the `feedback-loop` skill; compare the drafts this plugin created against what was actually
-  sent, extract the repeatable edits as voice rules, update the voice-rules file named
-  in `TEAM.md`, and prune to 15. Read-only on the mailbox; writes only that one file.
+Prerequisites on that account (check each; stop with the fix if one is missing):
+- **Connectors** at claude.ai/customize/connectors: Gmail, Google Calendar, Google Drive,
+  DocuSign — plus **Executor** added as a custom connector (the URL in `.mcp.json`) and signed
+  in. A routine can't do an interactive sign-in, so Executor must be a connector, not the
+  plugin's `.mcp.json` server.
+- **A cloud environment** (claude.ai/code) with this plugin's repository
+  (`LoanArkAI/tc-assistant`) attached, so each run has the skills, scripts and checklists.
 
-Pull the full prompt text from each skill's SKILL.md so the scheduled copy stays in sync
-with the skills. After creating them, tell the person to click **Run now** once on each
-(Scheduled sidebar) to pre-approve the connector/FUB tool prompts, so future runs don't
-pause.
+Create three routines (Claude Code on the web → Routines, or `create_trigger` with
+`create_new_session_on_fire: true` and the connectors above when this session has it). Use the
+person's time zone in the schedule:
 
-### 4. Explain the one limitation
-These are local scheduled tasks: **the Claude app must be open for them to fire** (a missed
-window runs at next launch). That's the trade for using the Claude connectors directly. If
-they need true always-on later, that's a separate infrastructure conversation.
+- **TC — Daily Sweep** — `CRON_TZ=<tz> 27 7,16 * * *` (7:27am & 4:27pm).
+- **TC — Inbox Watch** — `CRON_TZ=<tz> 13 8-18/2 * * 1-6` (every 2 hours, 8am–6pm, Mon–Sat).
+- **TC — Feedback Loop** — `CRON_TZ=<tz> 3 9 1 * *` (9:03am on the 1st of each month).
+
+Each prompt is self-contained, because every run starts from nothing:
+```
+Scheduled run. Use the <skill> skill in skills/<skill>/SKILL.md of this repository
+(read TEAM.md first, then its private settings file in Google Drive).
+Run unattended: drafts only, never send; never close a checklist item; never write to
+Follow Up Boss except what the skill allows unattended. If a connector is unavailable,
+say so in the output instead of guessing. Do not commit or push anything to the repository.
+```
+(`<skill>` = `daily-sweep`, `inbox-watch`, `feedback-loop`.) Then **run each once now** and
+check its output — that run surfaces any missing connector while the person can still fix it.
+
+### 4. What changes in the cloud
+- **Run logs:** each cloud session is thrown away after it finishes, so scheduled runs don't
+  add lines to `metrics/runs.jsonl`. The digest, drafts and reports themselves are the record.
+- **The Pipeline Board** is republished by the daily sweep as before.
+- **Texts** still come from the Mac tap's file in Google Drive; the cloud run reads it there.
+  When the Mac has been off, the file is older — the skills say "texts as of <time>".
 
 ## Done check
 Confirm back: which connectors are green, that the FUB key verified, and that all three
-scheduled tasks show in the Scheduled sidebar with their next run times. List anything still missing.
+routines exist with their next run times and a good first run. List anything still missing.

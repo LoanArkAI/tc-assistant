@@ -53,9 +53,12 @@ Run the **`setup`** skill ("set up the TC assistant"). It walks through:
 4. **Fill in `TEAM.md`** — it reads the account name, deal stage ids, user ids and template
    prefix from FUB, asks for the rest, and shows the changes before saving.
 
-## 6. Scheduled tasks
+## 6. Scheduled jobs (cloud)
 
-`setup` registers three local scheduled tasks on this machine:
+`setup` registers three **cloud routines** on the agent's claude.ai account, so they run
+whether or not the computer is on. Before it can: add **Executor** as a custom connector
+(claude.ai/customize/connectors, the URL in `.mcp.json`) and sign in, and create a cloud
+environment at claude.ai/code with the `LoanArkAI/tc-assistant` repository attached.
 
 | Task | Runs | Does |
 |---|---|---|
@@ -63,8 +66,8 @@ Run the **`setup`** skill ("set up the TC assistant"). It walks through:
 | **TC — Inbox Watch** | every 2h, business hours | match new arrivals to deals, surface (never auto-close) |
 | **TC — Feedback Loop** | 9am on the 1st | learn the sender's voice from draft-vs-sent |
 
-Click **Run now** once on each to pre-approve the connector/Executor prompts. These are local
-tasks — **the Claude app must be open** for them to fire.
+Setup runs each one once right away so any missing connector shows up while you're there.
+Each run is a fresh cloud session, so scheduled runs don't add to `metrics/runs.jsonl`.
 
 ## 7. Texts (Mac only, optional)
 
@@ -87,7 +90,8 @@ in `TEAM.md`. Share it from the artifact's Share menu with anyone else who shoul
 - [ ] Executor connected, FUB key in the vault, `getIdentity` returns 200
 - [ ] `TEAM.md` has no `[fill-in]` left that the team can answer
 - [ ] Brokerage checklists imported (`checklists/<team>.json` exists)
-- [ ] `setup` run → 3 scheduled tasks visible, **Run now** clicked on each
+- [ ] Executor added as a custom connector; cloud environment with this repo
+- [ ] `setup` run → 3 cloud routines created, each with a good first run
 
 ✱ = required.
 

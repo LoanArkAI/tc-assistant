@@ -20,7 +20,7 @@ broker signs off.
   writes work-contact iMessage threads to Drive, so texts count as evidence. Never sends.
 - **How-to guide:** [`docs/how-to-guide.html`](docs/how-to-guide.html) — published privately at https://claude.ai/artifact/XGWZeXbcfDpiJK35T8EDiz (share it with Ernie from its Share menu).
 - **Setup:** [`INSTALL.md`](INSTALL.md) — connectors, Executor + FUB key, filling in `TEAM.md`,
-  scheduled tasks.
+  cloud routines.
 - **Working on the skills:** [`docs/skill-ops.md`](docs/skill-ops.md) — how we version,
   measure, audit and tune them.
 
@@ -36,7 +36,7 @@ broker signs off.
 | `draft-emails` | Draft the transaction emails from the team's FUB templates (drafts only); applies learned voice rules |
 | `feedback-loop` | Learn the sender's voice from draft-vs-sent; maintain the shared voice-rules file |
 | `manage-file` | Move a deal's stage, log a note, set an appointment, reassign, mark a task done (confirm-first) |
-| `setup` | First-run: connectors, FUB key, fill in `TEAM.md`, and the three scheduled tasks |
+| `setup` | First-run: connectors, FUB key, fill in `TEAM.md`, and the three cloud routines |
 
 ## How Follow Up Boss is reached
 
