@@ -1,6 +1,6 @@
 ---
 name: create-deal
-version: 1.2.0
+version: 1.3.0
 description: >-
   Open a new transaction in Follow Up Boss from an accepted purchase contract, for the team
   configured in TEAM.md. Use this whenever the agent or TC says a deal
@@ -135,14 +135,19 @@ Call FUB through the **Executor** MCP — `search` the operation, then `invoke` 
 
 **New deal (from step 1 "create"):**
 - `people.listPeople` → resolve/confirm the contact's `personId` (tasks attach to a person).
-- `deals.createDeal` with `{ body: { name, stageId (from `TEAM.md`), price, and every confirmed date field
-  (`mutualAcceptanceDate`, `dueDiligenceDate`, `customCR1`, `customCR2Date`,
-  `projectedCloseDate`, `finalWalkThroughDate`) } }` — **omit any date that was refused**, never a placeholder.
+- `deals.createDeal` with `{ body: { name, stageId (from `TEAM.md`), price, and every confirmed date field } }`
+  — **omit any date that was refused**, never a placeholder. Date fields: `mutualAcceptanceDate`,
+  `dueDiligenceDate` (investigation removal), `projectedCloseDate`, `finalWalkThroughDate`; add
+  `customCR1` / `customCR2Date` **only** if `TEAM.md` says to group removals into CR1/CR2 and
+  confirms those fields exist. When it doesn't (Kase), the per-contingency removal dates live on
+  the checklist tasks below instead, so don't write the CR1/CR2 fields from `compute_dates.py`.
 - `tasks.createTask` for each item `checklist_tasks.py` returned, named **exactly** as the
   checklist item (the team's naming convention — `TEAM.md` → Document naming convention),
-  `{ body: { name, type:"Closing", dueDate, personId } }`. Deadline-linked items (e.g. `CR -
-  Inspection`, `EMD - Earnest Money Deposit`) get their deadline as `dueDate`; "as it arrives"
-  items get none.
+  `{ body: { name, type:"Closing", dueDate, personId } }`. Deadline-linked items get their
+  confirmed deadline as `dueDate`: `CR - Inspection` ← investigation removal, `CR - Appraisal` ←
+  appraisal removal, `CR - Loan` ← loan removal, `CR - Removal of ALL Contingencies` ← the latest
+  of those three, `EMD …` ← the EMD date only if the human supplied one. Everything else is "as it
+  arrives" and gets no `dueDate`.
 - Apply the `checklist:<id>`, `side:*` and `cond:*` tags to the contact.
 
 **Existing deal (update / back-fill from step 1 "update"):**

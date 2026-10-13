@@ -7,6 +7,33 @@ moves independently.
 
 ---
 
+## plugin 0.4.0 — 2026-10-13
+
+### setup 2.0.0 (MAJOR — the scheduled jobs move from local tasks to cloud routines)
+**Hypothesis:** the daily sweep, inbox watch and feedback loop only fired while the Claude app
+was open on the agent's computer, so a closed laptop meant an unwatched inbox. Running them as
+cloud routines on the agent's own claude.ai account should make every scheduled run fire on time.
+**Changed:** setup creates three cloud routines (fresh session per run, the agent's Gmail /
+Calendar / Drive / DocuSign / Executor connectors, an environment with this repo) and runs each
+once. Executor must be a custom connector, since a routine can't sign in interactively.
+Personal settings move to `TEAM.private.md` in the agent's Drive folder, because the repo is
+public and cloud runs read `TEAM.md` from it.
+**Watch:** first-run failures from a missing connector; scheduled runs no longer reach
+`metrics/runs.jsonl` (cloud sessions are discarded).
+
+---
+
+## plugin 0.3.2 — 2026-10-13
+
+### create-deal 1.3.0 (MINOR — it stops writing the CR1/CR2 fields for teams that don't group removals)
+Final review fixes. Step 5 no longer tells the skill to write `customCR1`/`customCR2Date`
+when `TEAM.md` says removals aren't grouped (Kase): per-contingency removal dates go on the
+`CR - Inspection` / `CR - Appraisal` / `CR - Loan` / `CR - Removal of ALL Contingencies` tasks,
+with the mapping spelled out. `fub-field-map.md` no longer forbids the field-scoped updates the
+skill's update path allows.
+
+---
+
 ## plugin 0.3.1 — 2026-10-13
 
 ### create-deal 1.2.0

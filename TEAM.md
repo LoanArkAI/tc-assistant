@@ -9,6 +9,12 @@ ask the person rather than guess, and should say which line of this file to fill
 
 **This copy is configured for:** Ernie Aguilar at Kase.
 
+**Private settings stay out of this public repo.** Emails, phone numbers, folder names and
+anything else personal go in `TEAM.private.md` in the agent's TC Assistant folder in Google
+Drive. Every skill reads that file through the Google Drive connector right after this one,
+and its values override any `[fill-in]` here. `setup` creates it. Never commit private values
+to this file.
+
 ---
 
 ## People and roles
@@ -37,7 +43,7 @@ collapses to one recipient — never address the same person twice.
 | Setting | Value |
 |---|---|
 | FUB account name (as `getIdentity` returns it) | `[fill-in]` |
-| Executor workspace MCP URL (also in `.mcp.json`) | `[fill-in: https://executor.sh/<workspace>/mcp]` |
+| Executor workspace MCP URL (also in `.mcp.json`; add it as a custom connector for the cloud routines) | `[fill-in: https://executor.sh/<workspace>/mcp]` |
 | Executor connection name for FUB | `follow_up_boss_subset` |
 | Email-template prefix in FUB | `[fill-in: e.g. "KASE |"]` — templates not built yet |
 | CR2 custom deal field key | `customCR2Date` `[confirm the field exists in this account]` |
