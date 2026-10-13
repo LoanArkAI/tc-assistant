@@ -1,6 +1,6 @@
 ---
 name: setup
-version: 1.0.0
+version: 1.0.1
 description: >-
   First-run setup for the TC assistant plugin. Use when the agent or TC (or
   whoever is installing) says "set up the TC assistant plugin", "finish setup", "install my
@@ -53,8 +53,10 @@ FUB can answer instead of asking:
 - **FUB user ids** — from `users.listUsers`, matched to the people in the table.
 - **Template prefix** — from `templates.listTemplates`; if the team has no templates yet,
   record "none yet" and `draft-emails` will write from scratch.
-- Everything else (emails, broker, folders, calendar, vendors, the compliance checklist) —
-  ask. Leave `[fill-in]` on anything the person doesn't know yet rather than guessing.
+- **Compliance checklists** — if the brokerage has a master checklist workbook, import it:
+  `python3 ../../scripts/import_checklists.py <workbook> --team <team>`, and fill in the
+  checklist-picking table in `TEAM.md` with the ids it prints.
+- Everything else (emails, broker, folders, calendar, vendors) — ask. Leave `[fill-in]` on anything the person doesn't know yet rather than guessing.
 Show the proposed changes to `TEAM.md` and get a yes before saving. In Cowork, where the
 plugin folder can't be edited, give the person the finished file to commit to the plugin's
 repo, and note that skills will keep asking for those values until it's in.

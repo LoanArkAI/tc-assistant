@@ -1,6 +1,6 @@
 ---
 name: whats-missing
-version: 1.0.0
+version: 1.1.0
 description: >-
   Answer "what's still missing on this file?" for a
   transaction — reconcile the deal's required checklist items and open tasks against what
@@ -19,10 +19,14 @@ Give the TC a straight answer to the question they ask themselves on Day 10–17
 against one file. It reconciles what the file is supposed to have against what has actually
 shown up, and it is honest about the edges of what it can see.
 
-**What "required" means for this file:** the team's compliance checklist in
-`../../TEAM.md`, filtered by the deal's `cond:*` / `side:*` tags. If the checklist there is
-still `[fill-in]`, check the deal's dates and open FUB tasks only, and say plainly that the
-checklist isn't configured — never present that as a full compliance check.
+**What "required" means for this file:** the brokerage checklist named by the contact's
+`checklist:<id>` tag, filtered by its `side:*` / `cond:*` tags — get the list with
+`python3 ../../scripts/checklist_tasks.py --team <team> --checklist <id> --tags …`. Items are
+named by the team's naming convention (`../../TEAM.md`), so match evidence to an item by that
+name or its form code (TDS, SPQ, AVID, …). If the deal has no `checklist:` tag, ask which
+checklist applies (and offer to tag it); if the team has no checklist file, check dates and
+open FUB tasks only and say plainly it isn't a full compliance check. Also report any
+if-applicable item that has clearly arrived, so it gets filed under its slot name.
 
 ## Read-only. Always.
 This skill answers a question; it does not change the file. It never closes a checklist

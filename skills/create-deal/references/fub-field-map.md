@@ -65,10 +65,11 @@ The tag list and what each turns on live in `TEAM.md` → Condition tags. Tags a
 first application (there is no standalone tag-create endpoint).
 
 ## The checklist task set
-The team's compliance checklist lives in `TEAM.md` → Compliance checklist. Create a task per
-item that survives the tag filter, taskType `Closing`, with the item's due date where one
-applies (deadline-linked items) and no due date for "as it arrives" items. If the checklist
-is still `[fill-in]`, create only the dated-deadline tasks and say so.
+The brokerage checklists live in `checklists/<team>.json` (see `TEAM.md` → Compliance
+checklists). `scripts/checklist_tasks.py` returns the items for a checklist id + tags. Create a
+task per returned item, named exactly as the item, taskType `Closing`, with the item's due
+date where one applies (deadline-linked items) and no due date for "as it arrives" items. Tag
+the contact `checklist:<id>` so later skills know which checklist the file is on.
 
 ## Email templates (draft, don't send)
 Templates carry the prefix in `TEAM.md` (`GET /templates`, filter by prefix). The usual set:

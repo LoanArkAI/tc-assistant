@@ -1,0 +1,7918 @@
+{
+ "team": "kase",
+ "imported": "2026-10-13",
+ "source": "ck.xlsx",
+ "checklists": [
+  {
+   "id": "kase-listing-includes-sfr-condo",
+   "title": "KASE LISTING (Includes SFR/Condo)",
+   "sheet": "KASE Listing (Includes SFRCondo",
+   "items": [
+    {
+     "name": "BROKER NOTES",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "field",
+     "required": true,
+     "when": null,
+     "notes": "BROKER NOTES *"
+    },
+    {
+     "name": "TC For File - Please add your Name and email",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "field",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Preliminary Title Report",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Tax Record / Realist Report",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "RLA - Residential Listing Agreement",
+     "code": "RLA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "MLSA - Multiple Listing Service Addendum",
+     "code": "MLSA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "NHD REPORT",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "AD - Agency Disclosure",
+     "code": "AD",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "KASE Listing ADM",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "SA - Seller Advisory",
+     "code": "SA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "BCA - Broker Compensation Advisory",
+     "code": "BCA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "PRBS-S - Possible Rep of More than one Buyer or Sell",
+     "code": "PRBS-S",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "FHDA - Fair Housing Discrimination Advisory",
+     "code": "FHDA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "CCPA - California Consumer Privacy Act Advisory",
+     "code": "CCPA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "AAA - Additional Agent Acknowledgement",
+     "code": "AAA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:team",
+     "notes": null
+    },
+    {
+     "name": "ABA - Additional Broker Acknowledgement",
+     "code": "ABA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:team",
+     "notes": null
+    },
+    {
+     "name": "Coming Soon Form (MLS)",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:coming-soon",
+     "notes": null
+    },
+    {
+     "name": "MLS Active - Full Agent Report",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "DIA - Disclosure Information Advisory",
+     "code": "DIA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "LPD - Lead-Based Paint Disclosure",
+     "code": "LPD",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:pre1978",
+     "notes": null
+    },
+    {
+     "name": "MT-LA - Modification of Terms, Listing Agreement",
+     "code": "MT-LA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "APPROVAL of LESS THAN 2% commission",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:low-commission",
+     "notes": null
+    },
+    {
+     "name": "TA - Trust Advisory",
+     "code": "TA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "Trust, Notarized Cert of Trust or Testamentary",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": "Help Text: Testamentary only for Probate Listings"
+    },
+    {
+     "name": "RCSD-S - Representative Capacity Signature Disc",
+     "code": "RCSD-S",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "Entity Docs (LLC or Corp)",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "RFA - Referral Fee Agreement",
+     "code": "RFA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:referral",
+     "notes": null
+    },
+    {
+     "name": "FHDS - Fire Hardening and Defensible Space Advisory",
+     "code": "FHDS",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:firezone",
+     "notes": "Help Text: If NHD Report shows High Fire Zone"
+    },
+    {
+     "name": "TDS- Seller Signed",
+     "code": "TDS",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "SPQ - Seller Signed",
+     "code": "SPQ",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "ESD - Exempt Seller Disclosure",
+     "code": "ESD",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:esd",
+     "notes": null
+    },
+    {
+     "name": "SELI - Exclude Listing from Internet",
+     "code": "SELI",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:off-internet",
+     "notes": null
+    },
+    {
+     "name": "SPRP - Sellers Purchase of Replacement Property",
+     "code": "SPRP",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:replacement-property",
+     "notes": null
+    },
+    {
+     "name": "SOLAR - Solar Questionnaire",
+     "code": "SOLAR",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:solar",
+     "notes": null
+    },
+    {
+     "name": "AVID - Seller/Listing Agent Signed",
+     "code": "AVID",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "9a City Report",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:la-city",
+     "notes": "If required by city."
+    },
+    {
+     "name": "COC - Certificate of Compliance",
+     "code": "COC",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Miscellaneous - Listing",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "COL - Cancellation of Listing",
+     "code": "COL",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:canceled",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "id": "kase-purchase-includes-sfr-condo",
+   "title": "KASE Purchase (Includes SFR/Condo)",
+   "sheet": "KASE Purchase (Includes SFRCond",
+   "items": [
+    {
+     "name": "BROKER NOTES",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "field",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "TC for File - Please add your name and email",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "field",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "AD - Agency Disclosure (Buyer)",
+     "code": "AD",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "RPA - Residential Purchase Agreement",
+     "code": "RPA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "SMCO- Seller Multiple Counter Offer",
+     "code": "SMCO",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:counter",
+     "notes": null
+    },
+    {
+     "name": "SCO - Seller Counter Offer(s)",
+     "code": "SCO",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:counter",
+     "notes": null
+    },
+    {
+     "name": "BCO - Buyer Counter Offer(s)",
+     "code": "BCO",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:counter",
+     "notes": null
+    },
+    {
+     "name": "BIA - Buyers Inspection Advisory",
+     "code": "BIA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "AAA - Additonal Agent Acknowledgement",
+     "code": "AAA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:team",
+     "notes": null
+    },
+    {
+     "name": "ABA - Additional Brokerage Acknowledgement",
+     "code": "ABA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:team",
+     "notes": null
+    },
+    {
+     "name": "AC - Confirmation of Real Estate Agency",
+     "code": "AC",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "ADM - Addendum #1",
+     "code": "ADM",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "ADM - Addendum #2",
+     "code": "ADM",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "ADM - Addendum #3",
+     "code": "ADM",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "AEA - Amendment of Exisiting Terms",
+     "code": "AEA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "AOAA - Assignment of Agreement Addendum",
+     "code": "AOAA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "BCA - Broker Compensation Advisory",
+     "code": "BCA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "PRBS-B - Possible Rep more than one Buyer or Seller",
+     "code": "PRBS-B",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "FHDA- Fair Housing Discrimination Advisory",
+     "code": "FHDA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "BHIA- Buyer Homeowners Insurance Advisory",
+     "code": "BHIA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "WFA - Wire Fraud Advisory",
+     "code": "WFA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "CCPA - California Consumer Privacy Act Advisory",
+     "code": "CCPA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "BRBC - Buyer Rep & Broker Compensation Agreement",
+     "code": "BRBC",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "side:buy",
+     "notes": "HELP: Only upload if representing Buyer"
+    },
+    {
+     "name": "EMD - Earnest Money Deposit",
+     "code": "EMD",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "ETA - Extension of Time Amendment",
+     "code": "ETA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "TIC-PA- Tenancy In Common Purchase Addendum",
+     "code": "TIC-PA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:tic",
+     "notes": null
+    },
+    {
+     "name": "PA-PA - Probate Purchase Addendum",
+     "code": "PA-PA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:probate",
+     "notes": null
+    },
+    {
+     "name": "COP - Contingency of Sale of Buyers Property",
+     "code": "COP",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:contingent-sale",
+     "notes": null
+    },
+    {
+     "name": "CR - Inspection",
+     "code": "CR",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "CR - Appraisal",
+     "code": "CR",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "CR - Loan",
+     "code": "CR",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "CR - Removal of ALL Contingencies",
+     "code": "CR",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "COOP-PA Stock Cooperative Purchase Addendum",
+     "code": "COOP",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:coop",
+     "notes": null
+    },
+    {
+     "name": "Escrow Acknowledgement (Page 17)",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Escrow Instructions",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Escrow Amendments",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Escrow Commission Instructions w/Broker Signature",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Entity Docs (LLC or Corp)",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "Trust, Notarized Certificate of Trust or Testamentary",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "APPROVAL of LESS THAN 2% commission",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:low-commission",
+     "notes": null
+    },
+    {
+     "name": "FVAC-FHA/VA Amendatory Clause",
+     "code": "FVAC",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:fha-va",
+     "notes": null
+    },
+    {
+     "name": "MLS AUC - Full Agent Report",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "RCSD-B - Representative Capacity Signature",
+     "code": "RCSD-B",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "RCSD-S - Representative Capacity Signature",
+     "code": "RCSD-S",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "RLAS - Residential Lease After Sale (30 Days+)",
+     "code": "RLAS",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:seller-in-possession",
+     "notes": null
+    },
+    {
+     "name": "SIP - Seller In Possession (Up to 29 Days)",
+     "code": "SIP",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:seller-in-possession",
+     "notes": null
+    },
+    {
+     "name": "SIPA - Seller In Possession Advisory",
+     "code": "SIPA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:seller-in-possession",
+     "notes": null
+    },
+    {
+     "name": "SPRP - Seller's Purchase of Replacement Property",
+     "code": "SPRP",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:replacement-property",
+     "notes": null
+    },
+    {
+     "name": "Tax Record/Realist Tax",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "TOPA - Tenant Occupied Property Addendum",
+     "code": "TOPA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:tenant-occupied",
+     "notes": null
+    },
+    {
+     "name": "Verification of Loan Application (Lender Pre)",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Verification of Funds (POF)",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Rejected Offers",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Miscellaneous Sales Docs",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "CC - Cancellation of Contract",
+     "code": "CC",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:canceled",
+     "notes": null
+    },
+    {
+     "name": "AVID - Buying Agent Visual Inspection Disclosure",
+     "code": "AVID",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "AVID - Listing Agent Visual Inspection Disclosure",
+     "code": "AVID",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "APD - Amendment to Prior Disclosure",
+     "code": "APD",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "BHAA - Buyers HOA Advisory",
+     "code": "BHAA",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "cond:hoa",
+     "notes": null
+    },
+    {
+     "name": "COOP-OA -Stock Cooperative Ownership Advisory",
+     "code": "COOP-OA",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "cond:coop",
+     "notes": null
+    },
+    {
+     "name": "Environmental Hazards Handbook Receipt",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "FHDS-Fire Hardening and Defensible Space Advisory",
+     "code": "FHDS",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "cond:firezone",
+     "notes": "HELP: (if in High Fire Zone)"
+    },
+    {
+     "name": "HID- For FHA/VA Loans",
+     "code": "HID",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "cond:fha-va",
+     "notes": null
+    },
+    {
+     "name": "Historical DIsclosures",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "KASE Disclosures",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Local County/City Disclosures",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "LPD- Lead-Based Paint and Lead-Based Paint Hazard",
+     "code": "LPD",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "cond:pre1978",
+     "notes": null
+    },
+    {
+     "name": "MCA - Market Conditions Advisory",
+     "code": "MCA",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "NHD Receipt",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "PA- Probate Advisory",
+     "code": "PA",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "cond:probate",
+     "notes": null
+    },
+    {
+     "name": "PSD - Parking & Storage Disclosure (Condos Only)",
+     "code": "PSD",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "cond:condo",
+     "notes": null
+    },
+    {
+     "name": "Residential Earthquake Hazard Report (Pre-1960)",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "cond:pre1960",
+     "notes": "Pre-1960"
+    },
+    {
+     "name": "SBSA - Statewide Buyer & Seller Advisory",
+     "code": "SBSA",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "SFLS- Square Footage & Lot Size Disclosure",
+     "code": "SFLS",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "SOLAR - Solar Questionnaire",
+     "code": "SOLAR",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "cond:solar",
+     "notes": null
+    },
+    {
+     "name": "SPT- Notice of Supplemental Property Tax Bill",
+     "code": "SPT",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "SPQ - Seller Property Questionnaire",
+     "code": "SPQ",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "TDS - Transfer Disclosure Statement",
+     "code": "TDS",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "ESD - Exempt Seller Disclosure",
+     "code": "ESD",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "cond:esd",
+     "notes": null
+    },
+    {
+     "name": "TA - Trust Advisory",
+     "code": "TA",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "TIC-OA -Tenancy In Common Ownership Advisory",
+     "code": "TIC-OA",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "cond:tic",
+     "notes": null
+    },
+    {
+     "name": "TIC-FD -Tenancy In Common Financial Disc Statement",
+     "code": "TIC-FD",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "cond:tic",
+     "notes": null
+    },
+    {
+     "name": "WBSA - Wooden Balcony and Stairs Addendum",
+     "code": "WBSA",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "WFDA - Wildfire Disaster Advisory",
+     "code": "WFDA",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "WCMD - Water Conserving Plumbing & Carbon Mon",
+     "code": "WCMD",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "WHSD - Water Heater Smoke Detector (if TDS Exempt)",
+     "code": "WHSD",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "cond:esd",
+     "notes": "If there is no TDS- Seller to provide WHS or WHSD"
+    },
+    {
+     "name": "Miscellaneous Disclosures",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "BIW - Buyer Inspection Waiver",
+     "code": "BIW",
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "cond:inspection-waived",
+     "notes": null
+    },
+    {
+     "name": "Home Inspection",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": "No asterisk on Sksylope"
+    },
+    {
+     "name": "NHD Report",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Preliminary Report",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Pool Inspection",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Roof Inspection",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Other Inspections",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Septic Inspection",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Sewer Lateral Inspection",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Termite Inspection",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Termite Clearance",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Well Inspection",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Asbestos Inspection",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "RR & RRRR - Request for Repairs/Response",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "RFR - Receipt for Reports",
+     "code": "RFR",
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "9a Report (LA City)",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "cond:la-city",
+     "notes": null
+    },
+    {
+     "name": "COC - Certificate of Compliance (LA City)",
+     "code": "COC",
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "cond:la-city",
+     "notes": null
+    },
+    {
+     "name": "CDA Signed",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Closing Package",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Buyer Signed Prelim Report Receipt from Escrow",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "HOA Receipt from Escrow",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": false,
+     "when": "cond:hoa",
+     "notes": "Skyslope: HOA Document Package *"
+    },
+    {
+     "name": "Final Closing Statement",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Home Warranty",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "MLS Sold - Full Agent Report",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Completed FIRPTA with SSN or QS",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "RFA - Referral Fee Agreement",
+     "code": "RFA",
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": false,
+     "when": "cond:referral",
+     "notes": null
+    },
+    {
+     "name": "VP - Verification of Property Condition",
+     "code": "VP",
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "W-9 for Other Broker (upload to commission tab)",
+     "code": "W",
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": false,
+     "when": "cond:referral",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "id": "kase-vacant-land-listing",
+   "title": "KASE Vacant Land Listing",
+   "sheet": "KASE Vacant Land Listing",
+   "items": [
+    {
+     "name": "BROKER NOTES",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "field",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "TC For File - Please add your Name and e-mail",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "field",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Preliminary Title Report",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Tax Record / Realist Report",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "VLL - Vacant Land Listing Agreement",
+     "code": "VLL",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "MLSA - Multiple Listing Service Addendum",
+     "code": "MLSA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "AD - Agency Disclosure",
+     "code": "AD",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "BCA - Buyer Compensation Advisory",
+     "code": "BCA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "PRBS-S - Possible Rep More than one Buyer",
+     "code": "PRBS-S",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "FHDA - Fair Housing Discrimination Advisory",
+     "code": "FHDA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "CCPA - California Consumer Privacy Act Advisory",
+     "code": "CCPA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "KASE Listing ADM",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "AAA - Additional Agent Acknowledgement",
+     "code": "AAA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:team",
+     "notes": null
+    },
+    {
+     "name": "ABA - Additional Broker Acknowledgement",
+     "code": "ABA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:team",
+     "notes": null
+    },
+    {
+     "name": "Coming Soon Form (MLS)",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:coming-soon",
+     "notes": null
+    },
+    {
+     "name": "DIA - Disclosure Information Advisory",
+     "code": "DIA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "APPROVAL of LESS THAN 2% commission",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:low-commission",
+     "notes": null
+    },
+    {
+     "name": "MLS Active - Full Agent Report",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "MT-LA - Modification of Listing Terms",
+     "code": "MT-LA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "RCSD - Representative Capacity Signature Disc",
+     "code": "RCSD",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "Rejected Offers",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "RFR - Referral Fee Agreement",
+     "code": "RFR",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:referral",
+     "notes": null
+    },
+    {
+     "name": "SVLA - Sellers Vacant Land Advisory",
+     "code": "SVLA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "SELI - Exclude Listing from Internet",
+     "code": "SELI",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:off-internet",
+     "notes": null
+    },
+    {
+     "name": "TA - Trust Advisory",
+     "code": "TA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "Trust, Notarized Cert of Trust or Testamentary",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": "Help Text: Testamentary only for Probate Listings"
+    },
+    {
+     "name": "Entity Docs (LLC or Corp)",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "VLQ Seller Vacant Land Questionnaire Seller Signed",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Miscellaneous - Listing",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "COL - Cancellation of Listing",
+     "code": "COL",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:canceled",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "id": "kase-vacant-land-purchase",
+   "title": "KASE Vacant Land Purchase",
+   "sheet": "KASE Vacant Land Purchase",
+   "items": [
+    {
+     "name": "Broker Notes",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "field",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "TC For File - Please add your Name and email",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "field",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "VLPA - Vacant Land Purchase Agreement",
+     "code": "VLPA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "SMCO - Seller Multiple Counter Offer",
+     "code": "SMCO",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:counter",
+     "notes": null
+    },
+    {
+     "name": "SCO - Seller Counter Offer(s)",
+     "code": "SCO",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:counter",
+     "notes": null
+    },
+    {
+     "name": "BCO - Buyer Counter Offer(s)",
+     "code": "BCO",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:counter",
+     "notes": null
+    },
+    {
+     "name": "AAA - Additional Agent Acknowledgement",
+     "code": "AAA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:team",
+     "notes": null
+    },
+    {
+     "name": "ABA - Additional Brokerage Acknowledgement",
+     "code": "ABA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:team",
+     "notes": null
+    },
+    {
+     "name": "AC - Confirmation of Real Estate Agency",
+     "code": "AC",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "AD - Agency Disclosure",
+     "code": "AD",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "ADM - Addendum #1",
+     "code": "ADM",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "ADM - Addendum #2",
+     "code": "ADM",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "ADM - Addendum #3",
+     "code": "ADM",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "AEA - Amendment of Existing Terms",
+     "code": "AEA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Advisory Regarding Geographic Targeting Order",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "AOAA - Assignment of Agreement Addendum",
+     "code": "AOAA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "BCA - Broker Compensation Advisory",
+     "code": "BCA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "BRBC - Buyer Rep & Broker Compensation Agreement",
+     "code": "BRBC",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": "HELP: Only upload if representing Buyer"
+    },
+    {
+     "name": "BVLIA - Buyers Vacant Land Additional Inspection",
+     "code": "BVLIA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "CCPA - California Consumer Privacy Act Advisory",
+     "code": "CCPA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "COP - Contingency of Sale of Buyers Property",
+     "code": "COP",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:contingent-sale",
+     "notes": null
+    },
+    {
+     "name": "CR - Inspection",
+     "code": "CR",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "CR - Appraisal",
+     "code": "CR",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "CR - Loan",
+     "code": "CR",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "CR - Removal of ALL Contingencies",
+     "code": "CR",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "APPROVAL of LESS THAN 2% commission",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:low-commission",
+     "notes": null
+    },
+    {
+     "name": "EMD RECEIPT",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Escrow Acknowledgement (page 17)",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Escrow Instructions",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Escrow Commission Instructions w/Broker Signature",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "ETA - Extension of Time",
+     "code": "ETA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "FHDA- Fair Housing Discrimination Advisory",
+     "code": "FHDA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "FVAC-FHA/VA Amendatory Clause",
+     "code": "FVAC",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:fha-va",
+     "notes": null
+    },
+    {
+     "name": "MLS AUC - Full Agent Report",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "PRBS-B - Possible Rep More than one Buyer or Seller",
+     "code": "PRBS-B",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "RCSD-B - Representative Capacity Signature",
+     "code": "RCSD-B",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "RCSD-S - Representative Capacity Signature",
+     "code": "RCSD-S",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "Entity Docs (LLC or Corp)",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": "HELP: only if representing Entity Buyer"
+    },
+    {
+     "name": "Trust, Notarized Certificate of Trust or Testamentary",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": "HELP: only if representing Buyer Trustee"
+    },
+    {
+     "name": "Tax Record/Realist Tax",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Verification of Funds",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Verification of Loan Application",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "WFA - Wire Fraud Advisory",
+     "code": "WFA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Rejected Offers",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Miscellaneous Sales Docs",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "CC - Cancellation of Contract",
+     "code": "CC",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:canceled",
+     "notes": null
+    },
+    {
+     "name": "Environmental Hazards Handbook Receipt",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Historical Disclosures",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "KASE Disclosures",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Local County / City Disclosures",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "MCA - Market Conditions Advisory",
+     "code": "MCA",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "NHD Receipt",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "SBSA - Statewide Buyer & Seller Advisory",
+     "code": "SBSA",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "SPT- Notice of Supplemental Property Tax Bill",
+     "code": "SPT",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "SFLS - Square Footage And Lot Size Disclosure",
+     "code": "SFLS",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "TA - Trust Advisory",
+     "code": "TA",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "VLQ - Seller Vacant Land Questionnaire",
+     "code": "VLQ",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "WFDA -Wildfire Disaster Advisory",
+     "code": "WFDA",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Miscellaneous Disclosures",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Preliminary Title Report",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "NHD Report",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "BIW - Buyer Inspection Waiver",
+     "code": "BIW",
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "cond:inspection-waived",
+     "notes": null
+    },
+    {
+     "name": "Environmental Report",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "RFR - Receipt for Reports",
+     "code": "RFR",
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Septic Inspection",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Soil Inspection Report",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Well Inspection",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Other Inspections",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Buyer Signed Prelim Report Receipt from Escrow",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "CDA Signed",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Final Closing Statement",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "MLS Sold - Full Agent Report",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Completed FIRPTA with SSN or QS",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "RFA - Referral Fee Agreement",
+     "code": "RFA",
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": false,
+     "when": "cond:referral",
+     "notes": null
+    },
+    {
+     "name": "W-9 (upload to commission tab)",
+     "code": "W",
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": false,
+     "when": "cond:referral",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "id": "kase-mobile-home-listing",
+   "title": "KASE Mobile Home Listing",
+   "sheet": "KASE Mobile Home Listing",
+   "items": [
+    {
+     "name": "BROKER NOTES",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "field",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "TC For File - Please add your Name and email",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "field",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Preliminary Title Search",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Tax Record Printout / Realist Report",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "RLA - Residential Listing Agreement",
+     "code": "RLA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "MLSA - Multiple Listing Service Addendum",
+     "code": "MLSA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "NHD Report",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "MHLA - Manufactured Home Listing Addendum",
+     "code": "MHLA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "KASE Listing ADM",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "DIA - Disclosure Information Advisory",
+     "code": "DIA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "AD - Agency Disclosure",
+     "code": "AD",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "SA - Seller Advisory",
+     "code": "SA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "FHDA-Fair Housing Discrimination Advisory",
+     "code": "FHDA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "PRBS-S - Possible Rep More than on Buyer",
+     "code": "PRBS-S",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "CCPA - California Consumer Privacy Act Advisory",
+     "code": "CCPA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "BCA - Buyer Compensation Advisory",
+     "code": "BCA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "AAA - Additional Agent Acknowledgement",
+     "code": "AAA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:team",
+     "notes": null
+    },
+    {
+     "name": "ABA - Additional Broker Acknowledgement",
+     "code": "ABA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:team",
+     "notes": null
+    },
+    {
+     "name": "MT-LA - Modification of Terms",
+     "code": "MT-LA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Coming Soon Form (MLS)",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:coming-soon",
+     "notes": null
+    },
+    {
+     "name": "MLS Active - Full Agent Report",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "FHDS-Fire Hardening and Defensible Space Advisory",
+     "code": "FHDS",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:firezone",
+     "notes": "Help Text: If NHD shows High Fire Zone"
+    },
+    {
+     "name": "APPROVAL of LESS THAN 2% commission",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:low-commission",
+     "notes": null
+    },
+    {
+     "name": "RCSD - Representative Capacity Signature Disc",
+     "code": "RCSD",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "TA - Trust Advisory",
+     "code": "TA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "Trust, Notarized Cert of Trust or Testamentary",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": "Help Text: Testamentary only for Probate Listings"
+    },
+    {
+     "name": "Entity Docs (LLC or Corp)",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "RFA - Referral Fee Agreement",
+     "code": "RFA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:referral",
+     "notes": null
+    },
+    {
+     "name": "Miscellaneous - Listing",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "COL - Cancellation of Listing",
+     "code": "COL",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:canceled",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "id": "kase-mobile-home-purchase",
+   "title": "KASE Mobile Home Purchase",
+   "sheet": "KASE Mobile Home Purchase",
+   "items": [
+    {
+     "name": "BROKER NOTES",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "field",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "TC for File - Please add your full name and email",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "field",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "RPA - Residential Purchase Agreement",
+     "code": "RPA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "SMCO - Seller Multiple Counter Offer",
+     "code": "SMCO",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:counter",
+     "notes": null
+    },
+    {
+     "name": "SCO - Seller Counter Offer(s)",
+     "code": "SCO",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:counter",
+     "notes": null
+    },
+    {
+     "name": "BCO - Buyer Counter Offer(s)",
+     "code": "BCO",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:counter",
+     "notes": null
+    },
+    {
+     "name": "AAA - Additional Agent Acknowledgement",
+     "code": "AAA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:team",
+     "notes": null
+    },
+    {
+     "name": "ABA - Additional Broker Acknowledgement",
+     "code": "ABA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:team",
+     "notes": null
+    },
+    {
+     "name": "AC - Confirmation of Real Estate Agency",
+     "code": "AC",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "AD - Agency Disclosure",
+     "code": "AD",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "ADM - Addendum #1",
+     "code": "ADM",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "ADM - Addendum #2",
+     "code": "ADM",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "ADM - Addendum #3",
+     "code": "ADM",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "AEA - Amendment of Exisiting Terms",
+     "code": "AEA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "AOAA - Assignment of Agreement Addendum",
+     "code": "AOAA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "BIA - Buyers Inspection Advisory",
+     "code": "BIA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "BCA - Broker Compensation Advisory",
+     "code": "BCA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "BRBC - Buyer Representation & Broker Compensation",
+     "code": "BRBC",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "side:buy",
+     "notes": "HELP: Only upload if representing Buyer · There is no asterisk on Skyslope"
+    },
+    {
+     "name": "CBC - Cooperating Broker Compensation",
+     "code": "CBC",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "CCPA - California Consumer Privacy Act Advisory",
+     "code": "CCPA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Commission Instructions Signed",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "COP - Contingency of Sale of Buyers Property",
+     "code": "COP",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:contingent-sale",
+     "notes": null
+    },
+    {
+     "name": "CR - Inspection",
+     "code": "CR",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "CR - Appraisal",
+     "code": "CR",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "CR - Loan",
+     "code": "CR",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "CR - Removal of ALL Contingencies",
+     "code": "CR",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Escrow Instructions",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "EMD Receipt",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Escrow Acknowledgement (Page 17)",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "ETA - Extension of Time Addendum",
+     "code": "ETA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "FHDA - Fair Housing Discrimination Advisory",
+     "code": "FHDA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "FVAC - FHA/VA Amendatory Clause",
+     "code": "FVAC",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:fha-va",
+     "notes": null
+    },
+    {
+     "name": "MHDA - Manufactured Home Dealer Addendum",
+     "code": "MHDA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "MH- PA Manufactured or Mobile Home Purchase Adm",
+     "code": "MH",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "MLS AUC - Full Agent Report",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Park Approval",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "PRBS-B - Possible Rep More than one Buyer or Seller",
+     "code": "PRBS-B",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "RCSD-B - Representative Capacity Signature",
+     "code": "RCSD-B",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "RCSD-S - Representative Capacity Signature",
+     "code": "RCSD-S",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "RLAS - Residential Lease After Sale (30 Days+)",
+     "code": "RLAS",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:seller-in-possession",
+     "notes": null
+    },
+    {
+     "name": "SIP - Seller In Possession (Up to 29 Days)",
+     "code": "SIP",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:seller-in-possession",
+     "notes": null
+    },
+    {
+     "name": "Tax Record / Realist Tax",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "TOPA - Tenant Occupied Property Addendum",
+     "code": "TOPA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:tenant-occupied",
+     "notes": null
+    },
+    {
+     "name": "WFA - Wire Fraud Advisory",
+     "code": "WFA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Verification of Loan Application",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Verifcation of Funds",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Entity Docs (LLC or Corp)",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": "HELP: (only if representing Entity Buyer)"
+    },
+    {
+     "name": "Trust, Notarized Certificate of Trust or Testamentary",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": "HELP: (only if representing Buyer Trustee)"
+    },
+    {
+     "name": "Miscellaneous Sales Docs",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Rejected Offers",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "CC - Cancellation of Contract",
+     "code": "CC",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:canceled",
+     "notes": null
+    },
+    {
+     "name": "AVID - Listing Agent Visual Inspection Disclosure",
+     "code": "AVID",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "AVID - Buying Agent Visual Inspection Disclosure",
+     "code": "AVID",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "BHAA - Buyers HOA Advisory",
+     "code": "BHAA",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "cond:hoa",
+     "notes": null
+    },
+    {
+     "name": "Environmental Hazards Handbook Receipt",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "ESD - Exempt Seller Disclosure",
+     "code": "ESD",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "cond:esd",
+     "notes": null
+    },
+    {
+     "name": "FHDS-Fire Hardening and Defensible Space Advisory",
+     "code": "FHDS",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "cond:firezone",
+     "notes": "Help Text: If NHD shows High Fire Zone"
+    },
+    {
+     "name": "Historical Disclosures",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": "Is this required for mobile homes?"
+    },
+    {
+     "name": "Local County / City Disclosures",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "KASE Disclosures",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "LPD - Lead-Based Paint and Lead-Based Paint Hazard",
+     "code": "LPD",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "cond:pre1978",
+     "notes": null
+    },
+    {
+     "name": "MCA - Market Conditions Advisory",
+     "code": "MCA",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "MHTDS - Mobile Home Transfer Disclosure Statement",
+     "code": "MHTDS",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "NHD Receipt",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "PSD - Parking & Storage Disclosure",
+     "code": "PSD",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "cond:condo",
+     "notes": null
+    },
+    {
+     "name": "Residential Earthquake Hazard Report (Pre-1960)",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "cond:pre1960",
+     "notes": "Pre-1960"
+    },
+    {
+     "name": "SBSA - Statewide Buyer & Seller Advisory",
+     "code": "SBSA",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "SFLS - Square Footage and Lot Size Disclosures",
+     "code": "SFLS",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "SPT - Notice of Supplemental Property Tax Bill",
+     "code": "SPT",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "SPQ - Seller Property Questionnaire",
+     "code": "SPQ",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "TDS - Transfer Disclosure Statement",
+     "code": "TDS",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "TA - Trust Advisory",
+     "code": "TA",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "WCMD - Water Conserving Plumbing & Carbon",
+     "code": "WCMD",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "WHSD - Water Heater Smoke Detector (if TDS Exempt)",
+     "code": "WHSD",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "cond:esd",
+     "notes": "If there is no TDS- Seller to provide WHS or WHSD"
+    },
+    {
+     "name": "WFDA - Wildfire Disaster Advisory",
+     "code": "WFDA",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Miscellaneous Disclosures",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Preliminary Title Search (HCD)",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "NHD Report",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "BIW - Buyer Inspection Waiver",
+     "code": "BIW",
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "cond:inspection-waived",
+     "notes": null
+    },
+    {
+     "name": "Home Inspection",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Pool Inspection",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Roof Inspection",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Septic Inspection",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Sewer Lateral Inspection",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Termite Inspection",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Termite Clearance",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Well Inspection",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Other Inspections",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "RFR - Receipt for Reports",
+     "code": "RFR",
+     "section": "Reports",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "RR & RRRR - Request for Repairs/Response",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "CLOSING DOCUMENTATION",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Buyer Signed Prelim from Escrow",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "HOA Receipt from Escrow",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "CDA Signed",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Final Closing Statement",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "MLS Sold - Full Agent Report",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Completed FIRPTA with SSN or QS",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "VP - Verification of Property",
+     "code": "VP",
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "RFA - Referral Agreement",
+     "code": "RFA",
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": false,
+     "when": "cond:referral",
+     "notes": null
+    },
+    {
+     "name": "W-9 for Other Broker (upload to commission tab)",
+     "code": "W",
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": false,
+     "when": "cond:referral",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "id": "kase-lease-listing",
+   "title": "KASE Lease Listing",
+   "sheet": "KASE Lease Listing",
+   "items": [
+    {
+     "name": "BROKER NOTES",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "field",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "TC For File - Please add your Name and e-mail",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "field",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Tax Record Printout / Realist Report",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "LL - Lease Listing Agreement",
+     "code": "LL",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "MLSA - Multiple Listing Service Addendum",
+     "code": "MLSA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "AD - Agency Disclosure",
+     "code": "AD",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Addendum to the Lease Listing Agreement",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "BBD - Bed Bug Disclosure",
+     "code": "BBD",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "CCPA - California Consumer Privacy Act Advisory",
+     "code": "CCPA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Coming Soon Form (MLS)",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:coming-soon",
+     "notes": null
+    },
+    {
+     "name": "FHDA - Fair Housing Discrimination Advisory",
+     "code": "FHDA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "KASE ESA - Electronic Signature Addendum",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "KLA - Keysafe / Lockbox Addendum",
+     "code": "KLA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "LPD - Lead Base Paint Disclosure",
+     "code": "LPD",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:pre1978",
+     "notes": null
+    },
+    {
+     "name": "MLS Active - Full Agent Report",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "RCJC - Rent Cap & Just Cause Addendum",
+     "code": "RCJC",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "TFHD - Tenant Flood Hazard Disclosure",
+     "code": "TFHD",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "TRPR - Tenant Positive Rental Reporting",
+     "code": "TRPR",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "RPOA - Rental Property Owner Advisory",
+     "code": "RPOA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "RPOD- Rental Property Owner Disclosure",
+     "code": "RPOD",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "SDDA - Security Deposit Disclosure and Addendum",
+     "code": "SDDA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "WSM - Water Submeter Addendum",
+     "code": "WSM",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "RCSD-LL - Representative Capacity Signature",
+     "code": "RCSD-LL",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "MT-LA - Modification of Terms of Listing Agreement",
+     "code": "MT-LA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "APPROVAL of LESS THAN 2% commission",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:low-commission",
+     "notes": null
+    },
+    {
+     "name": "Entity Docs (LLC or Corp)",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "Miscellaneous - Listing",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "COL - Cancellation of Listing",
+     "code": "COL",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:canceled",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "id": "kase-lease-tenant",
+   "title": "KASE Lease Tenant",
+   "sheet": "KASE Lease Tenant",
+   "items": [
+    {
+     "name": "Broker Notes",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "field",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "TC For File - Please add your Name in Text Box",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "field",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "TRBC - Tenant Rep & Broker Compensation Agreement",
+     "code": "TRBC",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "RENT SPREE Application",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "LRA - Application to Rent/ Screening Fee",
+     "code": "LRA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "AD - Agency Disclosure",
+     "code": "AD",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "CCPA - California Consumer Privacy Act Advisory",
+     "code": "CCPA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "FHDA - Fair Housing Discrimination Advisory",
+     "code": "FHDA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "LR - Residential Lease or Month to Month Rental",
+     "code": "LR",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "MII- Move In Insp. Follow up 3 days from delivery.",
+     "code": "MII",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Tax Record Printout",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "MLS AUC - Agent Full Detail Report",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "APPROVAL of LESS THAN 2% commission",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:low-commission",
+     "notes": null
+    },
+    {
+     "name": "KASE ESA - Electronic Signature Addendum",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "CLR - Cancellation of Lease Rental",
+     "code": "CLR",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:canceled",
+     "notes": null
+    },
+    {
+     "name": "BBD - Bed Bug Disclosure",
+     "code": "BBD",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "ATCA - Animal Terms Conditions Addendum",
+     "code": "ATCA",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Environmental Hazards Handbook Receipt",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "LPD - Lead Based Paint Disclsoure",
+     "code": "LPD",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "cond:pre1978",
+     "notes": null
+    },
+    {
+     "name": "LRM - Lease Rental Mold Addendum",
+     "code": "LRM",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "MCN - Methamphetamine Contamination Notice",
+     "code": "MCN",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "PHSA - Pool / Hot Tub & SPA Addendum",
+     "code": "PHSA",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "PSD - Parking & Strorage Disclosure",
+     "code": "PSD",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "cond:condo",
+     "notes": null
+    },
+    {
+     "name": "RCJC - Rent Cap & Just Cause Addendum",
+     "code": "RCJC",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "RCSD-LL - Representative Capacity Signature",
+     "code": "RCSD-LL",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "RCSD-T - Representative Capacity Signature",
+     "code": "RCSD-T",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "RPOD- Rental Property Owner Disclosure",
+     "code": "RPOD",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "SSDA - Security Deposit Disclosure and Addendum",
+     "code": "SSDA",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "TFHD - Tenant Flood Hazard Disclosure",
+     "code": "TFHD",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "TRPR - Tenant Rental Payment ReportIng",
+     "code": "TRPR",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "WCMD - Water Conserving/Carbon Monoxide",
+     "code": "WCMD",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "WHSD - Water Heater/Smoke Detector",
+     "code": "WHSD",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "WSM - Water Submeter Addendum",
+     "code": "WSM",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Miscellaneous - Disclosures",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "CDA - Signed",
+     "code": "CDA",
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Check & Relevant Docs",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Lease invoice",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "MLS Sold - Full Agent Report",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Proof of Liability Insurance (if 30C is checked)",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": "If item 30C on RLMM is checked"
+    },
+    {
+     "name": "Referral Agreement",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": false,
+     "when": "cond:referral",
+     "notes": null
+    },
+    {
+     "name": "W-9 for Other Broker (upload to commission tab)",
+     "code": "W",
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": false,
+     "when": "cond:referral",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "id": "kase-commercial-list",
+   "title": "KASE Commercial List",
+   "sheet": "KASE Commercial List",
+   "items": [
+    {
+     "name": "BROKER NOTES",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "field",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "TC For File - Please add your Name and e-mail",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "field",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Preliminary Title Report",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Tax Record / Realist Report",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "CLA - Commercial & Residential Income Listing",
+     "code": "CLA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "MLSA - Multiple Listing Service Addendum",
+     "code": "MLSA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "NHD Report",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "AD - Agency Disclosure",
+     "code": "AD",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "FHDA - Fair Housing Discrimination Advisory",
+     "code": "FHDA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "PRBS-S - Possible Rep More than one Buyer",
+     "code": "PRBS-S",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "SA - Sellers Advisory",
+     "code": "SA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "BCA - Buyer Compensation Advisory",
+     "code": "BCA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "CCPA - California Consumer Privacy Act Advisory",
+     "code": "CCPA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "MLS Active - Full Agent Report",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "ABA - Additional Broker Acknowledgement",
+     "code": "ABA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:team",
+     "notes": null
+    },
+    {
+     "name": "AAA - Additional Agent Acknowledgement",
+     "code": "AAA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:team",
+     "notes": null
+    },
+    {
+     "name": "Coming Soon Form (MLS)",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:coming-soon",
+     "notes": null
+    },
+    {
+     "name": "DIA - Disclosure Information Advisory",
+     "code": "DIA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "APPROVAL of LESS THAN 2% commission",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:low-commission",
+     "notes": null
+    },
+    {
+     "name": "KLA - Keysafe / Lockbox Addendum",
+     "code": "KLA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "MT-LA - Modification of Terms of Listing Agreement",
+     "code": "MT-LA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "FHDS-Fire Hardening and Defensible Space Advisory",
+     "code": "FHDS",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:firezone",
+     "notes": "Help Text: If NHD shows High Fire Zone"
+    },
+    {
+     "name": "NSE - Notice of Sale & Entry",
+     "code": "NSE",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "RCSD-S - Representative Capacity Signature Dis",
+     "code": "RCSD-S",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "TA - Trust Advisory",
+     "code": "TA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "Trust, Notarized Certificate of Trust or Testament",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "Entity Docs (LLC or Corp)",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "RFA - Referral Fee Agreement",
+     "code": "RFA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:referral",
+     "notes": null
+    },
+    {
+     "name": "Miscellaneous - Listing",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "COL - Cancelation of Listing",
+     "code": "COL",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:canceled",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "id": "kase-commercial-purchase",
+   "title": "KASE Commercial Purchase",
+   "sheet": "KASE Commercial Purchase",
+   "items": [
+    {
+     "name": "Broker Notes",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "field",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "TC for File - Please add your name and email",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "field",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "RIPA - Residential Income Purchase Agreement",
+     "code": "RIPA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "SMCO - Seller Multiple Counter Offer",
+     "code": "SMCO",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:counter",
+     "notes": null
+    },
+    {
+     "name": "SCO - Seller Counter Offer(s)",
+     "code": "SCO",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:counter",
+     "notes": null
+    },
+    {
+     "name": "BCO - Buyer Counter Offer(s)",
+     "code": "BCO",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:counter",
+     "notes": null
+    },
+    {
+     "name": "AAA - Additional Agent Acknowledgement",
+     "code": "AAA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:team",
+     "notes": null
+    },
+    {
+     "name": "ABA - Additional Broker Acknowledgement",
+     "code": "ABA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:team",
+     "notes": null
+    },
+    {
+     "name": "AC - Confirmation of Real Estate Agency",
+     "code": "AC",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "AD - Agency Disclosure",
+     "code": "AD",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "ADM - Addendum #1",
+     "code": "ADM",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "ADM - Addendum #2",
+     "code": "ADM",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "ADM - Addendum #3",
+     "code": "ADM",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "AEA - Amendment of Existing Terms",
+     "code": "AEA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "AOAA - Assignment of Agreement Addendum",
+     "code": "AOAA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "BCA - Broker Compensation Advisory",
+     "code": "BCA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "BIA - Buyers Rep & Broker Compensation Agreement",
+     "code": "BIA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "BRBC - Buyer Rep & Broker Compensation Agreement",
+     "code": "BRBC",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "side:buy",
+     "notes": null
+    },
+    {
+     "name": "CCPA - California Consumer Privacy Act Advisory",
+     "code": "CCPA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "COP - Contingency of Sale of Buyers Property",
+     "code": "COP",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:contingent-sale",
+     "notes": null
+    },
+    {
+     "name": "CR - Inspection",
+     "code": "CR",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "CR - Appraisal",
+     "code": "CR",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "CR - Loan",
+     "code": "CR",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "CR - Removal of ALL Contingencies",
+     "code": "CR",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "APPROVAL of LESS THAN 2% COMMISSION",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:low-commission",
+     "notes": null
+    },
+    {
+     "name": "Escrow Acknowledgement (Page 17)",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "EMD - Earnest Money Deposit",
+     "code": "EMD",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Escrow Instructions",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Escrow Commission Instructions w/Broker Signature",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "ETA - Extension of Time Amendment",
+     "code": "ETA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "FHDA - Fair Housing Discriminatory Advisory",
+     "code": "FHDA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "FVAC-FHA/VA Amendatory Clause",
+     "code": "FVAC",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:fha-va",
+     "notes": null
+    },
+    {
+     "name": "Lease Agreement",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "MLS AUC - Full Agent Report",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "PRBS-B - Possible Rep More than one Buyer or Seller",
+     "code": "PRBS-B",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "RCSD-B - Representative Capacity Signature",
+     "code": "RCSD-B",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "RCSD-S - Representative Capacity Signature",
+     "code": "RCSD-S",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "RLAS - Residential Lease After Sale (30 Days+)",
+     "code": "RLAS",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:seller-in-possession",
+     "notes": null
+    },
+    {
+     "name": "SIP - Seller In Possession (Up to 29 Days)",
+     "code": "SIP",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:seller-in-possession",
+     "notes": null
+    },
+    {
+     "name": "Tax Record/Realist Tax",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "TOPA - Tenant Occupied Property Addendum",
+     "code": "TOPA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:tenant-occupied",
+     "notes": null
+    },
+    {
+     "name": "Verification of Funds",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Verification of Loan Application",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "WFA - Wire Fraud Advisory",
+     "code": "WFA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Entity Docs (LLC or Corp)",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "Trust, Notarized Certificate of Trust",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "Rejected Offers",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Miscellaneous Sales Doc",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "CC - Cancellation of Contract",
+     "code": "CC",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:canceled",
+     "notes": null
+    },
+    {
+     "name": "AVID - Buying Agent Visual Inspection Disclosure",
+     "code": "AVID",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": "Only for 4 units or less."
+    },
+    {
+     "name": "AVID - Listing Agent Visual Inspection Disclosure",
+     "code": "AVID",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Environmental Hazards Handbook Receipt",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "ESD - Exempt Seller Disclosure",
+     "code": "ESD",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "cond:esd",
+     "notes": "Only for probate or REO"
+    },
+    {
+     "name": "FHDS - Fire Hardening and Definsible Space Advisory",
+     "code": "FHDS",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "cond:firezone",
+     "notes": "Only applicable if in high fire zone."
+    },
+    {
+     "name": "Historical Disclosures",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Income & Expense Statement",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "KASE Disclosures",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Local County/City Disclosures",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "LPD - Lead-Based Paint and Lead-Based Paint Hazard",
+     "code": "LPD",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "cond:pre1978",
+     "notes": null
+    },
+    {
+     "name": "MCA - Market Conditions Advisrory",
+     "code": "MCA",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "NHD Receipt",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Propane Tank Addendum",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": "Remove \"Side Form\""
+    },
+    {
+     "name": "Residential Earthquake Hazard Report (Pre-1960)",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "cond:pre1960",
+     "notes": "Pre-1960"
+    },
+    {
+     "name": "SBSA - Statewide Buyer & Seller Advisory",
+     "code": "SBSA",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "SFLS - Square Footage & Lot Size Disc & Advisroy",
+     "code": "SFLS",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "SPT - Notice of Supplemental Property Tax Bill",
+     "code": "SPT",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "CSPQ - Seller Property Questionnaire",
+     "code": "CSPQ",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "TA - Trust Advisory",
+     "code": "TA",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "TEC - Tenant Estoppel Certificate(s)",
+     "code": "TEC",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Unit Rental Agreement(s) / Lease(s)",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "WCMD - Water Conserving Plumbing & Carbon Mon",
+     "code": "WCMD",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "WFDA - Wildfire Disaster Advisory",
+     "code": "WFDA",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "WHSD - Water Heater Smoke Detector (if TDS Exempt)",
+     "code": "WHSD",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "cond:esd",
+     "notes": "If there is no TDS- Seller to provide WHS or WHSD"
+    },
+    {
+     "name": "Miscellaneous Disclosures",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Preliminary Report",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "NHD Report",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "BIW - Buyer Inspection Waiver",
+     "code": "BIW",
+     "section": "Reports",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Home Inspection",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Asbestos Inspection",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Pool Inspection",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Roof Inspection",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Septic Inspection",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Sewer Lateral Inspection",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Termite Inspection",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Termite Clearance",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Well Inspection",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Other inspections",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "RFR - Receipt for Reports",
+     "code": "RFR",
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": "Remove \"Buyer rep only\""
+    },
+    {
+     "name": "RR & RRRR - Request for Repairs / Response to RR",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Buyer Signed Prelim Report Receipt from Escrow",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "CDA - Signed",
+     "code": "CDA",
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Closing Package",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Home Warranty",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Final Closing Statement",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "MLS Sold - Full Agent Report",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "RFA - Referral Fee Agreement",
+     "code": "RFA",
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": false,
+     "when": "cond:referral",
+     "notes": null
+    },
+    {
+     "name": "Completed FIRPTA with SSN or QS",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "VP - Verification of Property",
+     "code": "VP",
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "W-9 for Other Broker (upload to commission tab)",
+     "code": "W",
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": false,
+     "when": "cond:referral",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "id": "kase-commercial-residential-income-listing-5-units",
+   "title": "KASE Commercial & Residential Income Listing (5+ UNITS)",
+   "sheet": "KASE Comm & Residential Income ",
+   "items": [
+    {
+     "name": "BROKER NOTES",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "field",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "TC For File - Please add your Name and e-mail",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "field",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Preliminary Title Report",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Tax Record / Realist Report",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "CLA - Commercial & Residential Income Listing",
+     "code": "CLA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "MLSA - Multiple Listing Service Addendum",
+     "code": "MLSA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "NHD Report",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "AD - Agency Disclosure",
+     "code": "AD",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "KASE Listing ADM",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Estoppel Certificate",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Environmental Report",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": "Help Text: If Industrial"
+    },
+    {
+     "name": "FHDA - Fair Housing Discrimination Advisory",
+     "code": "FHDA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "PRBS-S - Possible Rep More than one Buyer",
+     "code": "PRBS-S",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "SA - Sellers Advisory",
+     "code": "SA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "BCA - Buyer Compensation Advisory",
+     "code": "BCA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "CCPA - California Consumer Privacy Act Advisory",
+     "code": "CCPA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "MLS Active - Full Agent Report",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "CSPQ - Commercial Seller Property Questionnaire",
+     "code": "CSPQ",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Commercial Property Guide to Earthquake Safety",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "ABA - Additional Broker Acknowledgement",
+     "code": "ABA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:team",
+     "notes": null
+    },
+    {
+     "name": "AAA - Additional Agent Acknowledgement",
+     "code": "AAA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:team",
+     "notes": null
+    },
+    {
+     "name": "Coming Soon Form (MLS)",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:coming-soon",
+     "notes": null
+    },
+    {
+     "name": "DIA - Disclosure Information Advisory",
+     "code": "DIA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "APPROVAL of LESS THAN 2% commission",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:low-commission",
+     "notes": null
+    },
+    {
+     "name": "KLA - Keysafe / Lockbox Addendum",
+     "code": "KLA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "MT-LA - Modification of Terms of Listing Agreement",
+     "code": "MT-LA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "FHDS-Fire Hardening and Defensible Space Advisory",
+     "code": "FHDS",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:firezone",
+     "notes": "Help Text: If NHD shows High Fire Zone"
+    },
+    {
+     "name": "NSE - Notice of Sale & Entry",
+     "code": "NSE",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "RCSD-S - Representative Capacity Signature Dis",
+     "code": "RCSD-S",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "Rent Roll or Lease Agreement",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "TA - Trust Advisory",
+     "code": "TA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "Trust, Notarized Certificate of Trust or Testament",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "Entity Docs (LLC or Corp)",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "RFA - Referral Fee Agreement",
+     "code": "RFA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:referral",
+     "notes": null
+    },
+    {
+     "name": "Miscellaneous - Listing",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "COL - Cancelation of Listing",
+     "code": "COL",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:canceled",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "id": "kase-commercial-residential-income-purchase-5-units",
+   "title": "KASE Commercial & Residential Income Purchase (5+ UNITS)",
+   "sheet": "Sheet22",
+   "items": [
+    {
+     "name": "BROKER NOTES",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "field",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "TC For File - Please add your Name and e-mail",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "field",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Tax Record / Realist Report",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "CPA - Commercial Property Purchase Agreement",
+     "code": "CPA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "SCO - Seller Counter Offer(s)",
+     "code": "SCO",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:counter",
+     "notes": null
+    },
+    {
+     "name": "SMCO - Seller Multiple Counter Offer",
+     "code": "SMCO",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:counter",
+     "notes": null
+    },
+    {
+     "name": "BCO - Buyer Counter Offer(s)",
+     "code": "BCO",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:counter",
+     "notes": null
+    },
+    {
+     "name": "AAA - Additional Agent Acknowledgement",
+     "code": "AAA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:team",
+     "notes": null
+    },
+    {
+     "name": "ABA - Additional Broker Acknowledgement",
+     "code": "ABA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:team",
+     "notes": null
+    },
+    {
+     "name": "AC - Agency Confirmation",
+     "code": "AC",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "AD - Agency Disclosure",
+     "code": "AD",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "ADM - Addendum #1",
+     "code": "ADM",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "ADM - Addendum #2",
+     "code": "ADM",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "ADM - Addendum #3",
+     "code": "ADM",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "AEA - Amendment of Existing Terms",
+     "code": "AEA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "AOAA - Assignment of Agreement Addendum",
+     "code": "AOAA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "BCA - Buyer Compensation Advisory",
+     "code": "BCA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "BIA - Buyer's Investigation Advisory",
+     "code": "BIA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "BHIA - Buyer Homeowners Insurance Advisory",
+     "code": "BHIA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "BRBC - Buyer Rep & Broker Compensation Agreement",
+     "code": "BRBC",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "side:buy",
+     "notes": "*If we rep buyer only."
+    },
+    {
+     "name": "CR - Inspection",
+     "code": "CR",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "CR - Appraisal",
+     "code": "CR",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "CR - Loan",
+     "code": "CR",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "CR - Removal of ALL Contingencies",
+     "code": "CR",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "APPROVAL of LESS THAN 2% COMMISSION",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:low-commission",
+     "notes": null
+    },
+    {
+     "name": "Escrow Acknowledgement (Page 17)",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "EMD - Earnest Money Deposit",
+     "code": "EMD",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Escrow Instructions",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Escrow Commission Instructions w/Broker Signature",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "ETA - Extension of Time Amendment",
+     "code": "ETA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Lease Agreement",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "MLS AUC - Full Agent Report",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "PRBS-B - Possible Rep More than one Buyer",
+     "code": "PRBS-B",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "RCSD-B - Representative Capacity Signature Dis",
+     "code": "RCSD-B",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "RCSD-S - Representative Capacity Signature Dis",
+     "code": "RCSD-S",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "SIP - Seller in Possession (Up to 29 Days)",
+     "code": "SIP",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:seller-in-possession",
+     "notes": null
+    },
+    {
+     "name": "TOPA - Tenant Occupied Property Addendum",
+     "code": "TOPA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:tenant-occupied",
+     "notes": null
+    },
+    {
+     "name": "Verification of Funds",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Verification of Loan Application",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "WFA - Wire Fraud Advisory",
+     "code": "WFA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Entity Docs (LLC or Corp)",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "Rejected Offers",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Miscellanious Sales Docs",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "CC - Cancellation of Contract",
+     "code": "CC",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:canceled",
+     "notes": null
+    },
+    {
+     "name": "Environmental Hazards Handbook Receipt",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "ESD - Exempt Seller Dislcosures",
+     "code": "ESD",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "cond:esd",
+     "notes": null
+    },
+    {
+     "name": "CSP - Commercial Seller Property Questionnaire",
+     "code": "CSP",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "TEC - Tenant Estoppel Certificate(s)",
+     "code": "TEC",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Rent Roll",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Income and Expenses",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Rental and Service Agreements",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "KASE Disclosures",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Local County / City Disclosures",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "LPD - Lead-Based Paint and Lead-Based Paint Hazard",
+     "code": "LPD",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "cond:pre1978",
+     "notes": "Pre-1978"
+    },
+    {
+     "name": "NHD Receipt",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "EDUBA - Energy Use Disclosure and Benchmarking Advisory",
+     "code": "EDUBA",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Miscellanious Disclosures",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Preliminary Title Report",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "NHD Report",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Environmental Report",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": "Help Text: If Industrial"
+    },
+    {
+     "name": "Inspections",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "BIW - Buyer Inspection Waiver",
+     "code": "BIW",
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "cond:inspection-waived",
+     "notes": null
+    },
+    {
+     "name": "RFR - Receipt for Reports",
+     "code": "RFR",
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "RR & RRRR - Request for Repairs / Response to RR",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "ESA - Phase 1 Environamental Site Assessment",
+     "code": "ESA",
+     "section": "Reports",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "ESA - Phase 2 Environamental Site Assessment",
+     "code": "ESA",
+     "section": "Reports",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Buyer Signed Prelim Receipt from Escrow",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "CDA Signed",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Closing Package",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Final Closing Statement",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "MLS Sold - Full Agent Report",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "RFA - Referral Agreement Fee",
+     "code": "RFA",
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": false,
+     "when": "cond:referral",
+     "notes": null
+    },
+    {
+     "name": "Completed FIRPTA with SSN or QS",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "VP - Verification of Property",
+     "code": "VP",
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "W-9 Other Broker (upload To commission tab)",
+     "code": "W",
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": false,
+     "when": "cond:referral",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "id": "kase-new-construction-listing",
+   "title": "Kase New Construction Listing",
+   "sheet": "KASE New Construction Listing",
+   "items": [
+    {
+     "name": "BROKER NOTES",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "field",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "TC For File - Please add your Name and email",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "field",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Preliminary Title Report",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Tax Record / Realist Report",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "RLA - Residential Listing Agreement",
+     "code": "RLA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "MLSA - Multiple Listing Service Addendum",
+     "code": "MLSA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "NHD REPORT",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "KASE Listing ADM",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "AD - Agency Disclosure",
+     "code": "AD",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "SA - Seller Advisory",
+     "code": "SA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "BCA - Buyer Compensation Advisory",
+     "code": "BCA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "PRBS-S - Possible Rep of More than one Buyer or Sell",
+     "code": "PRBS-S",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "FHDA - Fair Housing Discrimination Advisory",
+     "code": "FHDA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "CCPA - California Consumer Privacy Act Advisory",
+     "code": "CCPA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "AAA - Additional Agent Acknowledgement",
+     "code": "AAA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:team",
+     "notes": null
+    },
+    {
+     "name": "ABA - Additional Broker Acknowledgement",
+     "code": "ABA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:team",
+     "notes": null
+    },
+    {
+     "name": "Coming Soon Form (MLS)",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:coming-soon",
+     "notes": null
+    },
+    {
+     "name": "MLS Active - Full Agent Report",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "DIA - Disclosure Information Advisory",
+     "code": "DIA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "MT-LA - Modification of Terms Listing Agreement",
+     "code": "MT-LA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "APPROVAL of LESS THAN 2% commission",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:low-commission",
+     "notes": null
+    },
+    {
+     "name": "TA - Trust Advisory",
+     "code": "TA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "RCSD-S- Representative Capacity Signature Disclos",
+     "code": "RCSD-S",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "Entity Docs (LLC or Corp)",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "RFA - Referral Fee Agreement",
+     "code": "RFA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:referral",
+     "notes": null
+    },
+    {
+     "name": "FHDS - Fire Hardening and Defensible Space Advisory",
+     "code": "FHDS",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:firezone",
+     "notes": "Help Text: If NHD Report shows High Fire Zone"
+    },
+    {
+     "name": "TDS- Seller Signed",
+     "code": "TDS",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "SPQ- Seller Signed",
+     "code": "SPQ",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "AVID- Seller/Listing Agent Signed",
+     "code": "AVID",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "NCA - New Construction Advisory",
+     "code": "NCA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "NCNC - Notice of Completion & to Close Escrow",
+     "code": "NCNC",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "NC Sub Termite Soil Treatment Record (FHA & VA)",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": "New Construction Subterranean Termite Soil Treatment Records (FHA & VA Offers) *"
+    },
+    {
+     "name": "Miscellaneous - Listing",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "COL - Cancellation of Listing",
+     "code": "COL",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:canceled",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "id": "kase-new-construction-purchase",
+   "title": "KASE New Construction Purchase",
+   "sheet": "KASE New Construction Purchase",
+   "items": [
+    {
+     "name": "BROKER NOTES",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "field",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "TC for File - Please add your name and email",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "field",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "NCPA - New Construction Purchase or Sellers Agreement",
+     "code": "NCPA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "SMCO - Seller Multiple Counter Offer",
+     "code": "SMCO",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:counter",
+     "notes": null
+    },
+    {
+     "name": "SCO - Seller Counter Offer(s)",
+     "code": "SCO",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:counter",
+     "notes": null
+    },
+    {
+     "name": "BCO - Buyer Counter Offer(s)",
+     "code": "BCO",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:counter",
+     "notes": null
+    },
+    {
+     "name": "AD - Agency Disclosure",
+     "code": "AD",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "ADM - Addendum #1",
+     "code": "ADM",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "ADM - Addendum #2",
+     "code": "ADM",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "ADM - Addendum #3",
+     "code": "ADM",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "AAA - Addtional Agent Acknowledgement",
+     "code": "AAA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:team",
+     "notes": null
+    },
+    {
+     "name": "ABA - Additional Broker Acknowledgement",
+     "code": "ABA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:team",
+     "notes": null
+    },
+    {
+     "name": "AEA - Amendment of Existing Terms",
+     "code": "AEA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "BCA - Broker Compensation Advisory",
+     "code": "BCA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "BIA - Buyers Inspection Advisory",
+     "code": "BIA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "BRBC - Buyer Rep & Broker Compensation Agreement",
+     "code": "BRBC",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "side:buy",
+     "notes": "Only needed if representing Buyer."
+    },
+    {
+     "name": "CCPA - California Consumer Privacy Act Advisory",
+     "code": "CCPA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "NCEI - Common Int Subdiv Supp Escrow Inst Add",
+     "code": "NCEI",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "COP - Contingency of Sale of Property",
+     "code": "COP",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:contingent-sale",
+     "notes": null
+    },
+    {
+     "name": "CR - Contingency Removal #1",
+     "code": "CR",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": "There's an asterisk on Skylope"
+    },
+    {
+     "name": "CR - Contingency Removal #2",
+     "code": "CR",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "CR - Contingency Removal #3",
+     "code": "CR",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Escrow Instructions",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "ETA - Extension of Time Addendum",
+     "code": "ETA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "FHDA - Fair Housing Discrimination Advisory",
+     "code": "FHDA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "FVAC-FHA/VA Amendatory Clause",
+     "code": "FVAC",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:fha-va",
+     "notes": null
+    },
+    {
+     "name": "MLS AUC - Full Agent Report",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "NCA - New Construction Advisory",
+     "code": "NCA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "NCA - New Construction Options and Upgrades Addendum",
+     "code": "NCA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "NCRPA - New Construction Addendum to RPA",
+     "code": "NCRPA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "NCNC - Notice of Completion & to Close Escrow",
+     "code": "NCNC",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "NBP or NSP - Notice to Perform",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "PRBS-B - Poss Rep of More Than One Buyer or Seller",
+     "code": "PRBS-B",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Receipt for Increased Deposit (from Escrow)",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "RCSD-S - Representative Capacity Signature Disc",
+     "code": "RCSD-S",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "RCSD-B - Representative Capacity Signature Disc",
+     "code": "RCSD-B",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "Tax Record/ Realist Tax",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Entity Docs (LLC or Corp)",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "WFA - Wire Fraud Advisory",
+     "code": "WFA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Miscellaneous (add name in desc box)",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "CC - Cancellation of Contract",
+     "code": "CC",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:canceled",
+     "notes": null
+    },
+    {
+     "name": "BHAA - Buyers HOA Advisory",
+     "code": "BHAA",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "cond:hoa",
+     "notes": null
+    },
+    {
+     "name": "CFCO - Cert of Final Completion & Occupancy",
+     "code": "CFCO",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "City Specific Requirements/Disclosures",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": "There's an asterisk on Skylsope"
+    },
+    {
+     "name": "Developers Disclosure",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "LA AVID - Agent Visual Inspection Disclosure",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "SA AVID - Agent Visual Inspection Disclosure",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Local Gen Info / Disclosure & Disclaimer",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "MCA - Market Conditions Advisory",
+     "code": "MCA",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "NHD Receipt",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "FHDS - Fire Hardening and Defensible Space Advisory",
+     "code": "FHDS",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:firezone",
+     "notes": "Help Text: If NHD Report shows High Fire Zone"
+    },
+    {
+     "name": "Receipt for Public Report",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Receipt for Residential Environmental Booklet",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "SPQ - Seller Property Questionnaire",
+     "code": "SPQ",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "SFLS - Square Footage and Lot Size Advisory",
+     "code": "SFLS",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "SBSA - Statewide Buyer & Seller Advisory",
+     "code": "SBSA",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "TDS - Transfer Disclsoure Statement",
+     "code": "TDS",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "VP - Verification of Property Condition",
+     "code": "VP",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "WCMD - Water Conserving Monoxide Detector Notice",
+     "code": "WCMD",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "WHSD - Water Heater Smoke Detector (TDS Exempt)",
+     "code": "WHSD",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": "If there is no TDS- Seller to provide WHS or WHSD"
+    },
+    {
+     "name": "Home Inspection",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "NHD Report",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Preliminary Title Report",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Public Report",
+     "code": null,
+     "section": "Reports",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "CDA - Signed",
+     "code": "CDA",
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "HOA Receipt from Escrow",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": false,
+     "when": "cond:hoa",
+     "notes": null
+    },
+    {
+     "name": "Buyer Signed Prelim Receipt from Escrow",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Check & Relevant Docs",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Final Closing Statement",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Completed FIRPTA with SSN or QS",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "MLS Closed - Full Agent Report",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "RFA - Referral Fee Agreement",
+     "code": "RFA",
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "W-9 for Other Broker (upload to commission tab)",
+     "code": "W",
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": false,
+     "when": "cond:referral",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "id": "kase-commercial-lease-listing",
+   "title": "KASE Commercial Lease Listing",
+   "sheet": "KASE Commercial Lease Listing",
+   "items": [
+    {
+     "name": "BROKER NOTES",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "field",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "TC For File - Please add your Name and email",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "field",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Tax Record /Realist Tax",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Commercial Lease Listing Agreement",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "MLSA - Multiple Listing Service Addendum",
+     "code": "MLSA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "AD - Agency Disclosure",
+     "code": "AD",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "BCA - Broker Compensation Advisory",
+     "code": "BCA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "CCPA - California Consumer Privacy Act Advisory",
+     "code": "CCPA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "FHDA - Fair Housing Discrimination Advisory",
+     "code": "FHDA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "PRBS-S - Possible Rep of More than one Buyer or Sell",
+     "code": "PRBS-S",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "RPOD- Rental Property Owner Disclosure",
+     "code": "RPOD",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Miscellaneous",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "MT-LA - Modification of Terms",
+     "code": "MT-LA",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "APPROVAL of LESS THAN 2% commission",
+     "code": null,
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:low-commission",
+     "notes": null
+    },
+    {
+     "name": "COL - Cancellation of Listing",
+     "code": "COL",
+     "section": "Listing Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "id": "kase-commercial-lease-tenant",
+   "title": "KASE Commercial Lease Tenant",
+   "sheet": "KASE Commercial Lease Tenant",
+   "items": [
+    {
+     "name": "BROKER NOTES",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "field",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "TC for File - Please add your name and email",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "field",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "AD - Agency Disclosure",
+     "code": "AD",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "BCA - Buyer Compensation Advisory",
+     "code": "BCA",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "BRBC - Buyer Representation & Broker Compensation",
+     "code": "BRBC",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "CL - Commercial Lease Agreement",
+     "code": "CL",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "RentSpree or Application to Rent",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "MLS AUC - Agent Full Detail Report",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "ADM - Addendum #1",
+     "code": "ADM",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "ADM - Addendum #2",
+     "code": "ADM",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "ADM - Addendum #3",
+     "code": "ADM",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "APPROVAL of LESS THAN 2% COMMISSION",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:low-commission",
+     "notes": null
+    },
+    {
+     "name": "RCSD-T - Representative Capacity Signature",
+     "code": "RCSD-T",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "RCSD-LL - Representative Capacity Signature",
+     "code": "RCSD-LL",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "Entity Docs (LLC or Corp)",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:trust",
+     "notes": null
+    },
+    {
+     "name": "Tax Record/Realist Tax",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Verification of Funds",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Miscellaneous",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "Cancellation Of Contract",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "cond:canceled",
+     "notes": null
+    },
+    {
+     "name": "WCMC - Water Conserving",
+     "code": "WCMC",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": "Help text: Water Conserving ONLY"
+    },
+    {
+     "name": "WHSD - Water Heater/Smoke Detector",
+     "code": "WHSD",
+     "section": "Disclosures",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Miscellaneous Disclosures",
+     "code": null,
+     "section": "Disclosures",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "CDA - Signed",
+     "code": "CDA",
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Check & Relevant Docs",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Lease Invoice",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "MLS Printout - CLOSED",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Proof of Liability Insurance (see item 30 in CL)",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": "If item 30 on CL is completed."
+    },
+    {
+     "name": "Referral Agreement",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": false,
+     "when": "cond:referral",
+     "notes": null
+    },
+    {
+     "name": "W-9 for Other Broker (upload to commission tab)",
+     "code": "W",
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": false,
+     "when": "cond:referral",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "id": "kase-new-construction-buyer-referral",
+   "title": "KASE New Construction - Buyer Referral",
+   "sheet": "KASE New Construction - Buyer R",
+   "items": [
+    {
+     "name": "BROKER NOTES",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "field",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "BRBC - Buyer Representation/Broker Compensation (Buyer Rep Only)",
+     "code": "BRBC",
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "side:buy",
+     "notes": "On Skyslope it says: BRBC- Buyer Representation/Broker Compensation · no asterisk on skyslope"
+    },
+    {
+     "name": "Builder Referral Agreement",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Commission Agreement",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Miscellaneous(1) - Sales",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    },
+    {
+     "name": "CDA - Signed",
+     "code": "CDA",
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Check & Relevant Docs",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Closing Package",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Final Closing Statement",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Miscellaneous(1) - Closing",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": false,
+     "when": "if-applicable",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "id": "kase-referral",
+   "title": "KASE Referral",
+   "sheet": "KASE Referral",
+   "items": [
+    {
+     "name": "BROKER NOTES",
+     "code": null,
+     "section": "Sales Documentation",
+     "kind": "field",
+     "required": true,
+     "when": null,
+     "notes": "There's an asterisk on Skyslope"
+    },
+    {
+     "name": "CDA - Signed",
+     "code": "CDA",
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "Check & Relevant Docs",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "RFA - Referral Fee Agreement",
+     "code": "RFA",
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": false,
+     "when": "cond:referral",
+     "notes": null
+    },
+    {
+     "name": "Outgoing Referral Closing Statement",
+     "code": null,
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": true,
+     "when": null,
+     "notes": null
+    },
+    {
+     "name": "W-9 from other Broker (upload to commission tab)",
+     "code": "W",
+     "section": "Closing Documents",
+     "kind": "document",
+     "required": false,
+     "when": "cond:referral",
+     "notes": null
+    }
+   ]
+  }
+ ]
+}

@@ -79,7 +79,8 @@ in `TEAM.md`. Share it from the artifact's Share menu with anyone else who shoul
 - [ ] FUB API key issued; plugin **tc-assistant** installed
 - [ ] Connectors: Gmail ✱, Google Calendar ✱, Dropbox or Drive ✱, DocuSign
 - [ ] Executor connected, FUB key in the vault, `getIdentity` returns 200
-- [ ] `TEAM.md` has no `[fill-in]` left that the team can answer (the checklist especially)
+- [ ] `TEAM.md` has no `[fill-in]` left that the team can answer
+- [ ] Brokerage checklists imported (`checklists/<team>.json` exists)
 - [ ] `setup` run → 3 scheduled tasks visible, **Run now** clicked on each
 
 ✱ = required.

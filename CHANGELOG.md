@@ -7,6 +7,23 @@ moves independently.
 
 ---
 
+## plugin 0.2.0 — 2026-10-13
+
+### create-deal, whats-missing, inbox-watch, daily-sweep 1.1.0 · setup 1.0.1
+**Hypothesis:** the skills were reconciling against an empty checklist, so "what's missing"
+could only see dates. Importing Kase's 18 master checklists and choosing one per deal at
+intake should make every file's task list match what the broker reviews in SkySlope, and
+naming tasks and documents by the slot name should let arrivals match items by name.
+**Changed:** `scripts/import_checklists.py` (workbook → `checklists/kase.json` + `.md`),
+`scripts/checklist_tasks.py` (checklist + tags → tasks, deterministic), `TEAM.md` checklist
+picker, condition tags and naming convention; the four skills read the deal's
+`checklist:<id>` tag. Conditional (`*`) items with an intake question become tagged tasks;
+the rest are recognized on arrival but never pre-created.
+**Watch:** `items_missing` that turn out to be filed already (a naming mismatch), and any
+broker-review gap on an item the checklist marked if-applicable.
+
+---
+
 ## plugin 0.1.0 — 2026-10-13
 
 ### all skills 1.0.0 — baseline

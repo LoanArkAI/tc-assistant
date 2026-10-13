@@ -13,6 +13,9 @@ broker signs off.
   calendar, vendor and the compliance checklist. The skills contain none of these; set the
   plugin up for another agent or brokerage by editing `TEAM.md` only. Values still marked
   `[fill-in]` make a skill stop and ask instead of guessing.
+- **Kase checklists:** [`checklists/kase.md`](checklists/kase.md) — all 18 Kase transaction
+  checklists, imported from the master workbook. Item names are the SkySlope slot names and
+  double as the document naming convention.
 - **Setup:** [`INSTALL.md`](INSTALL.md) — connectors, Executor + FUB key, filling in `TEAM.md`,
   scheduled tasks.
 - **Working on the skills:** [`docs/skill-ops.md`](docs/skill-ops.md) — how we version,

@@ -1,6 +1,6 @@
 ---
 name: create-deal
-version: 1.0.0
+version: 1.1.0
 description: >-
   Open a new transaction in Follow Up Boss from an accepted purchase contract, for the team
   configured in TEAM.md. Use this whenever the agent or TC says a deal
@@ -93,19 +93,23 @@ Doing the math in code, not in your head, is the point — a miscounted CR date 
 this prevents. `references/date-rules.md` explains the rules and the CR1/CR2 derivation.
 Present every date back for confirmation (with its basis) before anything is written.
 
-### 3. Run the conditional Q&A (the part the contract can't tell you)
-These come from the MLS sheet / the human, not the contract. Ask them plainly and keep the
-answers as tags — they decide which checklist items (`TEAM.md` → Compliance checklist) this
-file actually needs:
-- Which **side** are we — buyer or listing?
-- **Escrow company** (is it the affiliated escrow named in `TEAM.md`, if any?)
-- **HOA?** · **Solar?** · **Trust / LLC / POA?** · **High fire zone?**
-- **Year built** (drives lead-paint pre-1978 and earthquake pre-1960)
+### 3. Pick the checklist and run the conditional Q&A (what the contract can't tell you)
+These come from the MLS sheet / the human, not the contract. Ask them plainly.
+- **Side and property type** → the brokerage checklist for this file, from the table in
+  `TEAM.md` → Compliance checklists (e.g. residential purchase →
+  `kase-purchase-includes-sfr-condo`). Confirm the pick out loud; it decides everything after.
+- **The condition questions** in `TEAM.md` → Condition tags (HOA, condo, year built, solar,
+  fire zone, trust/entity, probate, FHA/VA, counters, …). Ask only the ones whose tags appear
+  on the chosen checklist. Keep the answers as tags.
 - **Home warranty** — buyer-paid? terms? (buyer names, coverage, price for the warranty order)
 
-`TEAM.md` → Condition tags maps each answer to its tag and the items it turns on. If the
-checklist in `TEAM.md` is still `[fill-in]`, apply the tags anyway, create tasks only for the
-dated deadlines, and say the checklist isn't configured yet.
+Then get the task list in code, never by eye:
+```
+python3 ../../scripts/checklist_tasks.py --team <team> --checklist <id> --tags side:buy cond:hoa …
+```
+It returns the items to create as tasks (required + conditional-and-tagged) and the
+if-applicable items to leave off. If `checklists/<team>.json` doesn't exist, apply the tags
+anyway, create tasks only for the dated deadlines, and say the checklist isn't configured.
 
 ### 4. Show the plan, get the go
 Summarize: the deal (address, side, client, price), the confirmed dates, the tags, and the
@@ -120,8 +124,12 @@ Call FUB through the **Executor** MCP — `search` the operation, then `invoke` 
 - `deals.createDeal` with `{ body: { name, stageId (from `TEAM.md`), price, and every confirmed date field
   (`mutualAcceptanceDate`, `dueDiligenceDate`, `customCR1`, `customCR2Date`,
   `projectedCloseDate`, `finalWalkThroughDate`) } }` — **omit any date that was refused**, never a placeholder.
-- `tasks.createTask` for each side-aware item, `{ body: { name, type:"Closing", dueDate, personId } }`.
-- Apply the `cond:*` / `side:*` tags to the contact.
+- `tasks.createTask` for each item `checklist_tasks.py` returned, named **exactly** as the
+  checklist item (the team's naming convention — `TEAM.md` → Document naming convention),
+  `{ body: { name, type:"Closing", dueDate, personId } }`. Deadline-linked items (e.g. `CR -
+  Inspection`, `EMD - Earnest Money Deposit`) get their deadline as `dueDate`; "as it arrives"
+  items get none.
+- Apply the `checklist:<id>`, `side:*` and `cond:*` tags to the contact.
 
 **Existing deal (update / back-fill from step 1 "update"):**
 - `deals.getDeal { dealId }` first — read what's already there so you only change what's needed.
@@ -129,7 +137,8 @@ Call FUB through the **Executor** MCP — `search` the operation, then `invoke` 
   send **only** the fields you are setting. Never include `name`/`price`/`people` you weren't
   asked to change, and never blank a field that already has a value. This is how you back-fill
   the deals already in FUB that have no dates yet: fill the blank date fields, leave the rest.
-- Add any still-missing side-aware tasks/tags additively — don't duplicate tasks that already exist.
+- Add any still-missing checklist tasks/tags additively (re-run `checklist_tasks.py` with the
+  deal's current tags) — don't duplicate tasks that already exist.
 - To correct a contact you were asked to fix: `people.updatePerson { personId, body: { ...only
   changed fields } }` (adding to `emails`/`phones`/`tags` appends). Same field-scoped rule.
 
