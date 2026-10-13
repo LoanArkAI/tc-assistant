@@ -1,12 +1,13 @@
 ---
 name: create-deal
-version: 1.1.0
+version: 1.2.0
 description: >-
   Open a new transaction in Follow Up Boss from an accepted purchase contract, for the team
   configured in TEAM.md. Use this whenever the agent or TC says a deal
   went into contract, an offer was accepted, "open a file / open escrow / start a new
-  deal", "we're in contract on [address]", or hands over an executed RPA / counter and
-  wants it set up in FUB. It runs a short Q&A, computes the contract deadlines, and
+  deal", "we're in contract on [address]", "review new contracts in Drive", or hands over an
+  executed RPA / counter (in chat or in the Google Drive contracts folder) and wants it set
+  up in FUB. It runs a short Q&A, computes the contract deadlines, and
   writes the FUB deal — date fields, conditional tags, and dated tasks — then drafts the
   intro emails and the shared deadline calendar. Trigger it even if they don't say
   "Follow Up Boss" — setting up any new transaction for this team is this skill's job.
@@ -63,12 +64,25 @@ for a deal at that address.
   clear a field to blank. Same confirm gate applies before any write.
 The agent can also just say "update the deal for [address]" directly — same path, skipping create.
 
+### 1b. "Review new contracts" — sweep the Google Drive contracts folder
+When asked to review new contracts (or the board's "Review new contracts (Drive)" command),
+use the **Google Drive** connector to list the contracts folder named in `../../TEAM.md` →
+Files. For each executed contract PDF (RPA / purchase agreement plus its counters), read the
+property address and check FUB for a deal at that address. List the ones with no deal and
+ask which to set up; then run this skill once per contract, using route **(b)** below with
+that file. Never set up a deal from a draft or unsigned offer — if a PDF isn't fully executed
+(missing signatures or acceptance), say so and skip it. If the folder isn't set in
+`TEAM.md`, ask for it.
+
 ### 2. Get the dates — three ways, best first
 **(a) RPA JSON export** (most accurate — deterministic engine). If provided, read
 `acceptance_date`, the deadline entries, and any `refusals` (see `references/fub-field-map.md`
 for the shape). A `refusal` means that field stays blank — surface the reason, don't invent.
 
-**(b) The executed contract PDF, handed to you directly.** The agent can just drop the RPA
+**(b) The executed contract PDF — dropped in chat, or pulled from Google Drive.** If the
+agent says it's in Drive ("the contract for 123 Main is in Drive"), find it with the Google
+Drive connector in the contracts folder from `TEAM.md` (search by property address; the
+newest fully executed version wins — ask if two look final) and read it there. The agent can just drop the RPA
 (and any counters) into the chat. Read the dates off it yourself: binding acceptance (last
 signature), close of escrow (page 1 §3B), and the contingency periods (page 2 §L). This is
 available today, before the RPA export exists. Because you are reading a document rather than
