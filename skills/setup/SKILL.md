@@ -24,7 +24,7 @@ tasks registered on this computer. Scheduled tasks live in each user's own Claud
 Confirm these are connected (Claude connector settings). The skills read from them:
 - **Gmail** — deal communication, packets, evidence (required)
 - **Google Calendar** — the deadlines calendar named in `../../TEAM.md`
-- **Dropbox** (or Drive) — the team's forms + filed deal docs, folder in `TEAM.md`
+- **Google Drive** — contracts, filed deal docs and the voice-rules file (folder in `TEAM.md`)
 - **DocuSign** — envelope completions (evidence)
 - **Google Drive** — filed working docs
 If any is missing, point them to connector settings and stop until it's connected — the
@@ -67,7 +67,7 @@ self-contained and carry the guardrails (unattended-safe, drafts-only, read-only
 compliance). The three tasks:
 
 - **TC — Daily Sweep** — cron `27 7,16 * * *` (7:27am & 4:27pm). Prompt: run the
-  `daily-sweep` skill; reconcile active deals vs Gmail/DocuSign/Dropbox/Drive; draft one
+  `daily-sweep` skill; reconcile active deals vs Gmail/DocuSign/Google Drive; draft one
   digest to the TC (cc the agent if a different person). (The sweep also refreshes the Pipeline Board at the end of its run.)
 - **TC — Inbox Watch** — cron `13 8-18/2 * * *` (every 2h, business hours). Prompt: run
   the `inbox-watch` skill; match recent arrivals to deals; surface (never auto-close).

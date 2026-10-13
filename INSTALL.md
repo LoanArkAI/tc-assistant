@@ -16,7 +16,7 @@ agent can say "Create a new deal" (or drop in a contract) and everything downstr
 | **Follow Up Boss** account | the system of record — deals, tasks, contacts, templates | the agent / brokerage FUB admin |
 | **A Follow Up Boss API key** | lets the plugin read/write FUB through Executor | FUB → Admin → API |
 | **Executor** workspace (executor.sh) | the vault that holds the FUB key so it never enters Cowork | free tier is fine |
-| **Dropbox or Google Drive** folder | contracts in, the email-voice-rules file, filed docs | the agent |
+| **Google Drive** folder | contracts in, the email-voice-rules file, filed docs | the agent |
 
 ## 2. Point the plugin at the team
 
@@ -38,7 +38,7 @@ the nine skills and the Executor endpoint — not the connectors or the schedule
 |---|---|---|
 | **Gmail** | **Required** | deal email, leaving drafts, the feedback loop (draft vs. sent) |
 | **Google Calendar** | Required | the deadlines calendar named in `TEAM.md` |
-| **Dropbox** or **Google Drive** | Required | contracts folder + the voice-rules file |
+| **Google Drive** | Required | contracts folder + the voice-rules file |
 | **DocuSign** | Recommended | envelope completions as evidence |
 
 ## 5. Connect Executor, add the FUB key, fill in `TEAM.md`
@@ -77,7 +77,7 @@ in `TEAM.md`. Share it from the artifact's Share menu with anyone else who shoul
 
 - [ ] `.mcp.json` points at the team's Executor workspace
 - [ ] FUB API key issued; plugin **tc-assistant** installed
-- [ ] Connectors: Gmail ✱, Google Calendar ✱, Dropbox or Drive ✱, DocuSign
+- [ ] Connectors: Gmail ✱, Google Calendar ✱, Google Drive ✱, DocuSign
 - [ ] Executor connected, FUB key in the vault, `getIdentity` returns 200
 - [ ] `TEAM.md` has no `[fill-in]` left that the team can answer
 - [ ] Brokerage checklists imported (`checklists/<team>.json` exists)

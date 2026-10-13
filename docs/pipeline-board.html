@@ -392,9 +392,9 @@ table.gap td.u{font-size:12.5px; color:var(--ink-2)}
   var CMDS = [
     {t:'Create a new deal', feature:true,
      c:'Create a new deal.',
-     d:'From an executed RPA — drop the PDF in chat, or point Claude at the contract in Dropbox. It reads the dates and confirms before writing.'},
-    {t:'Review new contracts (Dropbox)', feature:true,
-     c:'Review new contracts in the Dropbox contracts folder and open any that aren’t in Follow Up Boss yet.',
+     d:'From an executed RPA — drop the PDF in chat, or point Claude at the contract in Google Drive. It reads the dates and confirms before writing.'},
+    {t:'Review new contracts (Drive)', feature:true,
+     c:'Review new contracts in the Google Drive contracts folder and open any that aren’t in Follow Up Boss yet.',
      d:'Claude scans the shared folder, finds contracts with no FUB deal, and sets each one up after you confirm the dates.'},
     {t:'Update an existing deal',
      c:'Update the deal for [address] with the latest contract dates.',
@@ -407,7 +407,7 @@ table.gap td.u{font-size:12.5px; color:var(--ink-2)}
      d:'Escrow, lender and listing-agent intros from your email templates — left as drafts for you to send.'},
     {t:'Run the daily sweep',
      c:'Run the daily sweep.',
-     d:'Reconciles open files against Gmail, DocuSign and Dropbox and drafts one digest to you.'},
+     d:'Reconciles open files against Gmail, DocuSign and Google Drive and drafts one digest to you.'},
     {t:'Refresh this board',
      c:'Refresh the pipeline board.',
      d:'Re-pulls Follow Up Boss and republishes this page. Runs automatically on the daily sweep.'}

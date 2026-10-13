@@ -62,7 +62,8 @@ collapses to one recipient — never address the same person twice.
 
 | Setting | Value |
 |---|---|
-| Dropbox (or Drive) folder for contracts and filed deal docs | `[fill-in]` |
+| File storage (where contracts and filed deal docs live) | **Google Drive** |
+| Drive folder for contracts and filed deal docs (one subfolder per deal) | `[fill-in]` |
 | Email voice-rules file (written by `feedback-loop`) | `<that folder>/email-voice-rules.md` |
 | Deadlines calendar (a dedicated Google calendar, NOT the primary — FUB two-way-syncs the primary) | `[fill-in: e.g. "Escrow Deadlines"]` |
 | Pipeline Board artifact URL (set on first `dashboard` run) | `[fill-in]` |
