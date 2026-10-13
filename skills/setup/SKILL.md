@@ -26,7 +26,6 @@ Confirm these are connected (Claude connector settings). The skills read from th
 - **Google Calendar** — the deadlines calendar named in `../../TEAM.md`
 - **Google Drive** — contracts, filed deal docs and the voice-rules file (folder in `TEAM.md`)
 - **DocuSign** — envelope completions (evidence)
-- **Google Drive** — filed working docs
 If any is missing, point them to connector settings and stop until it's connected — the
 scheduled tasks can't read what isn't connected.
 

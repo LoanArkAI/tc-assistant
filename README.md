@@ -18,6 +18,7 @@ broker signs off.
   double as the document naming convention.
 - **Texts (Mac, optional):** [`mac-tap/`](mac-tap/README.md) — a read-only background job that
   writes work-contact iMessage threads to Drive, so texts count as evidence. Never sends.
+- **How-to guide:** [`docs/how-to-guide.html`](docs/how-to-guide.html) — published privately at https://claude.ai/artifact/XGWZeXbcfDpiJK35T8EDiz (share it with Ernie from its Share menu).
 - **Setup:** [`INSTALL.md`](INSTALL.md) — connectors, Executor + FUB key, filling in `TEAM.md`,
   scheduled tasks.
 - **Working on the skills:** [`docs/skill-ops.md`](docs/skill-ops.md) — how we version,

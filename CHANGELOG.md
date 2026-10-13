@@ -7,6 +7,21 @@ moves independently.
 
 ---
 
+## plugin 0.3.1 — 2026-10-13
+
+### create-deal 1.2.0
+**Hypothesis:** contracts reach the agent in Google Drive, but create-deal only took a PDF
+dropped into chat, so the board's "Review new contracts (Drive)" command had nothing behind it.
+Reading contracts from the Drive contracts folder — one at a time or as a sweep for contracts
+with no FUB deal — should cut files opened late because the contract sat unnoticed.
+**Changed:** step 1b (sweep the Drive contracts folder), route (b) reads from Drive; `TEAM.md`
+splits the contracts inbox folder from the filed-docs folder. Also adds
+`scripts/build_audit_section.py`, which renders the checklists + setup section for the agent's
+loanark.com AI audit page.
+**Watch:** contracts skipped as not fully executed (false skips are the failure).
+
+---
+
 ## plugin 0.3.0 — 2026-10-13
 
 ### mac-tap 1.0.0 · whats-missing, daily-sweep, inbox-watch 1.2.0 · setup 1.1.0

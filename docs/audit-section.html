@@ -1,0 +1,997 @@
+<!-- tc-assistant:start -->
+<section id="tc-assistant">
+<style>
+#tc-assistant details{border:1px solid var(--line);border-radius:6px;margin:0 0 10px;background:var(--ground)}
+#tc-assistant summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--ink);display:flex;justify-content:space-between;gap:12px}
+#tc-assistant summary span{color:var(--ink-3);font-weight:400;font-size:.85rem;white-space:nowrap}
+#tc-assistant table{width:100%;border-collapse:collapse;font-size:.88rem}
+#tc-assistant th{text-align:left;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:600;padding:8px 16px;background:var(--surface)}
+#tc-assistant td{padding:7px 16px;border-top:1px solid var(--line);vertical-align:top}
+#tc-assistant td.s{background:var(--surface);font-weight:600;color:var(--navy);font-size:.8rem}
+#tc-assistant td small{color:var(--ink-3);font-size:.8rem;display:block}
+#tc-assistant td.r,#tc-assistant td.c,#tc-assistant td.o,#tc-assistant td.f{font-size:0}
+#tc-assistant td.r:before,#tc-assistant td.c:before,#tc-assistant td.o:before,#tc-assistant td.f:before{display:inline-block;font-size:.72rem;font-weight:600;padding:2px 8px;border-radius:99px}
+#tc-assistant td.r:before{content:"Required";background:var(--good-soft);color:var(--good)}
+#tc-assistant td.o:before{content:"If applicable";background:var(--surface);color:var(--ink-2);border:1px solid var(--line)}
+#tc-assistant td.f:before{content:"SkySlope field";background:var(--warn-soft);color:var(--warn)}
+#tc-assistant td.c{font-size:.72rem;font-weight:600;color:var(--sky)}
+#tc-assistant td.c:before{content:"If\00a0";font-size:.72rem;padding:0;background:none}
+#tc-assistant ol.tc-steps li{margin:0 0 .5rem;max-width:70ch}
+#tc-assistant code{font-size:.85em;background:var(--surface);padding:1px 5px;border-radius:4px}
+@media (max-width:640px){#tc-assistant th:last-child,#tc-assistant td:last-child{width:40%}}
+</style>
+<p class="eyebrow">Your TC Assistant</p>
+<h2>Your transaction checklists and setup</h2>
+<p class="lede">Your Claude TC Assistant is set up for Kase. Every file it opens follows the Kase checklist for that transaction type, and every document is named exactly as its checklist item &mdash; the SkySlope slot name, with no property address.</p>
+<h3>Setting it up</h3><ol class="tc-steps">
+<li><b>Install the plugin.</b> In the Claude app, add the plugin marketplace <code>LoanArkAI/tc-assistant</code> and install <b>tc-assistant</b>.</li>
+<li><b>Connect your accounts</b> in Claude: Gmail, Google Calendar, Google Drive and DocuSign.</li>
+<li><b>Run setup.</b> Tell Claude &ldquo;set up the TC assistant&rdquo;. It connects Follow Up Boss and asks for anything it still needs.</li>
+<li><b>Texts (optional, on your Mac).</b> Download the plugin from <a href="https://github.com/LoanArkAI/tc-assistant" target="_blank" rel="noopener">github.com/LoanArkAI/tc-assistant</a>, run <code>mac-tap/install.sh</code> with your TC Assistant folder in Google Drive, allow Full Disk Access for Python, then tell Claude &ldquo;set up texts&rdquo;. It only reads texts with the work contacts Claude lists from your deals, and it never sends a message.</li>
+</ol>
+<h3>Kase checklists</h3><p>All 18 checklists, imported from the Kase master checklist workbook. Claude picks the one that matches the side and property type when it opens a file.</p>
+<details><summary>KASE LISTING (Includes SFR/Condo)<span>18 required &middot; 37 documents</span></summary>
+<table><tr><th>Document name<th>When it&rsquo;s needed
+<tr><td class=s colspan=2>Listing Documentation
+<tr><td>BROKER NOTES<td class=f>
+<tr><td>TC For File - Please add your Name and email<td class=f>
+<tr><td>Preliminary Title Report<td class=r>
+<tr><td>Tax Record / Realist Report<td class=r>
+<tr><td>RLA - Residential Listing Agreement<td class=r>
+<tr><td>MLSA - Multiple Listing Service Addendum<td class=r>
+<tr><td>NHD REPORT<td class=r>
+<tr><td>AD - Agency Disclosure<td class=r>
+<tr><td>KASE Listing ADM<td class=r>
+<tr><td>SA - Seller Advisory<td class=r>
+<tr><td>BCA - Broker Compensation Advisory<td class=r>
+<tr><td>PRBS-S - Possible Rep of More than one Buyer or Sell<td class=r>
+<tr><td>FHDA - Fair Housing Discrimination Advisory<td class=r>
+<tr><td>CCPA - California Consumer Privacy Act Advisory<td class=r>
+<tr><td>AAA - Additional Agent Acknowledgement<td class=c>Another agent or broker on our side
+<tr><td>ABA - Additional Broker Acknowledgement<td class=c>Another agent or broker on our side
+<tr><td>Coming Soon Form (MLS)<td class=c>Coming-soon listing
+<tr><td>MLS Active - Full Agent Report<td class=r>
+<tr><td>DIA - Disclosure Information Advisory<td class=r>
+<tr><td>LPD - Lead-Based Paint Disclosure<td class=c>Built before 1978
+<tr><td>MT-LA - Modification of Terms, Listing Agreement<td class=o>
+<tr><td>APPROVAL of LESS THAN 2% commission<td class=c>Commission under 2%
+<tr><td>TA - Trust Advisory<td class=c>Trust, LLC, corp or POA
+<tr><td>Trust, Notarized Cert of Trust or Testamentary<small>Help Text: Testamentary only for Probate Listings</small><td class=c>Trust, LLC, corp or POA
+<tr><td>RCSD-S - Representative Capacity Signature Disc<td class=c>Trust, LLC, corp or POA
+<tr><td>Entity Docs (LLC or Corp)<td class=c>Trust, LLC, corp or POA
+<tr><td>RFA - Referral Fee Agreement<td class=c>Referral fee
+<tr><td>FHDS - Fire Hardening and Defensible Space Advisory<small>Help Text: If NHD Report shows High Fire Zone</small><td class=c>High fire zone
+<tr><td>TDS- Seller Signed<td class=r>
+<tr><td>SPQ - Seller Signed<td class=r>
+<tr><td>ESD - Exempt Seller Disclosure<td class=c>Seller exempt from TDS
+<tr><td>SELI - Exclude Listing from Internet<td class=c>Off-internet listing
+<tr><td>SPRP - Sellers Purchase of Replacement Property<td class=c>Seller buying a replacement
+<tr><td>SOLAR - Solar Questionnaire<td class=c>Solar
+<tr><td>AVID - Seller/Listing Agent Signed<td class=r>
+<tr><td>9a City Report<small>If required by city.</small><td class=c>City of LA
+<tr><td>COC - Certificate of Compliance<td class=r>
+<tr><td>Miscellaneous - Listing<td class=o>
+<tr><td>COL - Cancellation of Listing<td class=c>File canceled
+</table></details>
+<details><summary>KASE Purchase (Includes SFR/Condo)<span>44 required &middot; 113 documents</span></summary>
+<table><tr><th>Document name<th>When it&rsquo;s needed
+<tr><td class=s colspan=2>Sales Documentation
+<tr><td>BROKER NOTES<td class=f>
+<tr><td>TC for File - Please add your name and email<td class=f>
+<tr><td>AD - Agency Disclosure (Buyer)<td class=r>
+<tr><td>RPA - Residential Purchase Agreement<td class=r>
+<tr><td>SMCO- Seller Multiple Counter Offer<td class=c>Counter offers
+<tr><td>SCO - Seller Counter Offer(s)<td class=c>Counter offers
+<tr><td>BCO - Buyer Counter Offer(s)<td class=c>Counter offers
+<tr><td>BIA - Buyers Inspection Advisory<td class=r>
+<tr><td>AAA - Additonal Agent Acknowledgement<td class=c>Another agent or broker on our side
+<tr><td>ABA - Additional Brokerage Acknowledgement<td class=c>Another agent or broker on our side
+<tr><td>AC - Confirmation of Real Estate Agency<td class=o>
+<tr><td>ADM - Addendum #1<td class=o>
+<tr><td>ADM - Addendum #2<td class=o>
+<tr><td>ADM - Addendum #3<td class=o>
+<tr><td>AEA - Amendment of Exisiting Terms<td class=o>
+<tr><td>AOAA - Assignment of Agreement Addendum<td class=o>
+<tr><td>BCA - Broker Compensation Advisory<td class=r>
+<tr><td>PRBS-B - Possible Rep more than one Buyer or Seller<td class=r>
+<tr><td>FHDA- Fair Housing Discrimination Advisory<td class=r>
+<tr><td>BHIA- Buyer Homeowners Insurance Advisory<td class=r>
+<tr><td>WFA - Wire Fraud Advisory<td class=r>
+<tr><td>CCPA - California Consumer Privacy Act Advisory<td class=r>
+<tr><td>BRBC - Buyer Rep &amp; Broker Compensation Agreement<small>HELP: Only upload if representing Buyer</small><td class=c>Buyer side
+<tr><td>EMD - Earnest Money Deposit<td class=r>
+<tr><td>ETA - Extension of Time Amendment<td class=o>
+<tr><td>TIC-PA- Tenancy In Common Purchase Addendum<td class=c>Tenancy in common
+<tr><td>PA-PA - Probate Purchase Addendum<td class=c>Probate
+<tr><td>COP - Contingency of Sale of Buyers Property<td class=c>Buyer must sell first
+<tr><td>CR - Inspection<td class=r>
+<tr><td>CR - Appraisal<td class=r>
+<tr><td>CR - Loan<td class=r>
+<tr><td>CR - Removal of ALL Contingencies<td class=r>
+<tr><td>COOP-PA Stock Cooperative Purchase Addendum<td class=c>Stock co-op
+<tr><td>Escrow Acknowledgement (Page 17)<td class=r>
+<tr><td>Escrow Instructions<td class=r>
+<tr><td>Escrow Amendments<td class=o>
+<tr><td>Escrow Commission Instructions w/Broker Signature<td class=r>
+<tr><td>Entity Docs (LLC or Corp)<td class=c>Trust, LLC, corp or POA
+<tr><td>Trust, Notarized Certificate of Trust or Testamentary<td class=c>Trust, LLC, corp or POA
+<tr><td>APPROVAL of LESS THAN 2% commission<td class=c>Commission under 2%
+<tr><td>FVAC-FHA/VA Amendatory Clause<td class=c>FHA / VA loan
+<tr><td>MLS AUC - Full Agent Report<td class=r>
+<tr><td>RCSD-B - Representative Capacity Signature<td class=c>Trust, LLC, corp or POA
+<tr><td>RCSD-S - Representative Capacity Signature<td class=c>Trust, LLC, corp or POA
+<tr><td>RLAS - Residential Lease After Sale (30 Days+)<td class=c>Seller stays after close
+<tr><td>SIP - Seller In Possession (Up to 29 Days)<td class=c>Seller stays after close
+<tr><td>SIPA - Seller In Possession Advisory<td class=c>Seller stays after close
+<tr><td>SPRP - Seller&#x27;s Purchase of Replacement Property<td class=c>Seller buying a replacement
+<tr><td>Tax Record/Realist Tax<td class=r>
+<tr><td>TOPA - Tenant Occupied Property Addendum<td class=c>Tenant-occupied
+<tr><td>Verification of Loan Application (Lender Pre)<td class=r>
+<tr><td>Verification of Funds (POF)<td class=r>
+<tr><td>Rejected Offers<td class=o>
+<tr><td>Miscellaneous Sales Docs<td class=o>
+<tr><td>CC - Cancellation of Contract<td class=c>File canceled
+<tr><td class=s colspan=2>Disclosures
+<tr><td>AVID - Buying Agent Visual Inspection Disclosure<td class=r>
+<tr><td>AVID - Listing Agent Visual Inspection Disclosure<td class=r>
+<tr><td>APD - Amendment to Prior Disclosure<td class=o>
+<tr><td>BHAA - Buyers HOA Advisory<td class=c>HOA
+<tr><td>COOP-OA -Stock Cooperative Ownership Advisory<td class=c>Stock co-op
+<tr><td>Environmental Hazards Handbook Receipt<td class=r>
+<tr><td>FHDS-Fire Hardening and Defensible Space Advisory<small>HELP: (if in High Fire Zone)</small><td class=c>High fire zone
+<tr><td>HID- For FHA/VA Loans<td class=c>FHA / VA loan
+<tr><td>Historical DIsclosures<td class=o>
+<tr><td>KASE Disclosures<td class=r>
+<tr><td>Local County/City Disclosures<td class=r>
+<tr><td>LPD- Lead-Based Paint and Lead-Based Paint Hazard<td class=c>Built before 1978
+<tr><td>MCA - Market Conditions Advisory<td class=r>
+<tr><td>NHD Receipt<td class=r>
+<tr><td>PA- Probate Advisory<td class=c>Probate
+<tr><td>PSD - Parking &amp; Storage Disclosure (Condos Only)<td class=c>Condo
+<tr><td>Residential Earthquake Hazard Report (Pre-1960)<small>Pre-1960</small><td class=c>Built before 1960
+<tr><td>SBSA - Statewide Buyer &amp; Seller Advisory<td class=r>
+<tr><td>SFLS- Square Footage &amp; Lot Size Disclosure<td class=r>
+<tr><td>SOLAR - Solar Questionnaire<td class=c>Solar
+<tr><td>SPT- Notice of Supplemental Property Tax Bill<td class=r>
+<tr><td>SPQ - Seller Property Questionnaire<td class=r>
+<tr><td>TDS - Transfer Disclosure Statement<td class=r>
+<tr><td>ESD - Exempt Seller Disclosure<td class=c>Seller exempt from TDS
+<tr><td>TA - Trust Advisory<td class=c>Trust, LLC, corp or POA
+<tr><td>TIC-OA -Tenancy In Common Ownership Advisory<td class=c>Tenancy in common
+<tr><td>TIC-FD -Tenancy In Common Financial Disc Statement<td class=c>Tenancy in common
+<tr><td>WBSA - Wooden Balcony and Stairs Addendum<td class=o>
+<tr><td>WFDA - Wildfire Disaster Advisory<td class=r>
+<tr><td>WCMD - Water Conserving Plumbing &amp; Carbon Mon<td class=r>
+<tr><td>WHSD - Water Heater Smoke Detector (if TDS Exempt)<small>If there is no TDS- Seller to provide WHS or WHSD</small><td class=c>Seller exempt from TDS
+<tr><td>Miscellaneous Disclosures<td class=o>
+<tr><td class=s colspan=2>Reports
+<tr><td>BIW - Buyer Inspection Waiver<td class=c>Buyer waives inspection
+<tr><td>Home Inspection<small>No asterisk on Sksylope</small><td class=o>
+<tr><td>NHD Report<td class=r>
+<tr><td>Preliminary Report<td class=r>
+<tr><td>Pool Inspection<td class=o>
+<tr><td>Roof Inspection<td class=o>
+<tr><td>Other Inspections<td class=o>
+<tr><td>Septic Inspection<td class=o>
+<tr><td>Sewer Lateral Inspection<td class=o>
+<tr><td>Termite Inspection<td class=o>
+<tr><td>Termite Clearance<td class=o>
+<tr><td>Well Inspection<td class=o>
+<tr><td>Asbestos Inspection<td class=o>
+<tr><td>RR &amp; RRRR - Request for Repairs/Response<td class=o>
+<tr><td>RFR - Receipt for Reports<td class=o>
+<tr><td>9a Report (LA City)<td class=c>City of LA
+<tr><td>COC - Certificate of Compliance (LA City)<td class=c>City of LA
+<tr><td class=s colspan=2>Closing Documents
+<tr><td>CDA Signed<td class=r>
+<tr><td>Closing Package<td class=o>
+<tr><td>Buyer Signed Prelim Report Receipt from Escrow<td class=r>
+<tr><td>HOA Receipt from Escrow<small>Skyslope: HOA Document Package *</small><td class=c>HOA
+<tr><td>Final Closing Statement<td class=r>
+<tr><td>Home Warranty<td class=r>
+<tr><td>MLS Sold - Full Agent Report<td class=r>
+<tr><td>Completed FIRPTA with SSN or QS<td class=r>
+<tr><td>RFA - Referral Fee Agreement<td class=c>Referral fee
+<tr><td>VP - Verification of Property Condition<td class=r>
+<tr><td>W-9 for Other Broker (upload to commission tab)<td class=c>Referral fee
+</table></details>
+<details><summary>KASE Vacant Land Listing<span>14 required &middot; 28 documents</span></summary>
+<table><tr><th>Document name<th>When it&rsquo;s needed
+<tr><td class=s colspan=2>Listing Documentation
+<tr><td>BROKER NOTES<td class=f>
+<tr><td>TC For File - Please add your Name and e-mail<td class=f>
+<tr><td>Preliminary Title Report<td class=r>
+<tr><td>Tax Record / Realist Report<td class=r>
+<tr><td>VLL - Vacant Land Listing Agreement<td class=r>
+<tr><td>MLSA - Multiple Listing Service Addendum<td class=r>
+<tr><td>AD - Agency Disclosure<td class=r>
+<tr><td>BCA - Buyer Compensation Advisory<td class=r>
+<tr><td>PRBS-S - Possible Rep More than one Buyer<td class=r>
+<tr><td>FHDA - Fair Housing Discrimination Advisory<td class=r>
+<tr><td>CCPA - California Consumer Privacy Act Advisory<td class=r>
+<tr><td>KASE Listing ADM<td class=r>
+<tr><td>AAA - Additional Agent Acknowledgement<td class=c>Another agent or broker on our side
+<tr><td>ABA - Additional Broker Acknowledgement<td class=c>Another agent or broker on our side
+<tr><td>Coming Soon Form (MLS)<td class=c>Coming-soon listing
+<tr><td>DIA - Disclosure Information Advisory<td class=r>
+<tr><td>APPROVAL of LESS THAN 2% commission<td class=c>Commission under 2%
+<tr><td>MLS Active - Full Agent Report<td class=r>
+<tr><td>MT-LA - Modification of Listing Terms<td class=o>
+<tr><td>RCSD - Representative Capacity Signature Disc<td class=c>Trust, LLC, corp or POA
+<tr><td>Rejected Offers<td class=o>
+<tr><td>RFR - Referral Fee Agreement<td class=c>Referral fee
+<tr><td>SVLA - Sellers Vacant Land Advisory<td class=r>
+<tr><td>SELI - Exclude Listing from Internet<td class=c>Off-internet listing
+<tr><td>TA - Trust Advisory<td class=c>Trust, LLC, corp or POA
+<tr><td>Trust, Notarized Cert of Trust or Testamentary<small>Help Text: Testamentary only for Probate Listings</small><td class=c>Trust, LLC, corp or POA
+<tr><td>Entity Docs (LLC or Corp)<td class=c>Trust, LLC, corp or POA
+<tr><td>VLQ Seller Vacant Land Questionnaire Seller Signed<td class=r>
+<tr><td>Miscellaneous - Listing<td class=o>
+<tr><td>COL - Cancellation of Listing<td class=c>File canceled
+</table></details>
+<details><summary>KASE Vacant Land Purchase<span>36 required &middot; 73 documents</span></summary>
+<table><tr><th>Document name<th>When it&rsquo;s needed
+<tr><td class=s colspan=2>Sales Documentation
+<tr><td>Broker Notes<td class=f>
+<tr><td>TC For File - Please add your Name and email<td class=f>
+<tr><td>VLPA - Vacant Land Purchase Agreement<td class=r>
+<tr><td>SMCO - Seller Multiple Counter Offer<td class=c>Counter offers
+<tr><td>SCO - Seller Counter Offer(s)<td class=c>Counter offers
+<tr><td>BCO - Buyer Counter Offer(s)<td class=c>Counter offers
+<tr><td>AAA - Additional Agent Acknowledgement<td class=c>Another agent or broker on our side
+<tr><td>ABA - Additional Brokerage Acknowledgement<td class=c>Another agent or broker on our side
+<tr><td>AC - Confirmation of Real Estate Agency<td class=o>
+<tr><td>AD - Agency Disclosure<td class=r>
+<tr><td>ADM - Addendum #1<td class=o>
+<tr><td>ADM - Addendum #2<td class=o>
+<tr><td>ADM - Addendum #3<td class=o>
+<tr><td>AEA - Amendment of Existing Terms<td class=o>
+<tr><td>Advisory Regarding Geographic Targeting Order<td class=o>
+<tr><td>AOAA - Assignment of Agreement Addendum<td class=o>
+<tr><td>BCA - Broker Compensation Advisory<td class=r>
+<tr><td>BRBC - Buyer Rep &amp; Broker Compensation Agreement<small>HELP: Only upload if representing Buyer</small><td class=r>
+<tr><td>BVLIA - Buyers Vacant Land Additional Inspection<td class=r>
+<tr><td>CCPA - California Consumer Privacy Act Advisory<td class=r>
+<tr><td>COP - Contingency of Sale of Buyers Property<td class=c>Buyer must sell first
+<tr><td>CR - Inspection<td class=r>
+<tr><td>CR - Appraisal<td class=r>
+<tr><td>CR - Loan<td class=r>
+<tr><td>CR - Removal of ALL Contingencies<td class=r>
+<tr><td>APPROVAL of LESS THAN 2% commission<td class=c>Commission under 2%
+<tr><td>EMD RECEIPT<td class=r>
+<tr><td>Escrow Acknowledgement (page 17)<td class=r>
+<tr><td>Escrow Instructions<td class=r>
+<tr><td>Escrow Commission Instructions w/Broker Signature<td class=r>
+<tr><td>ETA - Extension of Time<td class=o>
+<tr><td>FHDA- Fair Housing Discrimination Advisory<td class=r>
+<tr><td>FVAC-FHA/VA Amendatory Clause<td class=c>FHA / VA loan
+<tr><td>MLS AUC - Full Agent Report<td class=r>
+<tr><td>PRBS-B - Possible Rep More than one Buyer or Seller<td class=r>
+<tr><td>RCSD-B - Representative Capacity Signature<td class=c>Trust, LLC, corp or POA
+<tr><td>RCSD-S - Representative Capacity Signature<td class=c>Trust, LLC, corp or POA
+<tr><td>Entity Docs (LLC or Corp)<small>HELP: only if representing Entity Buyer</small><td class=c>Trust, LLC, corp or POA
+<tr><td>Trust, Notarized Certificate of Trust or Testamentary<small>HELP: only if representing Buyer Trustee</small><td class=c>Trust, LLC, corp or POA
+<tr><td>Tax Record/Realist Tax<td class=r>
+<tr><td>Verification of Funds<td class=r>
+<tr><td>Verification of Loan Application<td class=o>
+<tr><td>WFA - Wire Fraud Advisory<td class=r>
+<tr><td>Rejected Offers<td class=o>
+<tr><td>Miscellaneous Sales Docs<td class=o>
+<tr><td>CC - Cancellation of Contract<td class=c>File canceled
+<tr><td class=s colspan=2>Disclosures
+<tr><td>Environmental Hazards Handbook Receipt<td class=r>
+<tr><td>Historical Disclosures<td class=o>
+<tr><td>KASE Disclosures<td class=r>
+<tr><td>Local County / City Disclosures<td class=o>
+<tr><td>MCA - Market Conditions Advisory<td class=r>
+<tr><td>NHD Receipt<td class=r>
+<tr><td>SBSA - Statewide Buyer &amp; Seller Advisory<td class=r>
+<tr><td>SPT- Notice of Supplemental Property Tax Bill<td class=r>
+<tr><td>SFLS - Square Footage And Lot Size Disclosure<td class=r>
+<tr><td>TA - Trust Advisory<td class=c>Trust, LLC, corp or POA
+<tr><td>VLQ - Seller Vacant Land Questionnaire<td class=r>
+<tr><td>WFDA -Wildfire Disaster Advisory<td class=r>
+<tr><td>Miscellaneous Disclosures<td class=o>
+<tr><td class=s colspan=2>Reports
+<tr><td>Preliminary Title Report<td class=r>
+<tr><td>NHD Report<td class=r>
+<tr><td>BIW - Buyer Inspection Waiver<td class=c>Buyer waives inspection
+<tr><td>Environmental Report<td class=o>
+<tr><td>RFR - Receipt for Reports<td class=o>
+<tr><td>Septic Inspection<td class=o>
+<tr><td>Soil Inspection Report<td class=o>
+<tr><td>Well Inspection<td class=o>
+<tr><td>Other Inspections<td class=o>
+<tr><td class=s colspan=2>Closing Documents
+<tr><td>Buyer Signed Prelim Report Receipt from Escrow<td class=r>
+<tr><td>CDA Signed<td class=r>
+<tr><td>Final Closing Statement<td class=r>
+<tr><td>MLS Sold - Full Agent Report<td class=r>
+<tr><td>Completed FIRPTA with SSN or QS<td class=r>
+<tr><td>RFA - Referral Fee Agreement<td class=c>Referral fee
+<tr><td>W-9 (upload to commission tab)<td class=c>Referral fee
+</table></details>
+<details><summary>KASE Mobile Home Listing<span>14 required &middot; 28 documents</span></summary>
+<table><tr><th>Document name<th>When it&rsquo;s needed
+<tr><td class=s colspan=2>Listing Documentation
+<tr><td>BROKER NOTES<td class=f>
+<tr><td>TC For File - Please add your Name and email<td class=f>
+<tr><td>Preliminary Title Search<td class=o>
+<tr><td>Tax Record Printout / Realist Report<td class=r>
+<tr><td>RLA - Residential Listing Agreement<td class=r>
+<tr><td>MLSA - Multiple Listing Service Addendum<td class=r>
+<tr><td>NHD Report<td class=r>
+<tr><td>MHLA - Manufactured Home Listing Addendum<td class=r>
+<tr><td>KASE Listing ADM<td class=r>
+<tr><td>DIA - Disclosure Information Advisory<td class=r>
+<tr><td>AD - Agency Disclosure<td class=r>
+<tr><td>SA - Seller Advisory<td class=r>
+<tr><td>FHDA-Fair Housing Discrimination Advisory<td class=r>
+<tr><td>PRBS-S - Possible Rep More than on Buyer<td class=r>
+<tr><td>CCPA - California Consumer Privacy Act Advisory<td class=r>
+<tr><td>BCA - Buyer Compensation Advisory<td class=r>
+<tr><td>AAA - Additional Agent Acknowledgement<td class=c>Another agent or broker on our side
+<tr><td>ABA - Additional Broker Acknowledgement<td class=c>Another agent or broker on our side
+<tr><td>MT-LA - Modification of Terms<td class=o>
+<tr><td>Coming Soon Form (MLS)<td class=c>Coming-soon listing
+<tr><td>MLS Active - Full Agent Report<td class=r>
+<tr><td>FHDS-Fire Hardening and Defensible Space Advisory<small>Help Text: If NHD shows High Fire Zone</small><td class=c>High fire zone
+<tr><td>APPROVAL of LESS THAN 2% commission<td class=c>Commission under 2%
+<tr><td>RCSD - Representative Capacity Signature Disc<td class=c>Trust, LLC, corp or POA
+<tr><td>TA - Trust Advisory<td class=c>Trust, LLC, corp or POA
+<tr><td>Trust, Notarized Cert of Trust or Testamentary<small>Help Text: Testamentary only for Probate Listings</small><td class=c>Trust, LLC, corp or POA
+<tr><td>Entity Docs (LLC or Corp)<td class=c>Trust, LLC, corp or POA
+<tr><td>RFA - Referral Fee Agreement<td class=c>Referral fee
+<tr><td>Miscellaneous - Listing<td class=o>
+<tr><td>COL - Cancellation of Listing<td class=c>File canceled
+</table></details>
+<details><summary>KASE Mobile Home Purchase<span>49 required &middot; 98 documents</span></summary>
+<table><tr><th>Document name<th>When it&rsquo;s needed
+<tr><td class=s colspan=2>Sales Documentation
+<tr><td>BROKER NOTES<td class=f>
+<tr><td>TC for File - Please add your full name and email<td class=f>
+<tr><td>RPA - Residential Purchase Agreement<td class=r>
+<tr><td>SMCO - Seller Multiple Counter Offer<td class=c>Counter offers
+<tr><td>SCO - Seller Counter Offer(s)<td class=c>Counter offers
+<tr><td>BCO - Buyer Counter Offer(s)<td class=c>Counter offers
+<tr><td>AAA - Additional Agent Acknowledgement<td class=c>Another agent or broker on our side
+<tr><td>ABA - Additional Broker Acknowledgement<td class=c>Another agent or broker on our side
+<tr><td>AC - Confirmation of Real Estate Agency<td class=o>
+<tr><td>AD - Agency Disclosure<td class=r>
+<tr><td>ADM - Addendum #1<td class=o>
+<tr><td>ADM - Addendum #2<td class=o>
+<tr><td>ADM - Addendum #3<td class=o>
+<tr><td>AEA - Amendment of Exisiting Terms<td class=o>
+<tr><td>AOAA - Assignment of Agreement Addendum<td class=o>
+<tr><td>BIA - Buyers Inspection Advisory<td class=r>
+<tr><td>BCA - Broker Compensation Advisory<td class=r>
+<tr><td>BRBC - Buyer Representation &amp; Broker Compensation<small>HELP: Only upload if representing Buyer · There is no asterisk on Skyslope</small><td class=c>Buyer side
+<tr><td>CBC - Cooperating Broker Compensation<td class=o>
+<tr><td>CCPA - California Consumer Privacy Act Advisory<td class=r>
+<tr><td>Commission Instructions Signed<td class=r>
+<tr><td>COP - Contingency of Sale of Buyers Property<td class=c>Buyer must sell first
+<tr><td>CR - Inspection<td class=r>
+<tr><td>CR - Appraisal<td class=r>
+<tr><td>CR - Loan<td class=r>
+<tr><td>CR - Removal of ALL Contingencies<td class=r>
+<tr><td>Escrow Instructions<td class=r>
+<tr><td>EMD Receipt<td class=r>
+<tr><td>Escrow Acknowledgement (Page 17)<td class=r>
+<tr><td>ETA - Extension of Time Addendum<td class=o>
+<tr><td>FHDA - Fair Housing Discrimination Advisory<td class=r>
+<tr><td>FVAC - FHA/VA Amendatory Clause<td class=c>FHA / VA loan
+<tr><td>MHDA - Manufactured Home Dealer Addendum<td class=o>
+<tr><td>MH- PA Manufactured or Mobile Home Purchase Adm<td class=r>
+<tr><td>MLS AUC - Full Agent Report<td class=r>
+<tr><td>Park Approval<td class=r>
+<tr><td>PRBS-B - Possible Rep More than one Buyer or Seller<td class=r>
+<tr><td>RCSD-B - Representative Capacity Signature<td class=c>Trust, LLC, corp or POA
+<tr><td>RCSD-S - Representative Capacity Signature<td class=c>Trust, LLC, corp or POA
+<tr><td>RLAS - Residential Lease After Sale (30 Days+)<td class=c>Seller stays after close
+<tr><td>SIP - Seller In Possession (Up to 29 Days)<td class=c>Seller stays after close
+<tr><td>Tax Record / Realist Tax<td class=r>
+<tr><td>TOPA - Tenant Occupied Property Addendum<td class=c>Tenant-occupied
+<tr><td>WFA - Wire Fraud Advisory<td class=r>
+<tr><td>Verification of Loan Application<td class=r>
+<tr><td>Verifcation of Funds<td class=r>
+<tr><td>Entity Docs (LLC or Corp)<small>HELP: (only if representing Entity Buyer)</small><td class=c>Trust, LLC, corp or POA
+<tr><td>Trust, Notarized Certificate of Trust or Testamentary<small>HELP: (only if representing Buyer Trustee)</small><td class=c>Trust, LLC, corp or POA
+<tr><td>Miscellaneous Sales Docs<td class=o>
+<tr><td>Rejected Offers<td class=o>
+<tr><td>CC - Cancellation of Contract<td class=c>File canceled
+<tr><td class=s colspan=2>Disclosures
+<tr><td>AVID - Listing Agent Visual Inspection Disclosure<td class=r>
+<tr><td>AVID - Buying Agent Visual Inspection Disclosure<td class=r>
+<tr><td>BHAA - Buyers HOA Advisory<td class=c>HOA
+<tr><td>Environmental Hazards Handbook Receipt<td class=r>
+<tr><td>ESD - Exempt Seller Disclosure<td class=c>Seller exempt from TDS
+<tr><td>FHDS-Fire Hardening and Defensible Space Advisory<small>Help Text: If NHD shows High Fire Zone</small><td class=c>High fire zone
+<tr><td>Historical Disclosures<small>Is this required for mobile homes?</small><td class=o>
+<tr><td>Local County / City Disclosures<td class=r>
+<tr><td>KASE Disclosures<td class=r>
+<tr><td>LPD - Lead-Based Paint and Lead-Based Paint Hazard<td class=c>Built before 1978
+<tr><td>MCA - Market Conditions Advisory<td class=r>
+<tr><td>MHTDS - Mobile Home Transfer Disclosure Statement<td class=r>
+<tr><td>NHD Receipt<td class=r>
+<tr><td>PSD - Parking &amp; Storage Disclosure<td class=c>Condo
+<tr><td>Residential Earthquake Hazard Report (Pre-1960)<small>Pre-1960</small><td class=c>Built before 1960
+<tr><td>SBSA - Statewide Buyer &amp; Seller Advisory<td class=r>
+<tr><td>SFLS - Square Footage and Lot Size Disclosures<td class=r>
+<tr><td>SPT - Notice of Supplemental Property Tax Bill<td class=r>
+<tr><td>SPQ - Seller Property Questionnaire<td class=r>
+<tr><td>TDS - Transfer Disclosure Statement<td class=r>
+<tr><td>TA - Trust Advisory<td class=c>Trust, LLC, corp or POA
+<tr><td>WCMD - Water Conserving Plumbing &amp; Carbon<td class=r>
+<tr><td>WHSD - Water Heater Smoke Detector (if TDS Exempt)<small>If there is no TDS- Seller to provide WHS or WHSD</small><td class=c>Seller exempt from TDS
+<tr><td>WFDA - Wildfire Disaster Advisory<td class=r>
+<tr><td>Miscellaneous Disclosures<td class=o>
+<tr><td class=s colspan=2>Reports
+<tr><td>Preliminary Title Search (HCD)<td class=r>
+<tr><td>NHD Report<td class=r>
+<tr><td>BIW - Buyer Inspection Waiver<td class=c>Buyer waives inspection
+<tr><td>Home Inspection<td class=r>
+<tr><td>Pool Inspection<td class=o>
+<tr><td>Roof Inspection<td class=o>
+<tr><td>Septic Inspection<td class=o>
+<tr><td>Sewer Lateral Inspection<td class=o>
+<tr><td>Termite Inspection<td class=o>
+<tr><td>Termite Clearance<td class=o>
+<tr><td>Well Inspection<td class=o>
+<tr><td>Other Inspections<td class=o>
+<tr><td>RFR - Receipt for Reports<td class=r>
+<tr><td>RR &amp; RRRR - Request for Repairs/Response<td class=o>
+<tr><td>CLOSING DOCUMENTATION<td class=r>
+<tr><td class=s colspan=2>Closing Documents
+<tr><td>Buyer Signed Prelim from Escrow<td class=r>
+<tr><td>HOA Receipt from Escrow<td class=r>
+<tr><td>CDA Signed<td class=r>
+<tr><td>Final Closing Statement<td class=r>
+<tr><td>MLS Sold - Full Agent Report<td class=r>
+<tr><td>Completed FIRPTA with SSN or QS<td class=r>
+<tr><td>VP - Verification of Property<td class=r>
+<tr><td>RFA - Referral Agreement<td class=c>Referral fee
+<tr><td>W-9 for Other Broker (upload to commission tab)<td class=c>Referral fee
+</table></details>
+<details><summary>KASE Lease Listing<span>15 required &middot; 26 documents</span></summary>
+<table><tr><th>Document name<th>When it&rsquo;s needed
+<tr><td class=s colspan=2>Listing Documentation
+<tr><td>BROKER NOTES<td class=f>
+<tr><td>TC For File - Please add your Name and e-mail<td class=f>
+<tr><td>Tax Record Printout / Realist Report<td class=r>
+<tr><td>LL - Lease Listing Agreement<td class=r>
+<tr><td>MLSA - Multiple Listing Service Addendum<td class=r>
+<tr><td>AD - Agency Disclosure<td class=r>
+<tr><td>Addendum to the Lease Listing Agreement<td class=o>
+<tr><td>BBD - Bed Bug Disclosure<td class=r>
+<tr><td>CCPA - California Consumer Privacy Act Advisory<td class=r>
+<tr><td>Coming Soon Form (MLS)<td class=c>Coming-soon listing
+<tr><td>FHDA - Fair Housing Discrimination Advisory<td class=r>
+<tr><td>KASE ESA - Electronic Signature Addendum<td class=r>
+<tr><td>KLA - Keysafe / Lockbox Addendum<td class=o>
+<tr><td>LPD - Lead Base Paint Disclosure<td class=c>Built before 1978
+<tr><td>MLS Active - Full Agent Report<td class=r>
+<tr><td>RCJC - Rent Cap &amp; Just Cause Addendum<td class=r>
+<tr><td>TFHD - Tenant Flood Hazard Disclosure<td class=r>
+<tr><td>TRPR - Tenant Positive Rental Reporting<td class=r>
+<tr><td>RPOA - Rental Property Owner Advisory<td class=r>
+<tr><td>RPOD- Rental Property Owner Disclosure<td class=r>
+<tr><td>SDDA - Security Deposit Disclosure and Addendum<td class=o>
+<tr><td>WSM - Water Submeter Addendum<td class=r>
+<tr><td>RCSD-LL - Representative Capacity Signature<td class=c>Trust, LLC, corp or POA
+<tr><td>MT-LA - Modification of Terms of Listing Agreement<td class=o>
+<tr><td>APPROVAL of LESS THAN 2% commission<td class=c>Commission under 2%
+<tr><td>Entity Docs (LLC or Corp)<td class=c>Trust, LLC, corp or POA
+<tr><td>Miscellaneous - Listing<td class=o>
+<tr><td>COL - Cancellation of Listing<td class=c>File canceled
+</table></details>
+<details><summary>KASE Lease Tenant<span>23 required &middot; 39 documents</span></summary>
+<table><tr><th>Document name<th>When it&rsquo;s needed
+<tr><td class=s colspan=2>Sales Documentation
+<tr><td>Broker Notes<td class=f>
+<tr><td>TC For File - Please add your Name in Text Box<td class=f>
+<tr><td>TRBC - Tenant Rep &amp; Broker Compensation Agreement<td class=r>
+<tr><td>RENT SPREE Application<td class=r>
+<tr><td>LRA - Application to Rent/ Screening Fee<td class=o>
+<tr><td>AD - Agency Disclosure<td class=r>
+<tr><td>CCPA - California Consumer Privacy Act Advisory<td class=r>
+<tr><td>FHDA - Fair Housing Discrimination Advisory<td class=r>
+<tr><td>LR - Residential Lease or Month to Month Rental<td class=r>
+<tr><td>MII- Move In Insp. Follow up 3 days from delivery.<td class=r>
+<tr><td>Tax Record Printout<td class=r>
+<tr><td>MLS AUC - Agent Full Detail Report<td class=r>
+<tr><td>APPROVAL of LESS THAN 2% commission<td class=c>Commission under 2%
+<tr><td>KASE ESA - Electronic Signature Addendum<td class=r>
+<tr><td>CLR - Cancellation of Lease Rental<td class=c>File canceled
+<tr><td class=s colspan=2>Disclosures
+<tr><td>BBD - Bed Bug Disclosure<td class=r>
+<tr><td>ATCA - Animal Terms Conditions Addendum<td class=o>
+<tr><td>Environmental Hazards Handbook Receipt<td class=r>
+<tr><td>LPD - Lead Based Paint Disclsoure<td class=c>Built before 1978
+<tr><td>LRM - Lease Rental Mold Addendum<td class=r>
+<tr><td>MCN - Methamphetamine Contamination Notice<td class=o>
+<tr><td>PHSA - Pool / Hot Tub &amp; SPA Addendum<td class=o>
+<tr><td>PSD - Parking &amp; Strorage Disclosure<td class=c>Condo
+<tr><td>RCJC - Rent Cap &amp; Just Cause Addendum<td class=r>
+<tr><td>RCSD-LL - Representative Capacity Signature<td class=c>Trust, LLC, corp or POA
+<tr><td>RCSD-T - Representative Capacity Signature<td class=c>Trust, LLC, corp or POA
+<tr><td>RPOD- Rental Property Owner Disclosure<td class=r>
+<tr><td>SSDA - Security Deposit Disclosure and Addendum<td class=o>
+<tr><td>TFHD - Tenant Flood Hazard Disclosure<td class=r>
+<tr><td>TRPR - Tenant Rental Payment ReportIng<td class=r>
+<tr><td>WCMD - Water Conserving/Carbon Monoxide<td class=r>
+<tr><td>WHSD - Water Heater/Smoke Detector<td class=r>
+<tr><td>WSM - Water Submeter Addendum<td class=o>
+<tr><td>Miscellaneous - Disclosures<td class=o>
+<tr><td class=s colspan=2>Closing Documents
+<tr><td>CDA - Signed<td class=r>
+<tr><td>Check &amp; Relevant Docs<td class=r>
+<tr><td>Lease invoice<td class=r>
+<tr><td>MLS Sold - Full Agent Report<td class=r>
+<tr><td>Proof of Liability Insurance (if 30C is checked)<small>If item 30C on RLMM is checked</small><td class=o>
+<tr><td>Referral Agreement<td class=c>Referral fee
+<tr><td>W-9 for Other Broker (upload to commission tab)<td class=c>Referral fee
+</table></details>
+<details><summary>KASE Commercial List<span>13 required &middot; 28 documents</span></summary>
+<table><tr><th>Document name<th>When it&rsquo;s needed
+<tr><td class=s colspan=2>Listing Documentation
+<tr><td>BROKER NOTES<td class=f>
+<tr><td>TC For File - Please add your Name and e-mail<td class=f>
+<tr><td>Preliminary Title Report<td class=r>
+<tr><td>Tax Record / Realist Report<td class=r>
+<tr><td>CLA - Commercial &amp; Residential Income Listing<td class=r>
+<tr><td>MLSA - Multiple Listing Service Addendum<td class=r>
+<tr><td>NHD Report<td class=r>
+<tr><td>AD - Agency Disclosure<td class=r>
+<tr><td>FHDA - Fair Housing Discrimination Advisory<td class=r>
+<tr><td>PRBS-S - Possible Rep More than one Buyer<td class=r>
+<tr><td>SA - Sellers Advisory<td class=r>
+<tr><td>BCA - Buyer Compensation Advisory<td class=r>
+<tr><td>CCPA - California Consumer Privacy Act Advisory<td class=r>
+<tr><td>MLS Active - Full Agent Report<td class=r>
+<tr><td>ABA - Additional Broker Acknowledgement<td class=c>Another agent or broker on our side
+<tr><td>AAA - Additional Agent Acknowledgement<td class=c>Another agent or broker on our side
+<tr><td>Coming Soon Form (MLS)<td class=c>Coming-soon listing
+<tr><td>DIA - Disclosure Information Advisory<td class=r>
+<tr><td>APPROVAL of LESS THAN 2% commission<td class=c>Commission under 2%
+<tr><td>KLA - Keysafe / Lockbox Addendum<td class=o>
+<tr><td>MT-LA - Modification of Terms of Listing Agreement<td class=o>
+<tr><td>FHDS-Fire Hardening and Defensible Space Advisory<small>Help Text: If NHD shows High Fire Zone</small><td class=c>High fire zone
+<tr><td>NSE - Notice of Sale &amp; Entry<td class=o>
+<tr><td>RCSD-S - Representative Capacity Signature Dis<td class=c>Trust, LLC, corp or POA
+<tr><td>TA - Trust Advisory<td class=c>Trust, LLC, corp or POA
+<tr><td>Trust, Notarized Certificate of Trust or Testament<td class=c>Trust, LLC, corp or POA
+<tr><td>Entity Docs (LLC or Corp)<td class=c>Trust, LLC, corp or POA
+<tr><td>RFA - Referral Fee Agreement<td class=c>Referral fee
+<tr><td>Miscellaneous - Listing<td class=o>
+<tr><td>COL - Cancelation of Listing<td class=c>File canceled
+</table></details>
+<details><summary>KASE Commercial Purchase<span>43 required &middot; 97 documents</span></summary>
+<table><tr><th>Document name<th>When it&rsquo;s needed
+<tr><td class=s colspan=2>Sales Documentation
+<tr><td>Broker Notes<td class=f>
+<tr><td>TC for File - Please add your name and email<td class=f>
+<tr><td>RIPA - Residential Income Purchase Agreement<td class=r>
+<tr><td>SMCO - Seller Multiple Counter Offer<td class=c>Counter offers
+<tr><td>SCO - Seller Counter Offer(s)<td class=c>Counter offers
+<tr><td>BCO - Buyer Counter Offer(s)<td class=c>Counter offers
+<tr><td>AAA - Additional Agent Acknowledgement<td class=c>Another agent or broker on our side
+<tr><td>ABA - Additional Broker Acknowledgement<td class=c>Another agent or broker on our side
+<tr><td>AC - Confirmation of Real Estate Agency<td class=o>
+<tr><td>AD - Agency Disclosure<td class=r>
+<tr><td>ADM - Addendum #1<td class=o>
+<tr><td>ADM - Addendum #2<td class=o>
+<tr><td>ADM - Addendum #3<td class=o>
+<tr><td>AEA - Amendment of Existing Terms<td class=o>
+<tr><td>AOAA - Assignment of Agreement Addendum<td class=o>
+<tr><td>BCA - Broker Compensation Advisory<td class=r>
+<tr><td>BIA - Buyers Rep &amp; Broker Compensation Agreement<td class=r>
+<tr><td>BRBC - Buyer Rep &amp; Broker Compensation Agreement<td class=c>Buyer side
+<tr><td>CCPA - California Consumer Privacy Act Advisory<td class=r>
+<tr><td>COP - Contingency of Sale of Buyers Property<td class=c>Buyer must sell first
+<tr><td>CR - Inspection<td class=r>
+<tr><td>CR - Appraisal<td class=r>
+<tr><td>CR - Loan<td class=r>
+<tr><td>CR - Removal of ALL Contingencies<td class=r>
+<tr><td>APPROVAL of LESS THAN 2% COMMISSION<td class=c>Commission under 2%
+<tr><td>Escrow Acknowledgement (Page 17)<td class=r>
+<tr><td>EMD - Earnest Money Deposit<td class=r>
+<tr><td>Escrow Instructions<td class=r>
+<tr><td>Escrow Commission Instructions w/Broker Signature<td class=r>
+<tr><td>ETA - Extension of Time Amendment<td class=o>
+<tr><td>FHDA - Fair Housing Discriminatory Advisory<td class=r>
+<tr><td>FVAC-FHA/VA Amendatory Clause<td class=c>FHA / VA loan
+<tr><td>Lease Agreement<td class=o>
+<tr><td>MLS AUC - Full Agent Report<td class=r>
+<tr><td>PRBS-B - Possible Rep More than one Buyer or Seller<td class=r>
+<tr><td>RCSD-B - Representative Capacity Signature<td class=c>Trust, LLC, corp or POA
+<tr><td>RCSD-S - Representative Capacity Signature<td class=c>Trust, LLC, corp or POA
+<tr><td>RLAS - Residential Lease After Sale (30 Days+)<td class=c>Seller stays after close
+<tr><td>SIP - Seller In Possession (Up to 29 Days)<td class=c>Seller stays after close
+<tr><td>Tax Record/Realist Tax<td class=r>
+<tr><td>TOPA - Tenant Occupied Property Addendum<td class=c>Tenant-occupied
+<tr><td>Verification of Funds<td class=r>
+<tr><td>Verification of Loan Application<td class=r>
+<tr><td>WFA - Wire Fraud Advisory<td class=r>
+<tr><td>Entity Docs (LLC or Corp)<td class=c>Trust, LLC, corp or POA
+<tr><td>Trust, Notarized Certificate of Trust<td class=c>Trust, LLC, corp or POA
+<tr><td>Rejected Offers<td class=o>
+<tr><td>Miscellaneous Sales Doc<td class=o>
+<tr><td>CC - Cancellation of Contract<td class=c>File canceled
+<tr><td class=s colspan=2>Disclosures
+<tr><td>AVID - Buying Agent Visual Inspection Disclosure<small>Only for 4 units or less.</small><td class=o>
+<tr><td>AVID - Listing Agent Visual Inspection Disclosure<td class=r>
+<tr><td>Environmental Hazards Handbook Receipt<td class=r>
+<tr><td>ESD - Exempt Seller Disclosure<small>Only for probate or REO</small><td class=c>Seller exempt from TDS
+<tr><td>FHDS - Fire Hardening and Definsible Space Advisory<small>Only applicable if in high fire zone.</small><td class=c>High fire zone
+<tr><td>Historical Disclosures<td class=o>
+<tr><td>Income &amp; Expense Statement<td class=o>
+<tr><td>KASE Disclosures<td class=r>
+<tr><td>Local County/City Disclosures<td class=r>
+<tr><td>LPD - Lead-Based Paint and Lead-Based Paint Hazard<td class=c>Built before 1978
+<tr><td>MCA - Market Conditions Advisrory<td class=r>
+<tr><td>NHD Receipt<td class=r>
+<tr><td>Propane Tank Addendum<small>Remove &quot;Side Form&quot;</small><td class=o>
+<tr><td>Residential Earthquake Hazard Report (Pre-1960)<small>Pre-1960</small><td class=c>Built before 1960
+<tr><td>SBSA - Statewide Buyer &amp; Seller Advisory<td class=r>
+<tr><td>SFLS - Square Footage &amp; Lot Size Disc &amp; Advisroy<td class=r>
+<tr><td>SPT - Notice of Supplemental Property Tax Bill<td class=r>
+<tr><td>CSPQ - Seller Property Questionnaire<td class=r>
+<tr><td>TA - Trust Advisory<td class=c>Trust, LLC, corp or POA
+<tr><td>TEC - Tenant Estoppel Certificate(s)<td class=o>
+<tr><td>Unit Rental Agreement(s) / Lease(s)<td class=o>
+<tr><td>WCMD - Water Conserving Plumbing &amp; Carbon Mon<td class=r>
+<tr><td>WFDA - Wildfire Disaster Advisory<td class=r>
+<tr><td>WHSD - Water Heater Smoke Detector (if TDS Exempt)<small>If there is no TDS- Seller to provide WHS or WHSD</small><td class=c>Seller exempt from TDS
+<tr><td>Miscellaneous Disclosures<td class=o>
+<tr><td class=s colspan=2>Reports
+<tr><td>Preliminary Report<td class=r>
+<tr><td>NHD Report<td class=r>
+<tr><td>BIW - Buyer Inspection Waiver<td class=r>
+<tr><td>Home Inspection<td class=r>
+<tr><td>Asbestos Inspection<td class=o>
+<tr><td>Pool Inspection<td class=o>
+<tr><td>Roof Inspection<td class=o>
+<tr><td>Septic Inspection<td class=o>
+<tr><td>Sewer Lateral Inspection<td class=o>
+<tr><td>Termite Inspection<td class=o>
+<tr><td>Termite Clearance<td class=o>
+<tr><td>Well Inspection<td class=o>
+<tr><td>Other inspections<td class=o>
+<tr><td>RFR - Receipt for Reports<small>Remove &quot;Buyer rep only&quot;</small><td class=o>
+<tr><td>RR &amp; RRRR - Request for Repairs / Response to RR<td class=o>
+<tr><td class=s colspan=2>Closing Documents
+<tr><td>Buyer Signed Prelim Report Receipt from Escrow<td class=r>
+<tr><td>CDA - Signed<td class=r>
+<tr><td>Closing Package<td class=o>
+<tr><td>Home Warranty<td class=r>
+<tr><td>Final Closing Statement<td class=r>
+<tr><td>MLS Sold - Full Agent Report<td class=r>
+<tr><td>RFA - Referral Fee Agreement<td class=c>Referral fee
+<tr><td>Completed FIRPTA with SSN or QS<td class=r>
+<tr><td>VP - Verification of Property<td class=r>
+<tr><td>W-9 for Other Broker (upload to commission tab)<td class=c>Referral fee
+</table></details>
+<details><summary>KASE Commercial &amp; Residential Income Listing (5+ UNITS)<span>18 required &middot; 34 documents</span></summary>
+<table><tr><th>Document name<th>When it&rsquo;s needed
+<tr><td class=s colspan=2>Listing Documentation
+<tr><td>BROKER NOTES<td class=f>
+<tr><td>TC For File - Please add your Name and e-mail<td class=f>
+<tr><td>Preliminary Title Report<td class=r>
+<tr><td>Tax Record / Realist Report<td class=r>
+<tr><td>CLA - Commercial &amp; Residential Income Listing<td class=r>
+<tr><td>MLSA - Multiple Listing Service Addendum<td class=r>
+<tr><td>NHD Report<td class=r>
+<tr><td>AD - Agency Disclosure<td class=r>
+<tr><td>KASE Listing ADM<td class=r>
+<tr><td>Estoppel Certificate<td class=r>
+<tr><td>Environmental Report<small>Help Text: If Industrial</small><td class=o>
+<tr><td>FHDA - Fair Housing Discrimination Advisory<td class=r>
+<tr><td>PRBS-S - Possible Rep More than one Buyer<td class=r>
+<tr><td>SA - Sellers Advisory<td class=r>
+<tr><td>BCA - Buyer Compensation Advisory<td class=r>
+<tr><td>CCPA - California Consumer Privacy Act Advisory<td class=r>
+<tr><td>MLS Active - Full Agent Report<td class=r>
+<tr><td>CSPQ - Commercial Seller Property Questionnaire<td class=r>
+<tr><td>Commercial Property Guide to Earthquake Safety<td class=r>
+<tr><td>ABA - Additional Broker Acknowledgement<td class=c>Another agent or broker on our side
+<tr><td>AAA - Additional Agent Acknowledgement<td class=c>Another agent or broker on our side
+<tr><td>Coming Soon Form (MLS)<td class=c>Coming-soon listing
+<tr><td>DIA - Disclosure Information Advisory<td class=r>
+<tr><td>APPROVAL of LESS THAN 2% commission<td class=c>Commission under 2%
+<tr><td>KLA - Keysafe / Lockbox Addendum<td class=o>
+<tr><td>MT-LA - Modification of Terms of Listing Agreement<td class=o>
+<tr><td>FHDS-Fire Hardening and Defensible Space Advisory<small>Help Text: If NHD shows High Fire Zone</small><td class=c>High fire zone
+<tr><td>NSE - Notice of Sale &amp; Entry<td class=o>
+<tr><td>RCSD-S - Representative Capacity Signature Dis<td class=c>Trust, LLC, corp or POA
+<tr><td>Rent Roll or Lease Agreement<td class=r>
+<tr><td>TA - Trust Advisory<td class=c>Trust, LLC, corp or POA
+<tr><td>Trust, Notarized Certificate of Trust or Testament<td class=c>Trust, LLC, corp or POA
+<tr><td>Entity Docs (LLC or Corp)<td class=c>Trust, LLC, corp or POA
+<tr><td>RFA - Referral Fee Agreement<td class=c>Referral fee
+<tr><td>Miscellaneous - Listing<td class=o>
+<tr><td>COL - Cancelation of Listing<td class=c>File canceled
+</table></details>
+<details><summary>KASE Commercial &amp; Residential Income Purchase (5+ UNITS)<span>39 required &middot; 73 documents</span></summary>
+<table><tr><th>Document name<th>When it&rsquo;s needed
+<tr><td class=s colspan=2>Sales Documentation
+<tr><td>BROKER NOTES<td class=f>
+<tr><td>TC For File - Please add your Name and e-mail<td class=f>
+<tr><td>Tax Record / Realist Report<td class=r>
+<tr><td>CPA - Commercial Property Purchase Agreement<td class=r>
+<tr><td>SCO - Seller Counter Offer(s)<td class=c>Counter offers
+<tr><td>SMCO - Seller Multiple Counter Offer<td class=c>Counter offers
+<tr><td>BCO - Buyer Counter Offer(s)<td class=c>Counter offers
+<tr><td>AAA - Additional Agent Acknowledgement<td class=c>Another agent or broker on our side
+<tr><td>ABA - Additional Broker Acknowledgement<td class=c>Another agent or broker on our side
+<tr><td>AC - Agency Confirmation<td class=o>
+<tr><td>AD - Agency Disclosure<td class=r>
+<tr><td>ADM - Addendum #1<td class=o>
+<tr><td>ADM - Addendum #2<td class=o>
+<tr><td>ADM - Addendum #3<td class=o>
+<tr><td>AEA - Amendment of Existing Terms<td class=o>
+<tr><td>AOAA - Assignment of Agreement Addendum<td class=o>
+<tr><td>BCA - Buyer Compensation Advisory<td class=r>
+<tr><td>BIA - Buyer&#x27;s Investigation Advisory<td class=r>
+<tr><td>BHIA - Buyer Homeowners Insurance Advisory<td class=r>
+<tr><td>BRBC - Buyer Rep &amp; Broker Compensation Agreement<small>*If we rep buyer only.</small><td class=c>Buyer side
+<tr><td>CR - Inspection<td class=r>
+<tr><td>CR - Appraisal<td class=r>
+<tr><td>CR - Loan<td class=r>
+<tr><td>CR - Removal of ALL Contingencies<td class=r>
+<tr><td>APPROVAL of LESS THAN 2% COMMISSION<td class=c>Commission under 2%
+<tr><td>Escrow Acknowledgement (Page 17)<td class=r>
+<tr><td>EMD - Earnest Money Deposit<td class=r>
+<tr><td>Escrow Instructions<td class=r>
+<tr><td>Escrow Commission Instructions w/Broker Signature<td class=r>
+<tr><td>ETA - Extension of Time Amendment<td class=o>
+<tr><td>Lease Agreement<td class=o>
+<tr><td>MLS AUC - Full Agent Report<td class=r>
+<tr><td>PRBS-B - Possible Rep More than one Buyer<td class=r>
+<tr><td>RCSD-B - Representative Capacity Signature Dis<td class=c>Trust, LLC, corp or POA
+<tr><td>RCSD-S - Representative Capacity Signature Dis<td class=c>Trust, LLC, corp or POA
+<tr><td>SIP - Seller in Possession (Up to 29 Days)<td class=c>Seller stays after close
+<tr><td>TOPA - Tenant Occupied Property Addendum<td class=c>Tenant-occupied
+<tr><td>Verification of Funds<td class=r>
+<tr><td>Verification of Loan Application<td class=r>
+<tr><td>WFA - Wire Fraud Advisory<td class=r>
+<tr><td>Entity Docs (LLC or Corp)<td class=c>Trust, LLC, corp or POA
+<tr><td>Rejected Offers<td class=o>
+<tr><td>Miscellanious Sales Docs<td class=o>
+<tr><td>CC - Cancellation of Contract<td class=c>File canceled
+<tr><td class=s colspan=2>Disclosures
+<tr><td>Environmental Hazards Handbook Receipt<td class=r>
+<tr><td>ESD - Exempt Seller Dislcosures<td class=c>Seller exempt from TDS
+<tr><td>CSP - Commercial Seller Property Questionnaire<td class=r>
+<tr><td>TEC - Tenant Estoppel Certificate(s)<td class=r>
+<tr><td>Rent Roll<td class=r>
+<tr><td>Income and Expenses<td class=r>
+<tr><td>Rental and Service Agreements<td class=o>
+<tr><td>KASE Disclosures<td class=r>
+<tr><td>Local County / City Disclosures<td class=r>
+<tr><td>LPD - Lead-Based Paint and Lead-Based Paint Hazard<small>Pre-1978</small><td class=c>Built before 1978
+<tr><td>NHD Receipt<td class=r>
+<tr><td>EDUBA - Energy Use Disclosure and Benchmarking Advisory<td class=r>
+<tr><td>Miscellanious Disclosures<td class=o>
+<tr><td class=s colspan=2>Reports
+<tr><td>Preliminary Title Report<td class=r>
+<tr><td>NHD Report<td class=r>
+<tr><td>Environmental Report<small>Help Text: If Industrial</small><td class=o>
+<tr><td>Inspections<td class=r>
+<tr><td>BIW - Buyer Inspection Waiver<td class=c>Buyer waives inspection
+<tr><td>RFR - Receipt for Reports<td class=o>
+<tr><td>RR &amp; RRRR - Request for Repairs / Response to RR<td class=o>
+<tr><td>ESA - Phase 1 Environamental Site Assessment<td class=r>
+<tr><td>ESA - Phase 2 Environamental Site Assessment<td class=r>
+<tr><td class=s colspan=2>Closing Documents
+<tr><td>Buyer Signed Prelim Receipt from Escrow<td class=r>
+<tr><td>CDA Signed<td class=r>
+<tr><td>Closing Package<td class=o>
+<tr><td>Final Closing Statement<td class=r>
+<tr><td>MLS Sold - Full Agent Report<td class=r>
+<tr><td>RFA - Referral Agreement Fee<td class=c>Referral fee
+<tr><td>Completed FIRPTA with SSN or QS<td class=r>
+<tr><td>VP - Verification of Property<td class=r>
+<tr><td>W-9 Other Broker (upload To commission tab)<td class=c>Referral fee
+</table></details>
+<details><summary>Kase New Construction Listing<span>19 required &middot; 32 documents</span></summary>
+<table><tr><th>Document name<th>When it&rsquo;s needed
+<tr><td class=s colspan=2>Listing Documentation
+<tr><td>BROKER NOTES<td class=f>
+<tr><td>TC For File - Please add your Name and email<td class=f>
+<tr><td>Preliminary Title Report<td class=r>
+<tr><td>Tax Record / Realist Report<td class=r>
+<tr><td>RLA - Residential Listing Agreement<td class=r>
+<tr><td>MLSA - Multiple Listing Service Addendum<td class=r>
+<tr><td>NHD REPORT<td class=r>
+<tr><td>KASE Listing ADM<td class=r>
+<tr><td>AD - Agency Disclosure<td class=r>
+<tr><td>SA - Seller Advisory<td class=r>
+<tr><td>BCA - Buyer Compensation Advisory<td class=r>
+<tr><td>PRBS-S - Possible Rep of More than one Buyer or Sell<td class=r>
+<tr><td>FHDA - Fair Housing Discrimination Advisory<td class=r>
+<tr><td>CCPA - California Consumer Privacy Act Advisory<td class=r>
+<tr><td>AAA - Additional Agent Acknowledgement<td class=c>Another agent or broker on our side
+<tr><td>ABA - Additional Broker Acknowledgement<td class=c>Another agent or broker on our side
+<tr><td>Coming Soon Form (MLS)<td class=c>Coming-soon listing
+<tr><td>MLS Active - Full Agent Report<td class=r>
+<tr><td>DIA - Disclosure Information Advisory<td class=r>
+<tr><td>MT-LA - Modification of Terms Listing Agreement<td class=o>
+<tr><td>APPROVAL of LESS THAN 2% commission<td class=c>Commission under 2%
+<tr><td>TA - Trust Advisory<td class=c>Trust, LLC, corp or POA
+<tr><td>RCSD-S- Representative Capacity Signature Disclos<td class=c>Trust, LLC, corp or POA
+<tr><td>Entity Docs (LLC or Corp)<td class=c>Trust, LLC, corp or POA
+<tr><td>RFA - Referral Fee Agreement<td class=c>Referral fee
+<tr><td>FHDS - Fire Hardening and Defensible Space Advisory<small>Help Text: If NHD Report shows High Fire Zone</small><td class=c>High fire zone
+<tr><td>TDS- Seller Signed<td class=r>
+<tr><td>SPQ- Seller Signed<td class=r>
+<tr><td>AVID- Seller/Listing Agent Signed<td class=r>
+<tr><td>NCA - New Construction Advisory<td class=r>
+<tr><td>NCNC - Notice of Completion &amp; to Close Escrow<td class=r>
+<tr><td>NC Sub Termite Soil Treatment Record (FHA &amp; VA)<small>New Construction Subterranean Termite Soil Treatment Records (FHA &amp; VA Offers) *</small><td class=o>
+<tr><td>Miscellaneous - Listing<td class=o>
+<tr><td>COL - Cancellation of Listing<td class=c>File canceled
+</table></details>
+<details><summary>KASE New Construction Purchase<span>37 required &middot; 71 documents</span></summary>
+<table><tr><th>Document name<th>When it&rsquo;s needed
+<tr><td class=s colspan=2>Sales Documentation
+<tr><td>BROKER NOTES<td class=f>
+<tr><td>TC for File - Please add your name and email<td class=f>
+<tr><td>NCPA - New Construction Purchase or Sellers Agreement<td class=r>
+<tr><td>SMCO - Seller Multiple Counter Offer<td class=c>Counter offers
+<tr><td>SCO - Seller Counter Offer(s)<td class=c>Counter offers
+<tr><td>BCO - Buyer Counter Offer(s)<td class=c>Counter offers
+<tr><td>AD - Agency Disclosure<td class=r>
+<tr><td>ADM - Addendum #1<td class=o>
+<tr><td>ADM - Addendum #2<td class=o>
+<tr><td>ADM - Addendum #3<td class=o>
+<tr><td>AAA - Addtional Agent Acknowledgement<td class=c>Another agent or broker on our side
+<tr><td>ABA - Additional Broker Acknowledgement<td class=c>Another agent or broker on our side
+<tr><td>AEA - Amendment of Existing Terms<td class=o>
+<tr><td>BCA - Broker Compensation Advisory<td class=r>
+<tr><td>BIA - Buyers Inspection Advisory<td class=r>
+<tr><td>BRBC - Buyer Rep &amp; Broker Compensation Agreement<small>Only needed if representing Buyer.</small><td class=c>Buyer side
+<tr><td>CCPA - California Consumer Privacy Act Advisory<td class=r>
+<tr><td>NCEI - Common Int Subdiv Supp Escrow Inst Add<td class=o>
+<tr><td>COP - Contingency of Sale of Property<td class=c>Buyer must sell first
+<tr><td>CR - Contingency Removal #1<small>There&#x27;s an asterisk on Skylope</small><td class=r>
+<tr><td>CR - Contingency Removal #2<td class=o>
+<tr><td>CR - Contingency Removal #3<td class=o>
+<tr><td>Escrow Instructions<td class=r>
+<tr><td>ETA - Extension of Time Addendum<td class=o>
+<tr><td>FHDA - Fair Housing Discrimination Advisory<td class=r>
+<tr><td>FVAC-FHA/VA Amendatory Clause<td class=c>FHA / VA loan
+<tr><td>MLS AUC - Full Agent Report<td class=r>
+<tr><td>NCA - New Construction Advisory<td class=r>
+<tr><td>NCA - New Construction Options and Upgrades Addendum<td class=o>
+<tr><td>NCRPA - New Construction Addendum to RPA<td class=o>
+<tr><td>NCNC - Notice of Completion &amp; to Close Escrow<td class=o>
+<tr><td>NBP or NSP - Notice to Perform<td class=o>
+<tr><td>PRBS-B - Poss Rep of More Than One Buyer or Seller<td class=r>
+<tr><td>Receipt for Increased Deposit (from Escrow)<td class=o>
+<tr><td>RCSD-S - Representative Capacity Signature Disc<td class=c>Trust, LLC, corp or POA
+<tr><td>RCSD-B - Representative Capacity Signature Disc<td class=c>Trust, LLC, corp or POA
+<tr><td>Tax Record/ Realist Tax<td class=r>
+<tr><td>Entity Docs (LLC or Corp)<td class=c>Trust, LLC, corp or POA
+<tr><td>WFA - Wire Fraud Advisory<td class=r>
+<tr><td>Miscellaneous (add name in desc box)<td class=o>
+<tr><td>CC - Cancellation of Contract<td class=c>File canceled
+<tr><td class=s colspan=2>Disclosures
+<tr><td>BHAA - Buyers HOA Advisory<td class=c>HOA
+<tr><td>CFCO - Cert of Final Completion &amp; Occupancy<td class=o>
+<tr><td>City Specific Requirements/Disclosures<small>There&#x27;s an asterisk on Skylsope</small><td class=r>
+<tr><td>Developers Disclosure<td class=o>
+<tr><td>LA AVID - Agent Visual Inspection Disclosure<td class=r>
+<tr><td>SA AVID - Agent Visual Inspection Disclosure<td class=r>
+<tr><td>Local Gen Info / Disclosure &amp; Disclaimer<td class=o>
+<tr><td>MCA - Market Conditions Advisory<td class=r>
+<tr><td>NHD Receipt<td class=r>
+<tr><td class=s colspan=2>Listing Documentation
+<tr><td>FHDS - Fire Hardening and Defensible Space Advisory<small>Help Text: If NHD Report shows High Fire Zone</small><td class=c>High fire zone
+<tr><td class=s colspan=2>Disclosures
+<tr><td>Receipt for Public Report<td class=o>
+<tr><td>Receipt for Residential Environmental Booklet<td class=r>
+<tr><td>SPQ - Seller Property Questionnaire<td class=r>
+<tr><td>SFLS - Square Footage and Lot Size Advisory<td class=r>
+<tr><td>SBSA - Statewide Buyer &amp; Seller Advisory<td class=r>
+<tr><td>TDS - Transfer Disclsoure Statement<td class=r>
+<tr><td>VP - Verification of Property Condition<td class=r>
+<tr><td>WCMD - Water Conserving Monoxide Detector Notice<td class=r>
+<tr><td>WHSD - Water Heater Smoke Detector (TDS Exempt)<small>If there is no TDS- Seller to provide WHS or WHSD</small><td class=r>
+<tr><td class=s colspan=2>Reports
+<tr><td>Home Inspection<td class=r>
+<tr><td>NHD Report<td class=r>
+<tr><td>Preliminary Title Report<td class=r>
+<tr><td>Public Report<td class=r>
+<tr><td class=s colspan=2>Closing Documents
+<tr><td>CDA - Signed<td class=r>
+<tr><td>HOA Receipt from Escrow<td class=c>HOA
+<tr><td>Buyer Signed Prelim Receipt from Escrow<td class=r>
+<tr><td>Check &amp; Relevant Docs<td class=r>
+<tr><td>Final Closing Statement<td class=r>
+<tr><td>Completed FIRPTA with SSN or QS<td class=r>
+<tr><td>MLS Closed - Full Agent Report<td class=r>
+<tr><td>RFA - Referral Fee Agreement<td class=r>
+<tr><td>W-9 for Other Broker (upload to commission tab)<td class=c>Referral fee
+</table></details>
+<details><summary>KASE Commercial Lease Listing<span>10 required &middot; 13 documents</span></summary>
+<table><tr><th>Document name<th>When it&rsquo;s needed
+<tr><td class=s colspan=2>Listing Documentation
+<tr><td>BROKER NOTES<td class=f>
+<tr><td>TC For File - Please add your Name and email<td class=f>
+<tr><td>Tax Record /Realist Tax<td class=r>
+<tr><td>Commercial Lease Listing Agreement<td class=r>
+<tr><td>MLSA - Multiple Listing Service Addendum<td class=r>
+<tr><td>AD - Agency Disclosure<td class=r>
+<tr><td>BCA - Broker Compensation Advisory<td class=r>
+<tr><td>CCPA - California Consumer Privacy Act Advisory<td class=r>
+<tr><td>FHDA - Fair Housing Discrimination Advisory<td class=r>
+<tr><td>PRBS-S - Possible Rep of More than one Buyer or Sell<td class=r>
+<tr><td>RPOD- Rental Property Owner Disclosure<td class=r>
+<tr><td>Miscellaneous<td class=o>
+<tr><td>MT-LA - Modification of Terms<td class=o>
+<tr><td>APPROVAL of LESS THAN 2% commission<td class=c>Commission under 2%
+<tr><td>COL - Cancellation of Listing<td class=r>
+</table></details>
+<details><summary>KASE Commercial Lease Tenant<span>13 required &middot; 27 documents</span></summary>
+<table><tr><th>Document name<th>When it&rsquo;s needed
+<tr><td class=s colspan=2>Sales Documentation
+<tr><td>BROKER NOTES<td class=f>
+<tr><td>TC for File - Please add your name and email<td class=f>
+<tr><td>AD - Agency Disclosure<td class=r>
+<tr><td>BCA - Buyer Compensation Advisory<td class=r>
+<tr><td>BRBC - Buyer Representation &amp; Broker Compensation<td class=r>
+<tr><td>CL - Commercial Lease Agreement<td class=r>
+<tr><td>RentSpree or Application to Rent<td class=r>
+<tr><td>MLS AUC - Agent Full Detail Report<td class=r>
+<tr><td>ADM - Addendum #1<td class=o>
+<tr><td>ADM - Addendum #2<td class=o>
+<tr><td>ADM - Addendum #3<td class=o>
+<tr><td>APPROVAL of LESS THAN 2% COMMISSION<td class=c>Commission under 2%
+<tr><td>RCSD-T - Representative Capacity Signature<td class=c>Trust, LLC, corp or POA
+<tr><td>RCSD-LL - Representative Capacity Signature<td class=c>Trust, LLC, corp or POA
+<tr><td>Entity Docs (LLC or Corp)<td class=c>Trust, LLC, corp or POA
+<tr><td>Tax Record/Realist Tax<td class=r>
+<tr><td>Verification of Funds<td class=o>
+<tr><td>Miscellaneous<td class=o>
+<tr><td>Cancellation Of Contract<td class=c>File canceled
+<tr><td class=s colspan=2>Disclosures
+<tr><td>WCMC - Water Conserving<small>Help text: Water Conserving ONLY</small><td class=r>
+<tr><td>WHSD - Water Heater/Smoke Detector<td class=r>
+<tr><td>Miscellaneous Disclosures<td class=o>
+<tr><td class=s colspan=2>Closing Documents
+<tr><td>CDA - Signed<td class=r>
+<tr><td>Check &amp; Relevant Docs<td class=r>
+<tr><td>Lease Invoice<td class=r>
+<tr><td>MLS Printout - CLOSED<td class=r>
+<tr><td>Proof of Liability Insurance (see item 30 in CL)<small>If item 30 on CL is completed.</small><td class=o>
+<tr><td>Referral Agreement<td class=c>Referral fee
+<tr><td>W-9 for Other Broker (upload to commission tab)<td class=c>Referral fee
+</table></details>
+<details><summary>KASE New Construction - Buyer Referral<span>6 required &middot; 9 documents</span></summary>
+<table><tr><th>Document name<th>When it&rsquo;s needed
+<tr><td class=s colspan=2>Sales Documentation
+<tr><td>BROKER NOTES<td class=f>
+<tr><td>BRBC - Buyer Representation/Broker Compensation (Buyer Rep Only)<small>On Skyslope it says: BRBC- Buyer Representation/Broker Compensation · no asterisk on skyslope</small><td class=c>Buyer side
+<tr><td>Builder Referral Agreement<td class=r>
+<tr><td>Commission Agreement<td class=r>
+<tr><td>Miscellaneous(1) - Sales<td class=o>
+<tr><td class=s colspan=2>Closing Documents
+<tr><td>CDA - Signed<td class=r>
+<tr><td>Check &amp; Relevant Docs<td class=r>
+<tr><td>Closing Package<td class=r>
+<tr><td>Final Closing Statement<td class=r>
+<tr><td>Miscellaneous(1) - Closing<td class=o>
+</table></details>
+<details><summary>KASE Referral<span>3 required &middot; 5 documents</span></summary>
+<table><tr><th>Document name<th>When it&rsquo;s needed
+<tr><td class=s colspan=2>Sales Documentation
+<tr><td>BROKER NOTES<small>There&#x27;s an asterisk on Skyslope</small><td class=f>
+<tr><td class=s colspan=2>Closing Documents
+<tr><td>CDA - Signed<td class=r>
+<tr><td>Check &amp; Relevant Docs<td class=r>
+<tr><td>RFA - Referral Fee Agreement<td class=c>Referral fee
+<tr><td>Outgoing Referral Closing Statement<td class=r>
+<tr><td>W-9 from other Broker (upload to commission tab)<td class=c>Referral fee
+</table></details>
+</section>
+<!-- tc-assistant:end -->
