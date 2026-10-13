@@ -1,6 +1,6 @@
 {
   "name": "tc-assistant",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Transaction-coordination assistant for a real estate agent or team on Follow Up Boss. Turns an accepted contract into a fully set-up FUB deal, drafts the transaction emails, answers what's still missing on a file, runs the daily sweep and inbox watch, keeps a live pipeline board, and learns the sender's email voice. Team-specific names, ids and rules live in TEAM.md. Additive to FUB, drafts-only outbound, broker signs off.",
   "author": { "name": "Loan Ark (Don Stolan)" },
   "keywords": ["real-estate", "transaction-coordination", "follow-up-boss"]
