@@ -116,7 +116,9 @@ asterisk removed, e.g. `TDS - Transfer Disclosure Statement`, `CR - Inspection`,
 `AVID - Listing Agent Visual Inspection Disclosure`. Numbered slots keep their number
 (`ADM - Addendum #2`). Use the same name for the file, the FUB task, and every mention in a
 digest or report, so a document can be matched to its slot by name alone.
-`[confirm: prefix file names with the property address, e.g. "123 Main St - TDS - Transfer Disclosure Statement.pdf"?]`
+No property address or other prefix — the file name is the slot name alone, plus the file
+extension (`TDS - Transfer Disclosure Statement.pdf`). The deal is identified by the folder or
+SkySlope transaction the file sits in, never by its name.
 
 ### Condition tags (from the intake Q&A)
 
