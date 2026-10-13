@@ -29,8 +29,15 @@ Before installing, edit two files in this repo and commit:
 
 ## 3. Install the plugin
 
-Add this repo as a plugin marketplace in the Claude app and install **tc-assistant**. It ships
-the nine skills and the Executor endpoint — not the connectors or the schedules (steps 4–6).
+Download **`tc-assistant.zip`** from the agent's AI audit page on loanark.com (the "Download
+the TC Assistant" link in the *Your TC Assistant* section; direct file: https://loanark.com/downloads/tc-assistant.zip). Then, in
+Claude (desktop app or claude.ai): **Customize → Plugins → Add → Upload plugin**, and choose the
+zip. It ships the nine skills and the Executor endpoint — not the connectors or the schedules
+(steps 4–6). Keep the zip: unzipped, it also holds `mac-tap/` for step 7.
+
+To publish a new version: `python3 scripts/package_plugin.py`, then copy `dist/tc-assistant.zip`
+to `public/downloads/` in the `LoanArkAI/loanark-website` repo and merge — the site redeploys
+on merge.
 
 ## 4. Connect the Claude connectors
 

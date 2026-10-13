@@ -52,10 +52,11 @@ out = ['<!-- tc-assistant:start -->', '<section id="tc-assistant">', '''<style>
  '<p class="lede">Your Claude TC Assistant is set up for Kase. Every file it opens follows the Kase checklist for that transaction type, '
  'and every document is named exactly as its checklist item &mdash; the SkySlope slot name, with no property address.</p>',
  '<h3>Setting it up</h3><ol class="tc-steps">',
- '<li><b>Install the plugin.</b> In the Claude app, add the plugin marketplace <code>LoanArkAI/tc-assistant</code> and install <b>tc-assistant</b>.</li>',
+ '<li><b>Download and install the plugin.</b> <a href="https://loanark.com/downloads/tc-assistant.zip" target="_blank" rel="noopener"><b>Download the TC Assistant</b></a> (tc-assistant.zip). '
+ 'Then in Claude (desktop app or claude.ai): Customize &rarr; Plugins &rarr; Add &rarr; Upload plugin, and choose that file.</li>',
  '<li><b>Connect your accounts</b> in Claude: Gmail, Google Calendar, Google Drive and DocuSign.</li>',
  '<li><b>Run setup.</b> Tell Claude &ldquo;set up the TC assistant&rdquo;. It connects Follow Up Boss and asks for anything it still needs.</li>',
- '<li><b>Texts (optional, on your Mac).</b> Download the plugin from <a href="https://github.com/LoanArkAI/tc-assistant" target="_blank" rel="noopener">github.com/LoanArkAI/tc-assistant</a>, '
+ '<li><b>Texts (optional, on your Mac).</b> Unzip the same tc-assistant.zip, '
  'run <code>mac-tap/install.sh</code> with your TC Assistant folder in Google Drive, allow Full Disk Access for Python, then tell Claude &ldquo;set up texts&rdquo;. '
  'It only reads texts with the work contacts Claude lists from your deals, and it never sends a message.</li>',
  '</ol>',

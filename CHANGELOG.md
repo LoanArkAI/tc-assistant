@@ -7,6 +7,15 @@ moves independently.
 
 ---
 
+## plugin 0.4.1 — 2026-10-13
+Distribution only, no skill changes. The agent now downloads `tc-assistant.zip` from their
+loanark.com AI audit page and installs it with Upload plugin, instead of adding this GitHub repo
+as a marketplace. `scripts/package_plugin.py` builds the zip (plugin root at zip root, fixed
+timestamps, so a rebuild is byte-identical); install docs, the how-to guide and the audit-page
+section point at the download.
+
+---
+
 ## plugin 0.4.0 — 2026-10-13
 
 ### setup 2.0.0 (MAJOR — the scheduled jobs move from local tasks to cloud routines)

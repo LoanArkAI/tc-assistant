@@ -23,7 +23,8 @@ current. Email, DocuSign, Drive and Follow Up Boss checks don't depend on the Ma
 1. **Python** — install the python.org build for macOS (3.11 or newer):
    https://www.python.org/downloads/macos/ — the "universal2" installer. No packages needed.
 2. **Google Drive for desktop** running, with the TC Assistant folder synced.
-3. Get this repo onto the Mac (clone, or unzip it), then:
+3. Unzip `tc-assistant.zip` (the plugin download from the loanark.com audit page) and open
+   Terminal in the unzipped folder, then:
    ```bash
    cd tc-assistant/mac-tap
    ./install.sh "$HOME/Library/CloudStorage/GoogleDrive-<his email>/My Drive/TC Assistant"

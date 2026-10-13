@@ -17,3 +17,6 @@ runs/*
 
 # Python caches from the Mac tap tests
 mac-tap/**/__pycache__/
+
+# Built plugin zip
+dist/
