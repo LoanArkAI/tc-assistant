@@ -1,6 +1,6 @@
 # Kase checklists
 
-Imported 2026-10-13 from `ck.xlsx` by `scripts/import_checklists.py` — edit the workbook and re-import rather than editing this file.
+Imported 2026-10-13 from Kase's master checklist workbook by `scripts/import_checklists.py` — edit the workbook and re-import rather than editing this file.
 
 **Naming convention:** a filed document is named exactly as its checklist item below.
 

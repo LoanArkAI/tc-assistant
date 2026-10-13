@@ -88,7 +88,7 @@ collapses to one recipient — never address the same person twice.
 ## Compliance checklists
 
 Kase's master checklists — 18 of them, one per transaction type — are imported from
-`MASTER_CHECKLISTS.xlsx` into [`checklists/kase.json`](checklists/kase.json) (what the
+`MASTER_CHECKLISTS.xlsx` (kept by Ernie, not in this public repo) into [`checklists/kase.json`](checklists/kase.json) (what the
 skills read) and [`checklists/kase.md`](checklists/kase.md) (for people). To update them,
 edit the workbook and re-run `python3 scripts/import_checklists.py <workbook> --team kase`;
 never hand-edit the JSON.
