@@ -1,0 +1,220 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Follow Up Boss (TC subset)",
+    "version": "1.2.0",
+    "description": "The FUB endpoints the TC assistant skills use. Auth is HTTP Basic with the FUB API key as the username and a blank password — store the key in Executor's vault as the basic-auth username so it never reaches the model. Live-verified shapes 2026-09-18 (deal 93): POST /deals needs numeric stageId (pipelineId/names rejected) and accepts the native date fields directly; POST /tasks attaches by personId (no dealId field). v1.1.0 added createPerson/updatePerson/updateDeal/updateTask. v1.2.0 adds pipeline + records ops: listStages, listPipelines, listUsers, createNote, createAppointment, updateAppointment, and deal assignment via updateDeal.users. DELETE is intentionally omitted (no-delete policy). NOTE: the v1.2.0 write shapes (notes, appointments, assignment) are from the FUB API docs but NOT yet live-verified — the calling skill should GET an example first and confirm field names before writing. Edits are human-confirmed by the calling skill; never overwrite fields you weren't asked to change."
+  },
+  "servers": [{ "url": "https://api.followupboss.com/v1" }],
+  "components": {
+    "securitySchemes": {
+      "fubBasic": { "type": "http", "scheme": "basic", "description": "Username = FUB API key (fka_...), password blank. Held in Executor vault." }
+    }
+  },
+  "security": [{ "fubBasic": [] }],
+  "paths": {
+    "/identity": {
+      "get": { "operationId": "getIdentity", "summary": "Verify key + whose account (read-only health check)",
+        "responses": { "200": { "description": "account + user" } } }
+    },
+    "/pipelines": {
+      "get": { "operationId": "listPipelines", "summary": "List pipelines (id + name). Use to find the pipeline before reading its stages.",
+        "responses": { "200": { "description": "pipelines[]" } } }
+    },
+    "/stages": {
+      "get": { "operationId": "listStages", "summary": "List deal stages (id, name, pipelineId). Look up the target stageId here before moving a deal instead of hardcoding it.",
+        "parameters": [{ "name": "pipelineId", "in": "query", "schema": { "type": "integer" } }],
+        "responses": { "200": { "description": "stages[]" } } }
+    },
+    "/users": {
+      "get": { "operationId": "listUsers", "summary": "List users/agents (id, name, email, role). Resolve an agent's userId by name before assigning.",
+        "parameters": [{ "name": "limit", "in": "query", "schema": { "type": "integer" } }],
+        "responses": { "200": { "description": "users[]" } } }
+    },
+    "/deals": {
+      "get": { "operationId": "listDeals", "summary": "List deals (dup check, active-file sweep)",
+        "parameters": [
+          { "name": "limit", "in": "query", "schema": { "type": "integer", "maximum": 100 } },
+          { "name": "sort", "in": "query", "schema": { "type": "string" } }
+        ],
+        "responses": { "200": { "description": "deals[] + _metadata" } } },
+      "post": { "operationId": "createDeal", "summary": "Create a deal (additive). stageId required + numeric; native date fields post directly.",
+        "requestBody": { "required": true, "content": { "application/json": { "schema": {
+          "type": "object", "required": ["name", "stageId"],
+          "properties": {
+            "name": { "type": "string" },
+            "stageId": { "type": "integer", "description": "Buyers: In Escrow 16 / Closed 18 / Canceled 35. Sellers: Temp 31 / Coming Soon 30 / Active 32 / In Escrow 17 / Closed 19. Confirm via listStages." },
+            "price": { "type": "number" },
+            "mutualAcceptanceDate": { "type": "string", "format": "date" },
+            "dueDiligenceDate": { "type": "string", "format": "date" },
+            "customCR1": { "type": "string", "format": "date" },
+            "customCR2Date": { "type": "string", "format": "date" },
+            "projectedCloseDate": { "type": "string", "format": "date" },
+            "finalWalkThroughDate": { "type": "string", "format": "date" },
+            "possessionDate": { "type": "string", "format": "date" }
+          }
+        } } } },
+        "responses": { "201": { "description": "created deal (id, ...)" } } }
+    },
+    "/deals/{dealId}": {
+      "get": { "operationId": "getDeal", "summary": "Read one deal (confirm fields after write, read current stage before a move)",
+        "parameters": [{ "name": "dealId", "in": "path", "required": true, "schema": { "type": "integer" } }],
+        "responses": { "200": { "description": "deal" } } },
+      "put": { "operationId": "updateDeal", "summary": "Update a deal: edit date fields/price, MOVE STAGE (set stageId), or assign agents (users). Send only the fields you are changing; never blank a field you weren't asked to change. Confirm with the human first.",
+        "parameters": [{ "name": "dealId", "in": "path", "required": true, "schema": { "type": "integer" } }],
+        "requestBody": { "required": true, "content": { "application/json": { "schema": {
+          "type": "object",
+          "properties": {
+            "name": { "type": "string" },
+            "stageId": { "type": "integer", "description": "set to move the deal to another stage (advance the pipeline)" },
+            "price": { "type": "number" },
+            "users": { "type": "array", "items": { "type": "integer" }, "description": "user ids to assign the deal to (from listUsers)" },
+            "mutualAcceptanceDate": { "type": "string", "format": "date" },
+            "dueDiligenceDate": { "type": "string", "format": "date" },
+            "customCR1": { "type": "string", "format": "date" },
+            "customCR2Date": { "type": "string", "format": "date" },
+            "projectedCloseDate": { "type": "string", "format": "date" },
+            "finalWalkThroughDate": { "type": "string", "format": "date" },
+            "possessionDate": { "type": "string", "format": "date" }
+          }
+        } } } },
+        "responses": { "200": { "description": "updated deal" } } }
+    },
+    "/tasks": {
+      "get": { "operationId": "listTasks", "summary": "List tasks",
+        "parameters": [{ "name": "limit", "in": "query", "schema": { "type": "integer" } }],
+        "responses": { "200": { "description": "tasks[]" } } },
+      "post": { "operationId": "createTask", "summary": "Create a task (additive). Attaches by personId; there is no dealId field.",
+        "requestBody": { "required": true, "content": { "application/json": { "schema": {
+          "type": "object", "required": ["name"],
+          "properties": {
+            "name": { "type": "string" },
+            "type": { "type": "string", "description": "e.g. Closing" },
+            "dueDate": { "type": "string", "format": "date" },
+            "personId": { "type": "integer" }
+          }
+        } } } },
+        "responses": { "201": { "description": "created task" } } }
+    },
+    "/tasks/{taskId}": {
+      "put": { "operationId": "updateTask", "summary": "Update an existing task (change due date, or mark complete). Send only the fields you are changing.",
+        "parameters": [{ "name": "taskId", "in": "path", "required": true, "schema": { "type": "integer" } }],
+        "requestBody": { "required": true, "content": { "application/json": { "schema": {
+          "type": "object",
+          "properties": {
+            "name": { "type": "string" },
+            "type": { "type": "string" },
+            "dueDate": { "type": "string", "format": "date" },
+            "isCompleted": { "type": "boolean", "description": "true marks the task done" }
+          }
+        } } } },
+        "responses": { "200": { "description": "updated task" } } }
+    },
+    "/notes": {
+      "post": { "operationId": "createNote", "summary": "Log a note on a contact (additive). Attaches by personId. Shape best-effort — GET an example note first to confirm fields.",
+        "requestBody": { "required": true, "content": { "application/json": { "schema": {
+          "type": "object", "required": ["personId", "body"],
+          "properties": {
+            "personId": { "type": "integer" },
+            "subject": { "type": "string" },
+            "body": { "type": "string" },
+            "isHtml": { "type": "boolean" }
+          },
+          "additionalProperties": true
+        } } } },
+        "responses": { "201": { "description": "created note" } } }
+    },
+    "/appointments": {
+      "post": { "operationId": "createAppointment", "summary": "Create an appointment (additive). Shape best-effort — GET an example appointment first to confirm field names (start/end formats, invitees).",
+        "requestBody": { "required": true, "content": { "application/json": { "schema": {
+          "type": "object",
+          "properties": {
+            "title": { "type": "string" },
+            "description": { "type": "string" },
+            "location": { "type": "string" },
+            "start": { "type": "string", "description": "ISO-8601 datetime" },
+            "end": { "type": "string", "description": "ISO-8601 datetime" },
+            "personId": { "type": "integer" },
+            "invitees": { "type": "array", "items": { "type": "integer" }, "description": "user ids" }
+          },
+          "additionalProperties": true
+        } } } },
+        "responses": { "201": { "description": "created appointment" } } }
+    },
+    "/appointments/{appointmentId}": {
+      "put": { "operationId": "updateAppointment", "summary": "Update an appointment (reschedule/edit). Send only the fields you are changing.",
+        "parameters": [{ "name": "appointmentId", "in": "path", "required": true, "schema": { "type": "integer" } }],
+        "requestBody": { "required": true, "content": { "application/json": { "schema": {
+          "type": "object",
+          "properties": {
+            "title": { "type": "string" },
+            "description": { "type": "string" },
+            "location": { "type": "string" },
+            "start": { "type": "string" },
+            "end": { "type": "string" }
+          },
+          "additionalProperties": true
+        } } } },
+        "responses": { "200": { "description": "updated appointment" } } }
+    },
+    "/people": {
+      "get": { "operationId": "listPeople", "summary": "Find/list contacts (resolve personId before tasks)",
+        "parameters": [
+          { "name": "limit", "in": "query", "schema": { "type": "integer" } },
+          { "name": "fields", "in": "query", "schema": { "type": "string" } }
+        ],
+        "responses": { "200": { "description": "people[] + _metadata" } } },
+      "post": { "operationId": "createPerson", "summary": "Create a contact (additive). FUB dedups by email/phone; prefer this when no matching person exists.",
+        "requestBody": { "required": true, "content": { "application/json": { "schema": {
+          "type": "object",
+          "properties": {
+            "firstName": { "type": "string" },
+            "lastName": { "type": "string" },
+            "name": { "type": "string", "description": "full name, if not split" },
+            "emails": { "type": "array", "items": { "type": "object", "properties": { "value": { "type": "string" }, "type": { "type": "string" } }, "required": ["value"] } },
+            "phones": { "type": "array", "items": { "type": "object", "properties": { "value": { "type": "string" }, "type": { "type": "string" } }, "required": ["value"] } },
+            "tags": { "type": "array", "items": { "type": "string" } },
+            "source": { "type": "string" },
+            "assignedUserId": { "type": "integer", "description": "agent to assign (from listUsers)" },
+            "customFields": { "type": "object", "additionalProperties": true }
+          },
+          "additionalProperties": true
+        } } } },
+        "responses": { "201": { "description": "created person (id, ...)" } } }
+    },
+    "/people/{personId}": {
+      "get": { "operationId": "getPerson", "summary": "Read one contact",
+        "parameters": [
+          { "name": "personId", "in": "path", "required": true, "schema": { "type": "integer" } },
+          { "name": "fields", "in": "query", "schema": { "type": "string" } }
+        ],
+        "responses": { "200": { "description": "person" } } },
+      "put": { "operationId": "updatePerson", "summary": "Update a contact — name, emails, phones, tags, custom fields, or assign an agent (assignedUserId). Send only the fields you are changing; adding to emails/phones/tags appends. Never clear a field you weren't asked to change. Confirm first.",
+        "parameters": [{ "name": "personId", "in": "path", "required": true, "schema": { "type": "integer" } }],
+        "requestBody": { "required": true, "content": { "application/json": { "schema": {
+          "type": "object",
+          "properties": {
+            "firstName": { "type": "string" },
+            "lastName": { "type": "string" },
+            "name": { "type": "string" },
+            "emails": { "type": "array", "items": { "type": "object", "properties": { "value": { "type": "string" }, "type": { "type": "string" } }, "required": ["value"] } },
+            "phones": { "type": "array", "items": { "type": "object", "properties": { "value": { "type": "string" }, "type": { "type": "string" } }, "required": ["value"] } },
+            "tags": { "type": "array", "items": { "type": "string" } },
+            "assignedUserId": { "type": "integer", "description": "agent to assign (from listUsers)" },
+            "customFields": { "type": "object", "additionalProperties": true }
+          },
+          "additionalProperties": true
+        } } } },
+        "responses": { "200": { "description": "updated person" } } }
+    },
+    "/templates": {
+      "get": { "operationId": "listTemplates", "summary": "List email templates (<template prefix> | drafts)",
+        "parameters": [{ "name": "limit", "in": "query", "schema": { "type": "integer" } }],
+        "responses": { "200": { "description": "templates[]" } } }
+    },
+    "/dealCustomFields": {
+      "get": { "operationId": "listDealCustomFields", "summary": "List deal custom fields (CR2 = customCR2Date, id 2)",
+        "responses": { "200": { "description": "dealCustomFields[]" } } }
+    }
+  }
+}

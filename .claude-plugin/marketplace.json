@@ -1,0 +1,12 @@
+{
+  "name": "loanark-tc",
+  "owner": { "name": "Loan Ark (Don Stolan)" },
+  "metadata": { "description": "Transaction-coordination tools for real estate agents and teams on Follow Up Boss." },
+  "plugins": [
+    {
+      "name": "tc-assistant",
+      "source": "./",
+      "description": "Transaction-coordination assistant on Follow Up Boss, configured per team in TEAM.md. Additive to FUB, drafts-only outbound, broker signs off."
+    }
+  ]
+}
